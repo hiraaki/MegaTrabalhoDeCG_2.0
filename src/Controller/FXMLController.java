@@ -8,6 +8,8 @@ package Controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import Models.ResizableCanvas;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
@@ -22,7 +24,7 @@ import javafx.scene.control.Button;
 public class FXMLController implements Initializable {
 
     @FXML
-    private Canvas canvas1;
+    private ResizableCanvas canvas1;
     
     @FXML
     private Canvas canvas2;
