@@ -27,13 +27,13 @@ public class FXMLController implements Initializable {
     private ResizableCanvas canvas1;
     
     @FXML
-    private Canvas canvas2;
+    private ResizableCanvas canvas2;
     
     @FXML
-    private Canvas canvas3;
+    private ResizableCanvas canvas3;
     
     @FXML
-    private Canvas canvas4;
+    private ResizableCanvas canvas4;
     
     @FXML
     private Button botaoSeleciona;
