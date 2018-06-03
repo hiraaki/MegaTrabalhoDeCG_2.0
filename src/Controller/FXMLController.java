@@ -6,6 +6,7 @@
 package Controller;
 
 
+import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -15,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.paint.Color;
 
 /**
  * FXML Controller class
@@ -24,7 +26,7 @@ import javafx.scene.control.Button;
 public class FXMLController implements Initializable {
 
     @FXML
-    private ResizableCanvas canvas1;
+    private Canvas canvas1;
     
     @FXML
     private ResizableCanvas canvas2;
@@ -52,7 +54,9 @@ public class FXMLController implements Initializable {
     
     @FXML
     private Button botaoPoligonoR;
-    
+
+
+
     GraphicsContext gc1;
     GraphicsContext gc2;
     GraphicsContext gc3;
@@ -65,6 +69,17 @@ public class FXMLController implements Initializable {
         gc2= canvas2.getGraphicsContext2D();
         gc3= canvas3.getGraphicsContext2D();
         gc4= canvas4.getGraphicsContext2D();
+
     }    
-    
+
+    public void sX(){
+        double width = canvas1.getWidth();
+        double height = canvas1.getHeight();
+
+        GraphicsContext gc = gc1;
+        gc.clearRect(0, 0, width, height);
+        gc.setStroke(Color.RED);
+        gc.strokeLine(0, 0, width, height);
+        gc.strokeLine(0, height, width, 0);
+    }
 }

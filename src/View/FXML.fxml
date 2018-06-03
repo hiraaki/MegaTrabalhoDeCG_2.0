@@ -65,7 +65,7 @@
                   </Tooltip>
                </tooltip>
             </Button>
-            <Button fx:id="botaoPonto" layoutX="53.0" layoutY="103.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+            <Button fx:id="botaoPonto" onAction="#sX" layoutX="53.0" layoutY="103.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
