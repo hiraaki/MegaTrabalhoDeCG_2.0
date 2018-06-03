@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.canvas.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -21,15 +23,112 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Canvas height="313.0" width="509.0" />
-                  <Canvas height="306.0" width="510.0" GridPane.rowIndex="1" />
-                  <Canvas height="308.0" width="510.0" GridPane.columnIndex="1" />
-                  <Canvas height="306.0" width="509.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canvas1" height="313.0" width="509.0" />
+                  <Canvas fx:id="canvas2" height="306.0" width="510.0" GridPane.rowIndex="1" />
+                  <Canvas fx:id="canvas3" height="308.0" width="510.0" GridPane.columnIndex="1" />
+                  <Canvas fx:id="canvas4" height="306.0" width="509.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </content>
       </ScrollPane>
-      <Pane id="menuLateral" cacheHint="SCALE" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefWidth="230.0" style="-fx-background-color: #ddd; -fx-border-color: #bbb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane id="menuLateral" cacheHint="SCALE" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefWidth="230.0" style="-fx-background-color: #ddd; -fx-border-color: #bbb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="botaoSeleciona" layoutX="53.0" layoutY="40.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/59167-200.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Selecionar">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="botaoExclui" layoutX="132.0" layoutY="40.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/Trash_font_awesome.svg.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Excluir">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="botaoPonto" layoutX="53.0" layoutY="103.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/59167-202.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip graphicTextGap="1.0" text="Desenhar ponto">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="botaoCirculo" layoutX="132.0" layoutY="103.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/59167-201.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Desenhar círculo">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="botaoReta" layoutX="53.0" layoutY="164.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/59167-203.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Desenhar reta">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="botaoPoligonoR" layoutX="132.0" layoutY="164.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/59167-204.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Desenhar polígono regular">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+         </children></Pane>
       <MenuBar id="menuBar" fx:id="menuBar" cache="true" cacheHint="SCALE" maxWidth="1.7976931348623157E308" prefWidth="1250.0" style="-fx-background-color: #ccc; -fx-border-color: #bbb;" styleClass="menuBar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <menus>
           <Menu mnemonicParsing="false" styleClass="menuBar" text="Arquivo">
