@@ -24,7 +24,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <ResizableCanvas fx:id="canvas1"  ></ResizableCanvas>
+                  <ResizableCanvas fx:id="canvas1" height="313.0" width="509.0" />
                   <Canvas fx:id="canvas2" height="306.0" width="510.0" GridPane.rowIndex="1" />
                   <Canvas fx:id="canvas3" height="308.0" width="510.0" GridPane.columnIndex="1" />
                   <Canvas fx:id="canvas4" height="306.0" width="509.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
