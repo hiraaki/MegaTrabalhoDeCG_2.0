@@ -6,11 +6,15 @@
 package Controller;
 
 
-import java.awt.event.MouseEvent;
+import Models.Poligono;
+import javafx.scene.input.MouseEvent;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import Models.Aresta;
 import Models.ResizableCanvas;
+import Models.Vertice;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
@@ -55,22 +59,31 @@ public class FXMLController implements Initializable {
     @FXML
     private Button botaoPoligonoR;
 
+    public int cliques;
 
+    public ArrayList<Vertice> verIrregular;
+
+    public ArrayList<Aresta> arrIrregular;
+
+    public ArrayList<Poligono> poligonos;
 
     GraphicsContext gc1;
     GraphicsContext gc2;
     GraphicsContext gc3;
     GraphicsContext gc4;
-    
+
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        this.arrIrregular= new ArrayList<>();
+        this.verIrregular= new ArrayList<>();
+        this.poligonos = new ArrayList<>();
         gc1= canvas1.getGraphicsContext2D();
         gc2= canvas2.getGraphicsContext2D();
         gc3= canvas3.getGraphicsContext2D();
         gc4= canvas4.getGraphicsContext2D();
-
-    }    
+        this.cliques=0;
+    }
 
     public void sX(){
         double width = canvas1.getWidth();
@@ -81,5 +94,48 @@ public class FXMLController implements Initializable {
         gc.setStroke(Color.RED);
         gc.strokeLine(0, 0, width, height);
         gc.strokeLine(0, height, width, 0);
+
+    }
+    public void ButtonPonto(){
+        canvas1.setOnMouseClicked(this::Irregular);
+    }
+    public void Irregular(MouseEvent e){
+        if(verIrregular.size()>0){
+
+            if(verIrregular.get(0).distancia(new Vertice(e.getX(),e.getY(),0))<5) {
+
+
+                this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0)));
+                System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                System.out.println("saiu!!!!");
+
+                this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
+
+                this.poligonos.add(new Poligono(this.verIrregular,this.arrIrregular));
+
+                this.verIrregular=new ArrayList<>();
+                this.arrIrregular=new ArrayList<>();
+
+            }else {
+
+                System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
+                arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
+                        this.verIrregular.get(this.verIrregular.size() - 1)));
+
+                this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
+            }
+        }else {
+
+            verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
+
+
+        }
+
+    }
+    public void drawall(){
+        for(Aresta a: this.arrIrregular){
+            a.draw(gc1,1);
+        }
     }
 }

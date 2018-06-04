@@ -1,5 +1,7 @@
 package Models;
 
+import static java.lang.StrictMath.sqrt;
+
 public class Vertice {
     public double x;
     public double y;
@@ -12,6 +14,10 @@ public class Vertice {
     }
 
     public Vertice() {
+    }
+    public double distancia(Vertice V){
+        double resp = sqrt(Math.pow(V.x-this.x,2)+Math.pow(V.y-this.y,2));
+        return resp;
     }
 
 }

@@ -7,6 +7,12 @@ public class Poligono {
     public ArrayList<Aresta> arestas;
     public Vertice Central;
 
+
+    public Poligono(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas) {
+        this.vertices = vertices;
+        this.arestas = arestas;
+    }
+
     public Poligono(ArrayList<Vertice> vertices) {
         this.vertices = vertices;
         this.arestas = new ArrayList<>();
