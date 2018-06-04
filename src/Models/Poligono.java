@@ -1,6 +1,10 @@
 package Models;
 
+import javafx.scene.paint.Color;
+
 import java.util.ArrayList;
+
+import static java.lang.Math.abs;
 
 public class Poligono {
     public ArrayList<Vertice> vertices;
@@ -16,10 +20,43 @@ public class Poligono {
     public Poligono(ArrayList<Vertice> vertices) {
         this.vertices = vertices;
         this.arestas = new ArrayList<>();
-        this.setarestas();
+        this.setArestas();
         this.calcCentroid();
     }
-    public void setarestas(){
+
+    public Poligono(Vertice ini, Vertice fim, int lados, Color cor){
+        this.Central= new Vertice();
+        this.Central= ini;
+        this.arestas = new ArrayList();
+        this.vertices = new ArrayList();
+        //this.face = new Face(Color.BLACK,cor);
+        Vertice V=new Vertice();
+        V=ini;
+        double cos;
+        double sen;
+        double xtemp;
+        double ytemp;
+        double grau = (360/lados);
+        double R=abs(abs(fim.x)-abs(ini.x));
+        System.out.println(this.Central.x+" "+this.Central.y);
+        for(int i=0;i<lados;i++){
+            xtemp = (R * Math.cos((2 * Math.PI * (i)) / lados + grau) + V.x);
+            ytemp = (R * Math.sin((2 * Math.PI * (i)) / lados + grau) + V.y);
+            vertices.add(new Vertice(xtemp,ytemp, 0));
+            //System.out.println(this.Vertices.get(i).X+" "+this.Vertices.get(i).Y);
+            //System.out.println(R);
+        }
+        /*for (int i =0 ; i<this.Vertices.size();i++){
+            System.out.println(this.Vertices.get(i).X+" "+this.Vertices.get(i).Y);
+        }*/
+        this.setArestas();
+        calcCentroid();
+        System.out.println("Centroid :"+Central.x+","+Central.y);
+        //this.printVertices();
+
+    }
+
+    public void setArestas(){
         for (int i = 0; i < this.vertices.size(); i++) {
             if(i!=this.vertices.size()-1){
                 this.arestas.add(new Aresta(this.vertices.get(i),this.vertices.get(i+1)));

@@ -41,23 +41,23 @@ public class FXMLController implements Initializable {
     @FXML
     private ResizableCanvas canvas4;
     
-    @FXML
-    private Button botaoSeleciona;
-    
-    @FXML
-    private Button botaoExclui;
-    
-    @FXML
-    private Button botaoPonto;
-    
-    @FXML
-    private Button botaoCirculo;
-    
-    @FXML
-    private Button botaoReta;
-    
-    @FXML
-    private Button botaoPoligonoR;
+//    @FXML
+//    private Button botaoSeleciona;
+//
+//    @FXML
+//    private Button botaoExclui;
+//
+//    @FXML
+//    private Button botaoPonto;
+//
+//    @FXML
+//    private Button botaoCirculo;
+//
+//    @FXML
+//    private Button botaoReta;
+//
+//    @FXML
+//    private Button botaoPoligonoR;
 
     public int cliques;
 
@@ -85,6 +85,7 @@ public class FXMLController implements Initializable {
         this.cliques=0;
     }
 
+    //SAI X APENAS PARA DEBUG
     public void sX(){
         double width = canvas1.getWidth();
         double height = canvas1.getHeight();
@@ -96,9 +97,12 @@ public class FXMLController implements Initializable {
         gc.strokeLine(0, height, width, 0);
 
     }
+
+    //FAZ A POLYLINE
     public void ButtonPonto(){
         canvas1.setOnMouseClicked(this::Irregular);
     }
+
     public void Irregular(MouseEvent e){
         if(verIrregular.size()>0){
 
@@ -133,6 +137,15 @@ public class FXMLController implements Initializable {
         }
 
     }
+
+    public void botaoPoligonoR(){
+        canvas1.setOnMouseClicked(this::Regular);
+    }
+
+    public void Regular(MouseEvent e){
+
+    }
+
     public void drawall(){
         for(Aresta a: this.arrIrregular){
             a.draw(gc1,1);
