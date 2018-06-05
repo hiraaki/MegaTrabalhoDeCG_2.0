@@ -18,6 +18,9 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+
+import javax.swing.*;
 
 /**
  * FXML Controller class
@@ -74,6 +77,8 @@ public class FXMLController implements Initializable {
     GraphicsContext gc2;
     GraphicsContext gc3;
     GraphicsContext gc4;
+
+    int lados;
 
     
     @Override
@@ -147,18 +152,17 @@ public class FXMLController implements Initializable {
 
     public void botaoPoligonoR(){
         canvas1.setOnMouseClicked(this::Regular);
+        String resposta = JOptionPane.showInputDialog(null, "Quantos lados possui o polígono?");
+
+        lados = Integer.parseInt(resposta);
+        System.out.println(lados);
     }
 
     public void Regular(MouseEvent e){
 
-        if(this.cliques>0){
-            this.poligonos.add(new Poligono(this.clique,new Vertice(e.getX(),e.getY(),0),6,null));
-            cliques=0;
-            drawall();
-        }else {
-            this.clique=new Vertice(e.getX(),e.getY(),0);
-            cliques++;
-        }
+        this.poligonos.add(new Poligono(new Vertice(e.getX(),e.getY(),0),lados,null));
+        drawall();
+
 
     }
 
@@ -168,6 +172,19 @@ public class FXMLController implements Initializable {
 //        }
         for(Poligono p:this.poligonos){
             p.draw(gc1,1);
+        }
+
+        desenhaRegua();
+    }
+
+    public void desenhaRegua(){
+        for (int i=0;i<=canvas1.getHeight();i+=10){
+            gc1.strokeLine(0,i,6,i);
+            if(i%50==0){
+                Font f = new Font("Comic Sans MS", 9);
+                gc1.strokeText(String.valueOf(i), 7,i);
+            }
+
         }
     }
 }

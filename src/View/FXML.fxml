@@ -75,12 +75,12 @@
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../imagens/17102-200.png" />
+                        <Image url="@../imagens/17102-204.png" />
                      </image>
                   </ImageView>
                </graphic>
                <tooltip>
-                  <Tooltip graphicTextGap="1.0" text="Desenhar ponto">
+                  <Tooltip graphicTextGap="1.0" text="Desenhar polígono livre">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -107,12 +107,12 @@
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../imagens/59167-203.png" />
+                        <Image url="@../imagens/17102-200.png" />
                      </image>
                   </ImageView>
                </graphic>
                <tooltip>
-                  <Tooltip text="Desenhar reta">
+                  <Tooltip text="Polyline">
                      <font>
                         <Font size="14.0" />
                      </font>

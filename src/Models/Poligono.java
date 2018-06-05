@@ -25,7 +25,7 @@ public class Poligono {
         this.calcCentroid();
     }
 
-    public Poligono(Vertice ini, Vertice fim, int lados, Color cor){
+    public Poligono(Vertice ini, int lados, Color cor){
         this.Central= new Vertice();
         this.Central= ini;
         this.arestas = new ArrayList();
@@ -38,7 +38,7 @@ public class Poligono {
         double xtemp;
         double ytemp;
         double grau = (360/lados);
-        double R=ini.distancia(fim);
+        double R=60;
         //System.out.println(this.Central.x+" "+this.Central.y);
         for(int i=0;i<lados;i++){
             xtemp = (R * Math.cos((2 * Math.PI * (i)) / lados + grau) + V.x);
