@@ -1,5 +1,6 @@
 package Models;
 
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
@@ -37,8 +38,8 @@ public class Poligono {
         double xtemp;
         double ytemp;
         double grau = (360/lados);
-        double R=abs(abs(fim.x)-abs(ini.x));
-        System.out.println(this.Central.x+" "+this.Central.y);
+        double R=ini.distancia(fim);
+        //System.out.println(this.Central.x+" "+this.Central.y);
         for(int i=0;i<lados;i++){
             xtemp = (R * Math.cos((2 * Math.PI * (i)) / lados + grau) + V.x);
             ytemp = (R * Math.sin((2 * Math.PI * (i)) / lados + grau) + V.y);
@@ -51,7 +52,7 @@ public class Poligono {
         }*/
         this.setArestas();
         calcCentroid();
-        System.out.println("Centroid :"+Central.x+","+Central.y);
+        //System.out.println("Centroid :"+Central.x+","+Central.y);
         //this.printVertices();
 
     }
@@ -77,5 +78,10 @@ public class Poligono {
             somaZ+=v.z;
         }
         this.Central=new Vertice(somaX/2,somaY/2,somaZ/2);
+    }
+    public void draw(GraphicsContext gc,int lado){
+        for (Aresta a:this.arestas){
+            a.draw(gc,1);
+        }
     }
 }

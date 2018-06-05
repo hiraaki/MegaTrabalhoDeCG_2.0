@@ -6,15 +6,12 @@
 package Controller;
 
 
-import Models.Poligono;
+import Models.*;
 import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-import Models.Aresta;
-import Models.ResizableCanvas;
-import Models.Vertice;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
@@ -59,13 +56,19 @@ public class FXMLController implements Initializable {
 //    @FXML
 //    private Button botaoPoligonoR;
 
-    public int cliques;
+    private int cliques;
 
-    public ArrayList<Vertice> verIrregular;
+    private ArrayList<Vertice> verIrregular;
 
-    public ArrayList<Aresta> arrIrregular;
+    private ArrayList<Aresta> arrIrregular;
 
-    public ArrayList<Poligono> poligonos;
+    private ArrayList<Poligono> poligonos;
+
+    private Vertice clique;
+
+    private ArrayList<Poligono> linhas;
+
+    private ArrayList<Poliedro> poliedros;
 
     GraphicsContext gc1;
     GraphicsContext gc2;
@@ -78,6 +81,10 @@ public class FXMLController implements Initializable {
         this.arrIrregular= new ArrayList<>();
         this.verIrregular= new ArrayList<>();
         this.poligonos = new ArrayList<>();
+        this.clique=new Vertice();
+        this.linhas=new ArrayList<>();
+        this.poliedros=new ArrayList<>();
+
         gc1= canvas1.getGraphicsContext2D();
         gc2= canvas2.getGraphicsContext2D();
         gc3= canvas3.getGraphicsContext2D();
@@ -144,11 +151,23 @@ public class FXMLController implements Initializable {
 
     public void Regular(MouseEvent e){
 
+        if(this.cliques>0){
+            this.poligonos.add(new Poligono(this.clique,new Vertice(e.getX(),e.getY(),0),6,null));
+            cliques=0;
+            drawall();
+        }else {
+            this.clique=new Vertice(e.getX(),e.getY(),0);
+            cliques++;
+        }
+
     }
 
     public void drawall(){
-        for(Aresta a: this.arrIrregular){
-            a.draw(gc1,1);
+//        for(Aresta a: this.arrIrregular){
+//            a.draw(gc1,1);
+//        }
+        for(Poligono p:this.poligonos){
+            p.draw(gc1,1);
         }
     }
 }
