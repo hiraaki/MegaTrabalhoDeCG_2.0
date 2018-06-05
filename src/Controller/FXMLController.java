@@ -89,7 +89,8 @@ public class FXMLController implements Initializable {
         this.clique=new Vertice();
         this.linhas=new ArrayList<>();
         this.poliedros=new ArrayList<>();
-
+        canvas1.widthProperty().addListener(evt -> drawall());
+        canvas1.heightProperty().addListener(evt -> drawall());
         gc1= canvas1.getGraphicsContext2D();
         gc2= canvas2.getGraphicsContext2D();
         gc3= canvas3.getGraphicsContext2D();
