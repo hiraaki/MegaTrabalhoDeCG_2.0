@@ -12,6 +12,8 @@ public class Poligono {
     public ArrayList<Aresta> arestas;
     public Vertice Central;
 
+    public Poligono() {
+    }
 
     public Poligono(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas) {
         this.vertices = vertices;
@@ -82,6 +84,18 @@ public class Poligono {
     public void draw(GraphicsContext gc,int lado){
         for (Aresta a:this.arestas){
             a.draw(gc,1);
+        }
+    }
+    public void copyIn(ArrayList<Vertice> vertices){
+        for(Vertice v:vertices){
+            this.vertices.add(new Vertice(v.x,v.y,v.z));
+        }
+        this.setArestas();
+    }
+    public void setVertices(ArrayList<Aresta> arestas){
+        for(Aresta a: arestas){
+            this.vertices.add(a.ini);
+            this.vertices.add(a.fim);
         }
     }
 }

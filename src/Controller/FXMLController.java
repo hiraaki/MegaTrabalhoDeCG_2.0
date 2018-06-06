@@ -69,7 +69,10 @@ public class FXMLController implements Initializable {
 
     private Vertice clique;
 
-    private ArrayList<Poligono> linhas;
+
+    //mantenha setando a bosta até ele clicar denovo na porra do botão ou em qualquer outro
+    private ArrayList<Vertice> linha;
+
 
     private ArrayList<Poliedro> poliedros;
 
