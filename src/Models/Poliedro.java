@@ -22,7 +22,7 @@ public class Poliedro {
             pface.arestas.add(new Aresta(arevolucionar.arestas.get(i).ini,novo.arestas.get(i).ini));
             pface.arestas.add(novo.arestas.get(i));
             pface.arestas.add(new Aresta(arevolucionar.arestas.get(i).fim,novo.arestas.get(i).fim));
-            pface.setVertices();
+            //pface.setVertices();
             faces.add(pface);
         }
     }

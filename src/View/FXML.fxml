@@ -103,7 +103,7 @@
                   </Tooltip>
                </tooltip>
             </Button>
-            <Button fx:id="botaoReta" layoutX="53.0" layoutY="164.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+            <Button fx:id="botaoPoly" layoutX="53.0" layoutY="164.0" mnemonicParsing="false" onAction="#botaoPolyline" prefHeight="35.0" prefWidth="35.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -119,7 +119,7 @@
                   </Tooltip>
                </tooltip>
             </Button>
-            <Button fx:id="botaoPoligonoR" onAction="#botaoPoligonoR" layoutX="132.0" layoutY="164.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+            <Button fx:id="botaoPoligonoR" layoutX="132.0" layoutY="164.0" mnemonicParsing="false" onAction="#botaoPoligonoR" prefHeight="35.0" prefWidth="35.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
