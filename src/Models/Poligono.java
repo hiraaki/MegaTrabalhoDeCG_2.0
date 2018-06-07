@@ -81,11 +81,12 @@ public class Poligono {
         }
         this.Central=new Vertice(somaX/2,somaY/2,somaZ/2);
     }
-    public void draw(GraphicsContext gc,int lado){
+    public void drawXY(GraphicsContext gc,int lado){
         for (Aresta a:this.arestas){
-            a.draw(gc,1);
+            a.draw(gc,lado);
         }
     }
+
     public void copyIn(ArrayList<Vertice> vertices){
         for(Vertice v:vertices){
             this.vertices.add(new Vertice(v.x,v.y,v.z));

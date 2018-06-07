@@ -1,28 +1,17 @@
 package Models;
 
 import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Color;
 
-public class ResizableCanvas extends Canvas {
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
-//    public ResizableCanvas() {
-//        // Redraw canvas when size changes.
-//        widthProperty().addListener(evt -> draw());
-//        heightProperty().addListener(evt -> draw());
-//    }
-//
-//    private void draw() {
-//        double width = getWidth();
-//        double height = getHeight();
-//
-//        GraphicsContext gc = getGraphicsContext2D();
-//        gc.clearRect(0, 0, width, height);
-//
-//        gc.setStroke(Color.RED);
-//        gc.strokeLine(0, 0, width, height);
-//        gc.strokeLine(0, height, width, 0);
-//    }
+import static com.sun.java.accessibility.util.AWTEventMonitor.addMouseListener;
+import static com.sun.java.accessibility.util.AWTEventMonitor.addMouseMotionListener;
+
+public class ResizableCanvas extends Canvas
+ {
+
 
     @Override
     public boolean isResizable() {
@@ -71,4 +60,5 @@ public class ResizableCanvas extends Canvas {
         //draw();
     }
 
-}
+
+ }

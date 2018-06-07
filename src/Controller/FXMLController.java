@@ -33,7 +33,7 @@ import static javafx.scene.text.FontWeight.findByWeight;
 public class FXMLController implements Initializable {
 
     @FXML
-    private Canvas canvas1;
+    private ResizableCanvas canvas1;
     
     @FXML
     private ResizableCanvas canvas2;
@@ -88,7 +88,7 @@ public class FXMLController implements Initializable {
     GraphicsContext gc3;
     GraphicsContext gc4;
 
-    int lados, polylineAtiva;
+    int lados, polylineAtiva, canvas;
 
 
     
@@ -178,7 +178,9 @@ public class FXMLController implements Initializable {
     }
 
     public void botaoPoligonoR(){
-        canvas1.setOnMouseClicked(this::Regular);
+        canvas1.setOnMouseClicked(this::RegularXY);
+        canvas2.setOnMouseClicked(this::RegularYZ);
+        canvas3.setOnMouseClicked(this::RegularZX);
         String resposta = JOptionPane.showInputDialog(null, "Quantos lados possui o polígono?");
 
         lados = Integer.parseInt(resposta);
@@ -189,11 +191,22 @@ public class FXMLController implements Initializable {
         }
     }
 
-    public void Regular(MouseEvent e){
-        this.poligonos.add(new Poligono(new Vertice(e.getX(),e.getY(),0),lados,null));
+    public void RegularXY(MouseEvent e){
+
+        this.poligonos.add(new Poligono(new Vertice(e.getX(), e.getY(), 0), lados, null));
         drawall();
+    }
 
+    public void RegularYZ(MouseEvent e){
 
+        this.poligonos.add(new Poligono(new Vertice(0, e.getY(), e.getX()), lados, null));
+        drawall();
+    }
+
+    public void RegularZX(MouseEvent e){
+
+        this.poligonos.add(new Poligono(new Vertice(e.getX(), 0, e.getY()), lados, null));
+        drawall();
     }
 
     public void botaoPolyline(){
@@ -249,7 +262,10 @@ public class FXMLController implements Initializable {
         gc4.clearRect(0,0,canvas4.getWidth(),canvas4.getHeight());
 
         for(Poligono p:this.poligonos){
-            p.draw(gc1,1);
+            p.drawXY(gc1,1);
+            p.drawXY(gc2,2);
+            p.drawXY(gc3,3);
+
         }
 
         desenhaRegua();

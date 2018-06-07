@@ -21,9 +21,9 @@ public class Aresta {
     public void draw(GraphicsContext gc, int lado){
         if(lado==1)
             gc.strokeLine(this.ini.x,this.ini.y,this.fim.x,this.fim.y);
-        else if(lado==2){
+        else if(lado==3){
             gc.strokeLine(this.ini.x,this.ini.z,this.fim.x,this.fim.z);
-        }else if(lado==3){
+        }else if(lado==2){
             gc.strokeLine(this.ini.z,this.ini.y,this.fim.z,this.fim.y);
         }
     }
