@@ -192,20 +192,20 @@ public class FXMLController implements Initializable {
     }
 
     public void RegularXY(MouseEvent e){
-
-        this.poligonos.add(new Poligono(new Vertice(e.getX(), e.getY(), 0), lados, null));
+        System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
+        this.poligonos.add(new Poligono(new Vertice(e.getX(), e.getY(), 0), lados, null,1));
         drawall();
     }
 
     public void RegularYZ(MouseEvent e){
-
-        this.poligonos.add(new Poligono(new Vertice(0, e.getY(), e.getX()), lados, null));
+        System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
+        this.poligonos.add(new Poligono(new Vertice(0, e.getY(), e.getX()), lados, null,3));
         drawall();
     }
 
     public void RegularZX(MouseEvent e){
-
-        this.poligonos.add(new Poligono(new Vertice(e.getX(), 0, e.getY()), lados, null));
+        System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
+        this.poligonos.add(new Poligono(new Vertice(e.getX(), 0, e.getY()), lados, null,2));
         drawall();
     }
 
