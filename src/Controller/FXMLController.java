@@ -74,6 +74,10 @@ public class FXMLController implements Initializable {
 
     private ArrayList<Poligono> poligonos;
 
+    private Poligono selected;
+
+    private Poliedro poliselected;
+
     private Vertice clique;
 
 
@@ -102,6 +106,8 @@ public class FXMLController implements Initializable {
         this.clique=new Vertice();
         this.linhas=new ArrayList<>();
         this.poliedros=new ArrayList<>();
+        this.poliselected = new Poliedro();
+        this.selected = new Poligono();
         canvas1.widthProperty().addListener(evt -> drawall());
         canvas1.heightProperty().addListener(evt -> drawall());
         canvas2.widthProperty().addListener(evt -> drawall());
@@ -148,7 +154,7 @@ public class FXMLController implements Initializable {
             if(verIrregular.get(0).distancia(new Vertice(e.getX(),e.getY(),0))<5) {
 
 
-                this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0)));
+                this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
                 System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                 System.out.println("saiu!!!!");
 
@@ -164,7 +170,8 @@ public class FXMLController implements Initializable {
                 System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                 verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
                 arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
-                        this.verIrregular.get(this.verIrregular.size() - 1)));
+                        this.verIrregular.get(this.verIrregular.size() - 1),
+                        null));
 
                 this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
             }
@@ -240,7 +247,8 @@ public class FXMLController implements Initializable {
                 System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                 verIrregular2.add(new Vertice(e.getX(), e.getY(), 0));
                 arrIrregular2.add(new Aresta(this.verIrregular2.get(this.verIrregular2.size() - 2),
-                        this.verIrregular2.get(this.verIrregular2.size() - 1)));
+                        this.verIrregular2.get(this.verIrregular2.size() - 1),
+                        null));
 
                 this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc1, 1);
             //}
@@ -251,21 +259,42 @@ public class FXMLController implements Initializable {
 
 
     }
+    public void clear() {
+        gc1.clearRect(0, 0, canvas1.getWidth(), canvas1.getHeight());
+        gc2.clearRect(0, 0, canvas2.getWidth(), canvas2.getHeight());
+        gc3.clearRect(0, 0, canvas3.getWidth(), canvas3.getHeight());
+        gc4.clearRect(0, 0, canvas4.getWidth(), canvas4.getHeight());
+    }
 
     public void drawall(){
-//        for(Aresta a: this.arrIrregular){
-//            a.draw(gc1,1);
-//        }
-        gc1.clearRect(0,0,canvas1.getWidth(),canvas1.getHeight());
-        gc2.clearRect(0,0,canvas2.getWidth(),canvas2.getHeight());
-        gc3.clearRect(0,0,canvas3.getWidth(),canvas3.getHeight());
-        gc4.clearRect(0,0,canvas4.getWidth(),canvas4.getHeight());
-
+        clear();
         for(Poligono p:this.poligonos){
-            p.drawXY(gc1,1);
-            p.drawXY(gc2,2);
-            p.drawXY(gc3,3);
+            if(p==this.selected){
+                gc1.setStroke(Color.RED);
+                System.out.println("selected");
+                p.draw(gc1,1);
+                p.draw(gc2,2);
+                p.draw(gc3,3);
+                gc1.setStroke(Color.BLACK);
+            }else {
+                p.draw(gc1,1);
+                p.draw(gc2,2);
+                p.draw(gc3,3);
+            }
 
+        }
+        for(Poliedro p:this.poliedros){
+            if(p==this.poliselected){
+                gc1.setStroke(Color.RED);
+                p.draw(gc1,1);
+                p.draw(gc2,2);
+                p.draw(gc3,3);
+                gc1.setStroke(Color.BLACK);
+            }else{
+                p.draw(gc1,1);
+                p.draw(gc2,2);
+                p.draw(gc3,3);
+            }
         }
 
         desenhaRegua();
@@ -330,7 +359,61 @@ public class FXMLController implements Initializable {
             }
 
         }
+    }
 
+    public void buttonselect(){
+        canvas1.setOnMouseClicked(this::select);
+    }
 
+    public void select(MouseEvent e){
+        Vertice v = new Vertice(e.getX(),e.getY(),0);
+        boolean foundpolig=false;
+        boolean foundpolie=false;
+        for(Poligono p :this.poligonos){
+            for(Aresta a :p.arestas){
+                if(a.selected(v)){
+                    this.selected=a.pai;
+                    foundpolig=true;
+                    break;
+                }
+            }
+            if(foundpolig){
+                break;
+            }
+        }
+        for(Poliedro poli:this.poliedros){
+            for(Poligono p:poli.faces){
+                if(p.isselected(v)){
+                    this.poliselected=poli;
+                    foundpolie=true;
+                    break;
+                }
+            }
+            if(foundpolie){
+                break;
+            }
+        }
+        if(foundpolie&&!foundpolig){
+            selected=null;
+        }else if(!foundpolie&&foundpolig){
+            poliselected=null;
+        }
+
+        if(!foundpolig&&this.selected!=null){
+            this.selected=null;
+        }
+        if(!foundpolie&&this.poliselected!=null){
+            this.poliselected=null;
+        }
+
+        drawall();
+    }
+    public void buuttonDelete(){
+        if(selected!=null)
+            this.poligonos.remove(selected);
+        else if(poliselected!=null)
+            this.poliedros.remove(poliselected);
+
+        drawall();
     }
 }

@@ -40,7 +40,7 @@
       </ScrollPane>
       <Pane id="menuLateral" cacheHint="SCALE" maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefWidth="230.0" style="-fx-background-color: #ddd; -fx-border-color: #bbb;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button fx:id="botaoSeleciona" layoutX="53.0" layoutY="40.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+            <Button fx:id="botaoSeleciona" onAction="#buttonselect" layoutX="53.0" layoutY="40.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -55,7 +55,7 @@
                      </font></Tooltip>
                </tooltip>
             </Button>
-            <Button fx:id="botaoExclui" layoutX="132.0" layoutY="40.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
+            <Button fx:id="botaoExclui" onAction="#buuttonDelete" layoutX="132.0" layoutY="40.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>

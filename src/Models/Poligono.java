@@ -11,8 +11,12 @@ public class Poligono {
     public ArrayList<Vertice> vertices;
     public ArrayList<Aresta> arestas;
     public Vertice Central;
-
+    public Poliedro pai;
     public Poligono() {
+        this.vertices=new ArrayList<>();
+        this.arestas=new ArrayList<>();
+        this.Central = new Vertice();
+        this.pai = new Poliedro();
     }
 
     public Poligono(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas) {
@@ -79,9 +83,9 @@ public class Poligono {
     public void setArestas(){
         for (int i = 0; i < this.vertices.size(); i++) {
             if(i!=this.vertices.size()-1){
-                this.arestas.add(new Aresta(this.vertices.get(i),this.vertices.get(i+1)));
+                this.arestas.add(new Aresta(this.vertices.get(i),this.vertices.get(i+1),this));
             }else if(i==this.vertices.size()-1){
-                this.arestas.add(new Aresta(this.vertices.get(i),this.vertices.get(0)));
+                this.arestas.add(new Aresta(this.vertices.get(i),this.vertices.get(0),this));
             }
         }
     }
@@ -98,7 +102,7 @@ public class Poligono {
         }
         this.Central=new Vertice(somaX/2,somaY/2,somaZ/2);
     }
-    public void drawXY(GraphicsContext gc,int lado){
+    public void draw(GraphicsContext gc,int lado){
         for (Aresta a:this.arestas){
             a.draw(gc,lado);
         }
@@ -110,10 +114,32 @@ public class Poligono {
         }
         this.setArestas();
     }
-    public void setVertices(ArrayList<Aresta> arestas){
-        for(Aresta a: arestas){
+    public void setVertices(){
+        for(Aresta a: this.arestas){
             this.vertices.add(a.ini);
             this.vertices.add(a.fim);
         }
     }
+
+    public boolean isselected(Vertice v){
+
+        boolean found=false;
+        for (Aresta a : this.arestas){
+            //System.out.println(a.DistanceFromLine(v));
+            if(a.DistanceFromLine(v)<5){
+                found=true;
+                break;
+            }
+        }
+        return found;
+    }
+    public void translada(Vertice V){
+        for(Vertice v: this.vertices){
+            v.x=v.x+V.x-this.Central.x;
+            v.y=v.x+V.y-this.Central.y;
+            v.z=v.x+V.z-this.Central.z;
+        }
+        calcCentroid();
+    }
+
 }

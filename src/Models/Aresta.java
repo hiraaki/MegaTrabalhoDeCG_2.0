@@ -8,15 +8,17 @@ import static java.lang.StrictMath.sqrt;
 public class Aresta {
     public Vertice ini;
     public Vertice fim;
-
+    public Poligono pai;
     public Aresta() {
+        this.pai = new Poligono();
         this.ini= new Vertice();
         this.fim= new Vertice();
     }
 
-    public Aresta(Vertice ini, Vertice fim) {
+    public Aresta(Vertice ini, Vertice fim,Poligono pai) {
         this.ini = ini;
         this.fim = fim;
+        this.pai = pai;
     }
     public void draw(GraphicsContext gc, int lado){
         if(lado==1)
@@ -76,5 +78,14 @@ public class Aresta {
         }
 
         return distanceSegment;
+    }
+
+    public boolean selected(Vertice v){
+        if(this.DistanceFromLine(v)<5){
+            System.out.println(this.DistanceFromLine(v));
+            return true;
+        }else {
+            return false;
+        }
     }
 }
