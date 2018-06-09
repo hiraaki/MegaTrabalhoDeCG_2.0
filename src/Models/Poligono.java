@@ -54,17 +54,17 @@ public class Poligono {
                 xtemp = (R * Math.cos((2 * Math.PI * (i)) / lados + grau) + V.x);
                 ytemp = (R * Math.sin((2 * Math.PI * (i)) / lados + grau) + V.y);
                 vertices.add(new Vertice(xtemp,ytemp, 0));
-                System.out.println("VERTICE X="+xtemp+" Y="+ytemp);
+               // System.out.println("VERTICE X="+xtemp+" Y="+ytemp);
             }else if(plano == 2){
                 xtemp = (R * Math.cos((2 * Math.PI * (i)) / lados + grau) + V.x);
                 ytemp = (R * Math.sin((2 * Math.PI * (i)) / lados + grau) + V.z);
                 vertices.add(new Vertice(xtemp,0, ytemp));
-                System.out.println("VERTICE X="+xtemp+" Z="+ytemp);
+              //  System.out.println("VERTICE X="+xtemp+" Z="+ytemp);
             } else if(plano ==3){
                 xtemp = (R * Math.cos((2 * Math.PI * (i)) / lados + grau) + V.z);
                 ytemp = (R * Math.sin((2 * Math.PI * (i)) / lados + grau) + V.y);
                 vertices.add(new Vertice(0,ytemp, xtemp));
-                System.out.println("VERTICE Z="+xtemp+" Y="+ytemp);
+             //   System.out.println("VERTICE Z="+xtemp+" Y="+ytemp);
             }
 
             //System.out.println(this.Vertices.get(i).X+" "+this.Vertices.get(i).Y);

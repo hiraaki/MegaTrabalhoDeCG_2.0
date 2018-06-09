@@ -189,7 +189,6 @@ public class FXMLController implements Initializable {
         canvas2.setOnMouseClicked(this::RegularYZ);
         canvas3.setOnMouseClicked(this::RegularZX);
         String resposta = JOptionPane.showInputDialog(null, "Quantos lados possui o polígono?");
-
         lados = Integer.parseInt(resposta);
         System.out.println(lados);
 
