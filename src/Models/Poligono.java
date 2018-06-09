@@ -91,16 +91,23 @@ public class Poligono {
     }
 
     public void calcCentroid(){
-        double somaX=0;
-        double somaY=0;
-        double somaZ=0;
+        double maiorX=Double.MIN_VALUE, maiorY=Double.MIN_VALUE, maiorZ=Double.MIN_VALUE;
+        double menorX=Double.MAX_VALUE, menorY=Double.MAX_VALUE, menorZ=Double.MAX_VALUE;
 
         for(Vertice v:this.vertices){
-            somaX+=v.x;
-            somaY+=v.y;
-            somaZ+=v.z;
+            if(v.x>maiorX) maiorX=v.x;
+
+            if(v.x<menorX) menorX=v.x;
+
+            if(v.y>maiorY) maiorY=v.y;
+
+            if(v.y<menorY) menorY=v.y;
+
+            if(v.z>maiorZ) maiorZ=v.z;
+
+            if(v.z<menorZ) menorZ=v.z;
         }
-        this.Central=new Vertice(somaX/2,somaY/2,somaZ/2);
+        this.Central=new Vertice(menorX+((maiorX-menorX)/2),menorY+((maiorY-menorY)/2),menorZ+((maiorZ-menorZ)/2));
     }
     public void draw(GraphicsContext gc,int lado){
         for (Aresta a:this.arestas){
@@ -134,19 +141,13 @@ public class Poligono {
         return found;
     }
     public void translada(Vertice V){
+        double x =V.x-this.Central.x;
+        double y =V.y-this.Central.y;
         for(Vertice v: this.vertices){
-            double x =v.x+(V.x-v.x);
-            double y =v.y+(V.y-v.y);
-            System.out.println("X:"+v.x+" Y:"+v.y);
-            System.out.println("X:"+(v.x+(V.x-v.x))+" Y:"+(v.y+(V.y-v.y)));
-            System.out.println();
-            v.x=x;
-            v.y=y;
-            System.out.println("X:"+V.x+" Y:"+V.y);
+            v.x+=x;
+            v.y+=y;
         }
-
         calcCentroid();
-        //System.out.println("X:"+this.Central.x+" Y:"+this.Central.y);
     }
 
 }
