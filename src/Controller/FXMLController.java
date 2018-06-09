@@ -11,19 +11,14 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-
 import javax.swing.*;
 
-import static javafx.scene.text.FontWeight.findByWeight;
+
 
 /**
  * FXML Controller class
@@ -146,7 +141,7 @@ public class FXMLController implements Initializable {
         }
     }
 
-    public void Irregular(MouseEvent e){
+    private void Irregular(MouseEvent e){
 
 
         if(verIrregular.size()>0){
@@ -197,22 +192,24 @@ public class FXMLController implements Initializable {
         }
     }
 
-    public void RegularXY(MouseEvent e){
+    private void RegularXY(MouseEvent e){
         System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
         this.poligonos.add(new Poligono(new Vertice(e.getX(), e.getY(), 0), lados, null,1));
-        drawall();
+        //drawall();
+        this.poligonos.get(this.poligonos.size()-1).draw(gc1,1);
     }
 
-    public void RegularYZ(MouseEvent e){
+    private void RegularYZ(MouseEvent e){
         System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
         this.poligonos.add(new Poligono(new Vertice(0, e.getY(), e.getX()), lados, null,3));
-        drawall();
+        this.poligonos.get(this.poligonos.size()-1).draw(gc2,2);
     }
 
-    public void RegularZX(MouseEvent e){
+    private void RegularZX(MouseEvent e){
         System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
         this.poligonos.add(new Poligono(new Vertice(e.getX(), 0, e.getY()), lados, null,2));
-        drawall();
+        this.poligonos.get(this.poligonos.size()-1).draw(gc3,3);
+        //drawall();
     }
 
     public void botaoPolyline(){
@@ -223,7 +220,7 @@ public class FXMLController implements Initializable {
         }
     }
 
-    public void Polyline(MouseEvent e){
+    private void Polyline(MouseEvent e){
 
         if(verIrregular2.size()>0){
 
@@ -258,14 +255,14 @@ public class FXMLController implements Initializable {
 
 
     }
-    public void clear() {
+    private void clear() {
         gc1.clearRect(0, 0, canvas1.getWidth(), canvas1.getHeight());
         gc2.clearRect(0, 0, canvas2.getWidth(), canvas2.getHeight());
         gc3.clearRect(0, 0, canvas3.getWidth(), canvas3.getHeight());
         gc4.clearRect(0, 0, canvas4.getWidth(), canvas4.getHeight());
     }
 
-    public void drawall(){
+    private void drawall(){
         clear();
         for(Poligono p:this.poligonos){
             if(p==this.selected){
@@ -299,13 +296,13 @@ public class FXMLController implements Initializable {
         desenhaRegua();
     }
 
-    public void fechaPolilyne(){
+    private void fechaPolilyne(){
         this.poligonos.add(new Poligono(this.verIrregular2,this.arrIrregular2));
         this.verIrregular2=new ArrayList<>();
         this.arrIrregular2=new ArrayList<>();
     }
 
-    public void desenhaRegua(){
+    private void desenhaRegua(){
         Font f = new Font("Verdana",9);
         gc1.setFont(f);
         gc2.setFont(f);
@@ -364,7 +361,7 @@ public class FXMLController implements Initializable {
         canvas1.setOnMouseClicked(this::select);
     }
 
-    public void select(MouseEvent e){
+    private void select(MouseEvent e){
         Vertice v = new Vertice(e.getX(),e.getY(),0);
         boolean foundpolig=false;
         boolean foundpolie=false;
@@ -408,11 +405,30 @@ public class FXMLController implements Initializable {
         drawall();
     }
     public void buuttonDelete(){
-        if(selected!=null)
+        if(selected!=null) {
             this.poligonos.remove(selected);
-        else if(poliselected!=null)
+            this.selected=null;
+        }else if(poliselected!=null) {
             this.poliedros.remove(poliselected);
+            this.poliselected=null;
+        }
+        drawall();
+    }
+    public void buttonRotaciona(){
+        canvas1.setOnMouseDragEntered(this::rotaciona);
+    }
+    private void rotaciona(MouseEvent e){
+        if(selected!=null){
 
+        }
+    }
+    public void buttontranslada(){
+        canvas1.setOnMouseClicked(this::translada);
+    }
+    private void translada(MouseEvent e){
+        if(selected!=null){
+            selected.translada(new Vertice(e.getX(),e.getY(),0));
+        }
         drawall();
     }
 }

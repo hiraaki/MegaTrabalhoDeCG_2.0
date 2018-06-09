@@ -135,11 +135,18 @@ public class Poligono {
     }
     public void translada(Vertice V){
         for(Vertice v: this.vertices){
-            v.x=v.x+V.x-this.Central.x;
-            v.y=v.x+V.y-this.Central.y;
-            v.z=v.x+V.z-this.Central.z;
+            double x =v.x+(V.x-v.x);
+            double y =v.y+(V.y-v.y);
+            System.out.println("X:"+v.x+" Y:"+v.y);
+            System.out.println("X:"+(v.x+(V.x-v.x))+" Y:"+(v.y+(V.y-v.y)));
+            System.out.println();
+            v.x=x;
+            v.y=y;
+            System.out.println("X:"+V.x+" Y:"+V.y);
         }
+
         calcCentroid();
+        //System.out.println("X:"+this.Central.x+" Y:"+this.Central.y);
     }
 
 }
