@@ -149,5 +149,17 @@ public class Poligono {
         }
         calcCentroid();
     }
+    public void rotaciona(double radians,int lado){
+        if(lado==1) {
+            double seno = Math.sin(radians);
+            double cose = Math.cos(radians);
+            double ante = 0;
+            for (Vertice v : this.vertices) {
+                ante = (v.x * cose) + (v.z * seno);
+                v.z = (v.z * cose) - (v.x * seno);
+                v.x = ante;
+            }
+        }
+    }
 
 }
