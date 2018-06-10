@@ -128,12 +128,12 @@ public class Poligono {
         }
     }
 
-    public boolean isselected(Vertice v){
+    public boolean isselected(Vertice v, int lados){
 
         boolean found=false;
         for (Aresta a : this.arestas){
             //System.out.println(a.DistanceFromLine(v));
-            if(a.DistanceFromLine(v)<5){
+            if(a.selected(v,lados)){
                 found=true;
                 break;
             }
@@ -143,9 +143,11 @@ public class Poligono {
     public void translada(Vertice V){
         double x =V.x-this.Central.x;
         double y =V.y-this.Central.y;
+        double z =V.z-this.Central.z;
         for(Vertice v: this.vertices){
             v.x+=x;
             v.y+=y;
+            v.z+=z;
         }
         calcCentroid();
     }
