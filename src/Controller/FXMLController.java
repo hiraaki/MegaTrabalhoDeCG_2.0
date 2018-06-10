@@ -75,8 +75,6 @@ public class FXMLController implements Initializable {
 
     private Vertice clique;
 
-
-    //mantenha setando a bosta até ele clicar denovo na porra do botão ou em qualquer outro
     private ArrayList<Vertice> linhas;
 
 
@@ -267,7 +265,7 @@ public class FXMLController implements Initializable {
         for(Poligono p:this.poligonos){
             if(p==this.selected){
                 gc1.setStroke(Color.RED);
-                System.out.println("selected");
+                //System.out.println("selected");
                 p.draw(gc1,1);
                 p.draw(gc2,2);
                 p.draw(gc3,3);
@@ -279,19 +277,18 @@ public class FXMLController implements Initializable {
             }
 
         }
-        for(Poliedro p:this.poliedros){
-            if(p==this.poliselected){
+        for(Poliedro p:this.poliedros)
+            if (p == this.poliselected) {
                 gc1.setStroke(Color.RED);
-                p.draw(gc1,1);
-                p.draw(gc2,2);
-                p.draw(gc3,3);
+                p.draw(gc1, 1);
+                p.draw(gc2, 2);
+                p.draw(gc3, 3);
                 gc1.setStroke(Color.BLACK);
-            }else{
-                p.draw(gc1,1);
-                p.draw(gc2,2);
-                p.draw(gc3,3);
+            } else {
+                p.draw(gc1, 1);
+                p.draw(gc2, 2);
+                p.draw(gc3, 3);
             }
-        }
 
         desenhaRegua();
     }
@@ -365,9 +362,18 @@ public class FXMLController implements Initializable {
         Vertice v = new Vertice(e.getX(),e.getY(),0);
         boolean foundpolig=false;
         boolean foundpolie=false;
+        int lado=0;
+        if(e.getSource()==canvas1){
+            lado=1;
+        }else if(e.getSource()==canvas2){
+            lado=2;
+        }else if(e.getSource()==canvas3){
+            lado=3;
+        }
+
         for(Poligono p :this.poligonos){
             for(Aresta a :p.arestas){
-                if(a.selected(v)){
+                if(a.selected(v,lado)){
                     this.selected=a.pai;
                     foundpolig=true;
                     break;
@@ -423,7 +429,7 @@ public class FXMLController implements Initializable {
         }
     }
     public void buttontranslada(){
-        canvas1.setOnMouseClicked(this::translada);
+        canvas1.setOnMouseDragged(this::translada);
     }
     private void translada(MouseEvent e){
         if(selected!=null){

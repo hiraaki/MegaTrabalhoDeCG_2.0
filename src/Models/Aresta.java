@@ -29,14 +29,30 @@ public class Aresta {
             gc.strokeLine(this.ini.z,this.ini.y,this.fim.z,this.fim.y);
         }
     }
-    public double DistanceFromLine(Vertice v){
-        double ax, ay, bx, by, cx, cy;
-        ax=this.ini.x;
-        ay=this.ini.y;
-        bx=this.fim.x;
-        by=this.fim.y;
-        cx=v.x;
-        cy=v.y;
+    public double DistanceFromLine(Vertice v, int lado){
+        double ax=0, ay=0, bx=0, by=0, cx=0, cy=0;
+        if (lado==1) {
+            ax = this.ini.x;
+            ay = this.ini.y;
+            bx = this.fim.x;
+            by = this.fim.y;
+            cx = v.x;
+            cy = v.y;
+        }else if(lado==2){
+            ax = this.ini.z;
+            ay = this.ini.y;
+            bx = this.fim.z;
+            by = this.fim.y;
+            cx = v.z;
+            cy = v.y;
+        }else if (lado==3){
+            ax = this.ini.x;
+            ay = this.ini.z;
+            bx = this.fim.x;
+            by = this.fim.z;
+            cx = v.x;
+            cy = v.z;
+        }
         double distanceSegment,distanceLine;
         double r_numerator = (cx-ax)*(bx-ax) + (cy-ay)*(by-ay);
         double r_denomenator = (bx-ax)*(bx-ax) + (by-ay)*(by-ay);
@@ -80,9 +96,9 @@ public class Aresta {
         return distanceSegment;
     }
 
-    public boolean selected(Vertice v){
-        if(this.DistanceFromLine(v)<5){
-            System.out.println(this.DistanceFromLine(v));
+    public boolean selected(Vertice v,int lado){
+        if(this.DistanceFromLine(v,lado)<5){
+            //System.out.println(this.DistanceFromLine(v));
             return true;
         }else {
             return false;
