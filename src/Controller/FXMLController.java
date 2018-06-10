@@ -18,6 +18,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javax.swing.*;
 
+import static java.lang.Math.acos;
+import static java.lang.Math.atan2;
+import static java.lang.Math.pow;
 
 
 /**
@@ -331,7 +334,6 @@ public class FXMLController implements Initializable {
         gc2.setFont(f);
         gc3.setFont(f);
         gc4.setFont(f);
-
         for (int i=0;i<=canvas1.getHeight();i+=10){
             gc1.strokeLine(0,i,6,i);
             if(i%50==0){
@@ -459,15 +461,43 @@ public class FXMLController implements Initializable {
         drawall();
     }
     public void buttonRotaciona(){
+        canvas1.setOnMousePressed(this::rotaciona);
         canvas1.setOnMouseDragEntered(this::rotaciona);
-
+        canvas1.setOnMouseReleased(this::clearCanvasSet);
         if(arrIrregular2.size()>0){
             fechaPolilyne();
         }
     }
-    private void rotaciona(MouseEvent e){
-        if(selected!=null){
 
+    public void clearCanvasSet(MouseEvent e){
+        canvas1.setOnMousePressed(null);
+        canvas1.setOnMouseDragEntered(null);
+        canvas1.setOnMouseReleased(null);
+        canvas2.setOnMousePressed(null);
+        canvas2.setOnMouseDragEntered(null);
+        canvas2.setOnMouseReleased(null);
+        canvas3.setOnMousePressed(null);
+        canvas3.setOnMouseDragEntered(null);
+        canvas3.setOnMouseReleased(null);
+    }
+    private void rotaciona(MouseEvent e){
+        if((e.getX()!=this.clique.x)&&(e.getY()!=clique.x)) {
+
+            if (selected != null) {
+                if(clique!=null){
+                    Vertice novo=new Vertice(e.getX(),e.getY(),0);
+                    double a = selected.Central.distancia(novo);
+                    double b = novo.distancia(clique);
+                    double c = selected.Central.distancia(novo);
+                    double angulo = acos(pow(b,2)-pow(a,2)-pow(c,2))/(2*a*c);
+                    selected.rotaciona(angulo,1);
+                    this.clique=novo;
+                }else{
+                    clique= new Vertice(e.getX(),e.getY(),0);
+                }
+            }
+            this.clique.x=e.getX();
+            this.clique.y=e.getY();
         }
     }
     public void buttontranslada(){

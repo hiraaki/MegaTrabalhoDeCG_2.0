@@ -22,6 +22,9 @@ public class Poligono {
     public Poligono(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas) {
         this.vertices = vertices;
         this.arestas = arestas;
+        for(Aresta a:this.arestas){
+            a.pai=this;
+        }
     }
 
     public Poligono(ArrayList<Vertice> vertices) {
@@ -163,5 +166,6 @@ public class Poligono {
             }
         }
     }
+
 
 }
