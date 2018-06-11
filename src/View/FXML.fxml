@@ -30,10 +30,16 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                   <ResizableCanvas fx:id="canvas1" height="313.0" width="509.0" />
                   <ResizableCanvas fx:id="canvas2" height="306.0" width="510.0" GridPane.rowIndex="1" />
                   <ResizableCanvas fx:id="canvas3" height="308.0" width="510.0" GridPane.columnIndex="1" />
                   <ResizableCanvas fx:id="canvas4" height="306.0" width="509.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                     <image>
+                        <Image url="@../imagens/xy.png" />
+                     </image>
+                  </ImageView>
                </children>
             </GridPane>
          </content>

@@ -101,6 +101,7 @@ public class FXMLController implements Initializable {
         this.verIrregular= new ArrayList<>();
         this.verIrregular2 = new ArrayList<>();
         this.poligonos = new ArrayList<>();
+        this.polyline = new ArrayList<>();
         this.clique=new Vertice();
         this.linhas=new ArrayList<>();
         this.poliedros=new ArrayList<>();
@@ -214,6 +215,8 @@ public class FXMLController implements Initializable {
 
     public void botaoPolyline(){
         canvas1.setOnMouseClicked(this::Polyline);
+        canvas2.setOnMouseClicked(this::Polyline);
+        canvas3.setOnMouseClicked(this::Polyline);
         if(arrIrregular2.size()>0||polylineAtiva>0){
             fechaPolilyne();
             polylineAtiva=0;
@@ -222,9 +225,8 @@ public class FXMLController implements Initializable {
 
     private void Polyline(MouseEvent e){
 
-        if(verIrregular2.size()>0){
-
-
+        if(e.getSource()==canvas1){
+            if(verIrregular2.size()>0){
                 System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                 verIrregular2.add(new Vertice(e.getX(), e.getY(), 0));
                 arrIrregular2.add(new Aresta(this.verIrregular2.get(this.verIrregular2.size() - 2),
@@ -232,10 +234,17 @@ public class FXMLController implements Initializable {
                         null));
 
                 this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc1, 1);
-        }else {
-            verIrregular2.add(new Vertice(e.getX(), e.getY(), 0));
-            polylineAtiva=1;
+            }else {
+                verIrregular2.add(new Vertice(e.getX(), e.getY(), 0));
+                polylineAtiva=1;
+            }
+        }else if(e.getSource()==canvas2){
+
+        }else if(e.getSource()==canvas3){
+
         }
+
+
 
 
     }
@@ -320,7 +329,7 @@ public class FXMLController implements Initializable {
     }
 
     private void fechaPolilyne(){
-        this.poligonos.add(new Poligono(this.verIrregular2,this.arrIrregular2));
+        this.polyline.add(new Poligono(this.verIrregular2,this.arrIrregular2));
         this.verIrregular2=new ArrayList<>();
         this.arrIrregular2=new ArrayList<>();
     }
