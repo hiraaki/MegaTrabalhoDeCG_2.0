@@ -139,6 +139,8 @@ public class FXMLController implements Initializable {
     public void ButtonPonto(){
 
         canvas1.setOnMouseClicked(this::Irregular);
+        canvas2.setOnMouseClicked(this::Irregular);
+        canvas3.setOnMouseClicked(this::Irregular);
         if(arrIrregular2.size()>0){
             fechaPolilyne();
         }
@@ -183,9 +185,9 @@ public class FXMLController implements Initializable {
     }
 
     public void botaoPoligonoR(){
-        canvas1.setOnMouseClicked(this::RegularXY);
-        canvas2.setOnMouseClicked(this::RegularYZ);
-        canvas3.setOnMouseClicked(this::RegularZX);
+        canvas1.setOnMouseClicked(this::Regular);
+        canvas2.setOnMouseClicked(this::Regular);
+        canvas3.setOnMouseClicked(this::Regular);
         String resposta = JOptionPane.showInputDialog(null, "Quantos lados possui o polígono?");
         lados = Integer.parseInt(resposta);
         System.out.println(lados);
@@ -195,25 +197,20 @@ public class FXMLController implements Initializable {
         }
     }
 
-    private void RegularXY(MouseEvent e){
-        System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
-        this.poligonos.add(new Poligono(new Vertice(e.getX(), e.getY(), 0), lados, null,1));
-        //drawall();
-        this.poligonos.get(this.poligonos.size()-1).draw(gc1,1);
+    private void Regular(MouseEvent e){
+
+        if(e.getSource()==canvas1){
+            this.poligonos.add(new Poligono(new Vertice(e.getX(), e.getY(), 0), lados, null,1));
+            this.poligonos.get(this.poligonos.size()-1).draw(gc1,1);
+        }else if(e.getSource()==canvas2){
+            this.poligonos.add(new Poligono(new Vertice(0, e.getY(), e.getX()), lados, null,3));
+            this.poligonos.get(this.poligonos.size()-1).draw(gc2,2);
+        }else if(e.getSource()==canvas3){
+            this.poligonos.add(new Poligono(new Vertice(e.getX(), 0, e.getY()), lados, null,2));
+            this.poligonos.get(this.poligonos.size()-1).draw(gc3,3);
+        }
     }
 
-    private void RegularYZ(MouseEvent e){
-        System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
-        this.poligonos.add(new Poligono(new Vertice(0, e.getY(), e.getX()), lados, null,3));
-        this.poligonos.get(this.poligonos.size()-1).draw(gc2,2);
-    }
-
-    private void RegularZX(MouseEvent e){
-        System.out.println("MOUSE X="+e.getX()+"Y="+e.getY());
-        this.poligonos.add(new Poligono(new Vertice(e.getX(), 0, e.getY()), lados, null,2));
-        this.poligonos.get(this.poligonos.size()-1).draw(gc3,3);
-        //drawall();
-    }
 
     public void botaoPolyline(){
         canvas1.setOnMouseClicked(this::Polyline);
