@@ -38,14 +38,14 @@ public class Aresta {
             by = this.fim.y;
             cx = v.x;
             cy = v.y;
-        }else if(lado==3){
+        }else if(lado==2){
             ax = this.ini.z;
             ay = this.ini.y;
             bx = this.fim.z;
             by = this.fim.y;
             cx = v.z;
             cy = v.y;
-        }else if (lado==2){
+        }else if (lado==3){
             ax = this.ini.x;
             ay = this.ini.z;
             bx = this.fim.x;

@@ -18,9 +18,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javax.swing.*;
 
-import static java.lang.Math.acos;
-import static java.lang.Math.atan2;
-import static java.lang.Math.pow;
+import static java.lang.Math.*;
 
 
 /**
@@ -32,16 +30,16 @@ public class FXMLController implements Initializable {
 
     @FXML
     private ResizableCanvas canvas1;
-    
+
     @FXML
     private ResizableCanvas canvas2;
-    
+
     @FXML
     private ResizableCanvas canvas3;
-    
+
     @FXML
     private ResizableCanvas canvas4;
-    
+
 //    @FXML
 //    private Button botaoSeleciona;
 //
@@ -93,7 +91,7 @@ public class FXMLController implements Initializable {
     int lados, polylineAtiva, canvas;
 
 
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.arrIrregular= new ArrayList<>();
@@ -101,12 +99,16 @@ public class FXMLController implements Initializable {
         this.verIrregular= new ArrayList<>();
         this.verIrregular2 = new ArrayList<>();
         this.poligonos = new ArrayList<>();
+
         this.polyline = new ArrayList<>();
         this.clique=new Vertice();
+
+        this.clique=null;
+
         this.linhas=new ArrayList<>();
         this.poliedros=new ArrayList<>();
-        this.poliselected = new Poliedro();
-        this.selected = new Poligono();
+        this.poliselected =null;
+        this.selected =null;
         canvas1.widthProperty().addListener(evt -> drawall());
         canvas1.heightProperty().addListener(evt -> drawall());
         canvas2.widthProperty().addListener(evt -> drawall());
@@ -156,8 +158,8 @@ public class FXMLController implements Initializable {
 
 
                 this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
-                System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
-                System.out.println("saiu!!!!");
+                //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                //System.out.println("saiu!!!!");
 
                 this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
 
@@ -168,7 +170,7 @@ public class FXMLController implements Initializable {
 
             }else {
 
-                System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                 verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
                 arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
                         this.verIrregular.get(this.verIrregular.size() - 1),
@@ -179,7 +181,6 @@ public class FXMLController implements Initializable {
         }else {
 
             verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
-
 
         }
 
@@ -416,43 +417,48 @@ public class FXMLController implements Initializable {
             v = new Vertice(e.getX(),0,e.getY());
             lado=3;
         }
-
-        for(Poligono p :this.poligonos){
-            for(Aresta a :p.arestas){
-                if(a.selected(v,lado)){
-                    this.selected=a.pai;
-                    foundpolig=true;
+        if(this.poliselected==null) {
+            for (Poliedro poli : this.poliedros) {
+                for (Poligono p : poli.faces) {
+                    if (p.isselected(v, lados)) {
+                        this.poliselected = poli;
+                        foundpolie = true;
+                        break;
+                    }
+                }
+                if (foundpolie) {
+                    if(selected!=null) {
+                        this.selected = null;
+                    }
                     break;
                 }
             }
-            if(foundpolig){
-                break;
-            }
         }
-        for(Poliedro poli:this.poliedros){
-            for(Poligono p:poli.faces){
-                if(p.isselected(v, lados)){
-                    this.poliselected=poli;
-                    foundpolie=true;
+        if(this.selected==null) {
+            for (Poligono p : this.poligonos) {
+                for (Aresta a : p.arestas) {
+                    if (a.selected(v, lado)) {
+                        this.selected = a.pai;
+                        foundpolig = true;
+                        break;
+                    }
+                }
+                if (foundpolig) {
+                    if(poliselected!=null){
+                        this.poliselected=null;
+                    }
                     break;
                 }
             }
-            if(foundpolie){
-                break;
-            }
-        }
-        if(foundpolie&&!foundpolig){
-            selected=null;
-        }else if(!foundpolie&&foundpolig){
-            poliselected=null;
         }
 
-        if(!foundpolig&&this.selected!=null){
+
+        if(!foundpolie&&!foundpolig){
             this.selected=null;
-        }
-        if(!foundpolie&&this.poliselected!=null){
             this.poliselected=null;
         }
+
+
 
         drawall();
     }
@@ -467,64 +473,114 @@ public class FXMLController implements Initializable {
         drawall();
     }
     public void buttonRotaciona(){
-        canvas1.setOnMousePressed(this::rotaciona);
-        canvas1.setOnMouseDragEntered(this::rotaciona);
+        canvas1.setOnMousePressed(this::setClick);
+        canvas1.setOnMouseDragged(this::rotaciona);
         canvas1.setOnMouseReleased(this::clearCanvasSet);
         if(arrIrregular2.size()>0){
             fechaPolilyne();
         }
     }
-
     public void clearCanvasSet(MouseEvent e){
         canvas1.setOnMousePressed(null);
+        canvas1.setOnMouseClicked(null);
         canvas1.setOnMouseDragEntered(null);
         canvas1.setOnMouseReleased(null);
         canvas2.setOnMousePressed(null);
+        canvas2.setOnMouseClicked(null);
         canvas2.setOnMouseDragEntered(null);
         canvas2.setOnMouseReleased(null);
         canvas3.setOnMousePressed(null);
+        canvas3.setOnMouseClicked(null);
         canvas3.setOnMouseDragEntered(null);
         canvas3.setOnMouseReleased(null);
+        this.clique=null;
+    }
+    private void setClick(MouseEvent e){
+        this.clique=new Vertice(e.getX(),e.getY(),0);
     }
     private void rotaciona(MouseEvent e){
-        if((e.getX()!=this.clique.x)&&(e.getY()!=clique.x)) {
+        if(clique!=null){
+            if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
 
-            if (selected != null) {
-                if(clique!=null){
+                if (selected != null) {
+
                     Vertice novo=new Vertice(e.getX(),e.getY(),0);
                     double a = selected.Central.distancia(novo);
                     double b = novo.distancia(clique);
                     double c = selected.Central.distancia(novo);
-                    double angulo = acos(pow(b,2)-pow(a,2)-pow(c,2))/(2*a*c);
-                    selected.rotaciona(angulo,1);
-                    this.clique=novo;
-                }else{
-                    clique= new Vertice(e.getX(),e.getY(),0);
+                    double angulo = acos((pow(b,2)-pow(a,2)-pow(c,2))/(2*a*c));
+                    //System.out.println("a"+" "+a+" b"+b+" c"+c+" "+toRadians(angulo));
+
+                    novo.x=selected.Central.x;
+                    novo.y=selected.Central.y;
+                    novo.z=selected.Central.z;
+
+                    selected.rotaciona(toRadians(angulo),1);
+
+
+
+                    selected.calcCentroid();
+                    selected.translada(novo);
                 }
             }
             this.clique.x=e.getX();
             this.clique.y=e.getY();
         }
+        drawall();
     }
     public void buttontranslada(){
+        canvas1.setOnMousePressed(this::setClick);
         canvas1.setOnMouseDragged(this::translada);
+        canvas1.setOnMouseReleased(this::clearCanvasSet);
+
+        canvas2.setOnMousePressed(this::setClick);
         canvas2.setOnMouseDragged(this::translada);
+        canvas2.setOnMouseReleased(this::clearCanvasSet);
+
+        canvas3.setOnMousePressed(this::setClick);
         canvas3.setOnMouseDragged(this::translada);
+        canvas3.setOnMouseReleased(this::clearCanvasSet);
         if(arrIrregular2.size()>0){
             fechaPolilyne();
         }
     }
     private void translada(MouseEvent e){
-        if(selected!=null){
-            if(e.getSource()==canvas1){
-                selected.translada(new Vertice(e.getX(),e.getY(),0));
-            }else if(e.getSource()==canvas2){
-                selected.translada(new Vertice(0,e.getY(),e.getX()));
-            }else if(e.getSource()==canvas3){
-                selected.translada(new Vertice(e.getX(),0,e.getY()));
+        if(clique!=null) {
+            if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
+                if (e.getSource() == canvas1) {
+                    if (selected != null) {
+                        selected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
+                    } else if (poliselected != null) {
+                        poliselected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
+                    }
+                } else if (e.getSource() == canvas2) {
+                    if (selected != null) {
+                        selected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
+                    } else if (poliselected != null) {
+                        poliselected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
+                    }
+                } else if (e.getSource() == canvas3) {
+                    if (selected != null) {
+                        selected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
+                    } else if (poliselected != null) {
+                        poliselected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
+                    }
+                }
+                clique.x = e.getX();
+                clique.y = e.getY();
+                drawall();
             }
-
         }
-        drawall();
     }
+
+    public void buttonRevoluciona(){
+        if(selected!=null){
+            this.poliedros.add(new Poliedro(selected,5,2));
+            this.poligonos.remove(selected);
+            selected=null;
+            drawall();
+        }
+    }
+
+
 }

@@ -154,9 +154,9 @@ public class Poligono {
         return found;
     }
     public void translada(Vertice V){
-        double x =V.x-this.Central.x;
-        double y =V.y-this.Central.y;
-        double z =V.z-this.Central.z;
+        double x = V.x;//-this.Central.x;
+        double y =V.y;//-this.Central.y;
+        double z =V.z;//-this.Central.z;
         for(Vertice v: this.vertices){
             v.x+=x;
             v.y+=y;
@@ -178,9 +178,9 @@ public class Poligono {
             double seno = Math.sin(radians);
             double cose = Math.cos(radians);
             double ante=0;
-            for(Vertice v: vertices){
-                ante=(v.x*cose)-(v.z*seno);
-                v.z=(v.x*seno)+(v.z*cose);
+            for(Vertice v: this.vertices){
+                ante=(v.x*cose)+(v.z*seno);
+                v.z=(v.z*cose)-(v.x*seno);
                 v.x=ante;
             }
         }else if(lado==3){
