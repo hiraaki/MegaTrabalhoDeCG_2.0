@@ -21,9 +21,7 @@ public class Poliedro {
 
             Poligono novo = new Poligono();
             Poligono pface = new Poligono();
-
             novo.copyIn(arevolucionar.vertices);
-
             pface.arestas.add(arevolucionar.arestas.get(i));
             pface.arestas.add(new Aresta(arevolucionar.arestas.get(i).ini,novo.arestas.get(i).ini,pface));
             pface.arestas.add(novo.arestas.get(i));

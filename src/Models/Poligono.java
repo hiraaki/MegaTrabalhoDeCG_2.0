@@ -25,6 +25,8 @@ public class Poligono {
         for(Aresta a:this.arestas){
             a.pai=this;
         }
+        this.Central=new Vertice();
+        this.calcCentroid();
     }
 
     public Poligono(ArrayList<Vertice> vertices) {
@@ -94,23 +96,32 @@ public class Poligono {
     }
 
     public void calcCentroid(){
-        double maiorX=Double.MIN_VALUE, maiorY=Double.MIN_VALUE, maiorZ=Double.MIN_VALUE;
-        double menorX=Double.MAX_VALUE, menorY=Double.MAX_VALUE, menorZ=Double.MAX_VALUE;
-
-        for(Vertice v:this.vertices){
-            if(v.x>maiorX) maiorX=v.x;
-
-            if(v.x<menorX) menorX=v.x;
-
-            if(v.y>maiorY) maiorY=v.y;
-
-            if(v.y<menorY) menorY=v.y;
-
-            if(v.z>maiorZ) maiorZ=v.z;
-
-            if(v.z<menorZ) menorZ=v.z;
+        double soma=0;
+        double area = getArea();
+        Aresta a= new Aresta();
+        for (int i = 0; i < this.arestas.size(); i++) {
+            a=this.arestas.get(i);
+            soma+=(a.ini.x+a.fim.x)*((a.ini.x*a.fim.y)-(a.fim.x*a.ini.y));
         }
-        this.Central=new Vertice(menorX+((maiorX-menorX)/2),menorY+((maiorY-menorY)/2),menorZ+((maiorZ-menorZ)/2));
+        this.Central.x=soma/(6*area);
+        soma=0;
+        for (int i = 0; i < this.arestas.size(); i++) {
+            a=this.arestas.get(i);
+            soma+=(a.ini.y+a.fim.y)*((a.ini.x*a.fim.y)-(a.fim.x*a.ini.y));
+        }
+        this.Central.y=soma/(6*area);
+
+    }
+    public double getArea(){
+        double area=0;
+        double soma=0;
+        Aresta a= new Aresta();
+        for (int i = 0; i < this.arestas.size(); i++) {
+            a=this.arestas.get(i);
+            soma+=(a.ini.x*a.fim.y)-(a.fim.x*a.ini.y);
+        }
+        area=soma/2;
+        return area;
     }
     public void draw(GraphicsContext gc,int lado){
         for (Aresta a:this.arestas){
@@ -132,7 +143,6 @@ public class Poligono {
     }
 
     public boolean isselected(Vertice v, int lados){
-
         boolean found=false;
         for (Aresta a : this.arestas){
             //System.out.println(a.DistanceFromLine(v));
@@ -158,11 +168,29 @@ public class Poligono {
         if(lado==1) {
             double seno = Math.sin(radians);
             double cose = Math.cos(radians);
-            double ante = 0;
-            for (Vertice v : this.vertices) {
-                ante = (v.x * cose) + (v.z * seno);
-                v.z = (v.z * cose) - (v.x * seno);
-                v.x = ante;
+            double ante=0;
+            for(Vertice v: vertices){
+                ante=(v.x*cose)-(v.y*seno);
+                v.y=(v.x*seno)+(v.y*cose);
+                v.x=ante;
+            }
+        }else if(lado==2){
+            double seno = Math.sin(radians);
+            double cose = Math.cos(radians);
+            double ante=0;
+            for(Vertice v: vertices){
+                ante=(v.x*cose)-(v.z*seno);
+                v.z=(v.x*seno)+(v.z*cose);
+                v.x=ante;
+            }
+        }else if(lado==3){
+            double seno = Math.sin(radians);
+            double cose = Math.cos(radians);
+            double ante=0;
+            for(Vertice v: vertices){
+                ante=(v.x*cose)-(v.y*seno);
+                v.z=(v.x*seno)+(v.y*cose);
+                v.x=ante;
             }
         }
     }
