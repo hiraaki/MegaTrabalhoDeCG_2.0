@@ -18,7 +18,7 @@ public class Poliedro {
     public Poliedro(Poligono arevolucionar,int particoes,int lado) {
         double angulo = (2*Math.PI)/particoes;
         double anguloAtual = angulo;
-        double anguloNovo = angulo;
+        double anguloNovo = 0;
         this.faces = new ArrayList<>();
         Poligono atual = new Poligono();
         Poligono novo;
@@ -29,8 +29,10 @@ public class Poliedro {
             novo = new Poligono();
             novo.copyIn(arevolucionar.vertices);
             novo.rotaciona(anguloNovo,lado);
-            System.out.println(Math.toDegrees(anguloNovo));
+            //System.out.println(Math.toDegrees(anguloNovo));
+
             for (int i = 0; i < arevolucionar.arestas.size(); i++) {
+
                 Poligono pface = new Poligono();
                 pface.arestas.add(atual.arestas.get(i));
                 pface.arestas.add(new Aresta(atual.arestas.get(i).ini, novo.arestas.get(i).ini, pface));
@@ -45,6 +47,8 @@ public class Poliedro {
             atual.copyIn(arevolucionar.vertices);
             atual.rotaciona(anguloAtual,lado);
         }
+
+
     }
 
     public void draw(GraphicsContext gc, int lado){

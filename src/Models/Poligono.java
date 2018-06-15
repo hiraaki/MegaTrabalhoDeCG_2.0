@@ -12,6 +12,7 @@ public class Poligono {
     public ArrayList<Aresta> arestas;
     public Vertice Central;
     public Poliedro pai;
+
     public Poligono() {
         this.vertices=new ArrayList<>();
         this.arestas=new ArrayList<>();
@@ -162,8 +163,19 @@ public class Poligono {
             v.y+=y;
             v.z+=z;
         }
-        calcCentroid();
+        this.Central.x=x;
+        this.Central.y=y;
+        this.Central.z=z;
+
     }
+
+//
+//    double a = selected.Central.distancia(novo);
+//    double b = novo.distancia(clique);
+//    double c = selected.Central.distancia(novo);
+//    double angulo = acos((pow(b,2)-pow(a,2)-pow(c,2))/(2*a*c));
+//System.out.println("a"+" "+a+" b"+b+" c"+c+" "+toRadians(angulo));
+
     public void rotaciona(double radians,int lado){
         if(lado==1) {
             double seno = Math.sin(radians);
