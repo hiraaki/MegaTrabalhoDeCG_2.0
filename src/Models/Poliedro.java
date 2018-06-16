@@ -62,4 +62,9 @@ public class Poliedro {
             p.translada(v);
         }
     }
+    public void rotaciona(double radians,int lado){
+        for(Poligono p: this.faces){
+            p.rotaciona(radians,lado);
+        }
+    }
 }

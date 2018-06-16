@@ -97,21 +97,37 @@ public class Poligono {
     }
 
     public void calcCentroid(){
-        double soma=0;
-        double area = getArea();
-        Aresta a= new Aresta();
-        for (int i = 0; i < this.arestas.size(); i++) {
-            a=this.arestas.get(i);
-            soma+=(a.ini.x+a.fim.x)*((a.ini.x*a.fim.y)-(a.fim.x*a.ini.y));
-        }
-        this.Central.x=soma/(6*area);
-        soma=0;
-        for (int i = 0; i < this.arestas.size(); i++) {
-            a=this.arestas.get(i);
-            soma+=(a.ini.y+a.fim.y)*((a.ini.x*a.fim.y)-(a.fim.x*a.ini.y));
-        }
-        this.Central.y=soma/(6*area);
+//        double soma=0;
+//        double area = getArea();
+//        Aresta a= new Aresta();
+//        for (int i = 0; i < this.arestas.size(); i++) {
+//            a=this.arestas.get(i);
+//            soma+=(a.ini.x+a.fim.x)*((a.ini.x*a.fim.y)-(a.fim.x*a.ini.y));
+//        }
+//        this.Central.x=soma/(6*area);
+//        soma=0;
+//        for (int i = 0; i < this.arestas.size(); i++) {
+//            a=this.arestas.get(i);
+//            soma+=(a.ini.y+a.fim.y)*((a.ini.x*a.fim.y)-(a.fim.x*a.ini.y));
+//        }
+//        this.Central.y=soma/(6*area);
+        double maiorX=Double.MIN_VALUE, maiorY=Double.MIN_VALUE, maiorZ=Double.MIN_VALUE;
+        double menorX=Double.MAX_VALUE, menorY=Double.MAX_VALUE, menorZ=Double.MAX_VALUE;
 
+        for(Vertice v:this.vertices){
+            if(v.x>maiorX) maiorX=v.x;
+
+            if(v.x<menorX) menorX=v.x;
+
+            if(v.y>maiorY) maiorY=v.y;
+
+            if(v.y<menorY) menorY=v.y;
+
+            if(v.z>maiorZ) maiorZ=v.z;
+
+            if(v.z<menorZ) menorZ=v.z;
+        }
+        this.Central=new Vertice(menorX+((maiorX-menorX)/2),menorY+((maiorY-menorY)/2),menorZ+((maiorZ-menorZ)/2));
     }
     public double getArea(){
         double area=0;
@@ -155,26 +171,21 @@ public class Poligono {
         return found;
     }
     public void translada(Vertice V){
-        double x = V.x;//-this.Central.x;
-        double y =V.y;//-this.Central.y;
-        double z =V.z;//-this.Central.z;
+//        double x = V.x;//-this.Central.x;
+//        double y =V.y;//-this.Central.y;
+//        double z =V.z;//-this.Central.z;
         for(Vertice v: this.vertices){
-            v.x+=x;
-            v.y+=y;
-            v.z+=z;
+            v.x+=V.x;
+            v.y+=V.y;
+            v.z+=V.z;
         }
-        this.Central.x=x;
-        this.Central.y=y;
-        this.Central.z=z;
+        this.Central.x=V.x;
+        this.Central.y=V.y;
+        this.Central.z=V.z;
 
     }
 
-//
-//    double a = selected.Central.distancia(novo);
-//    double b = novo.distancia(clique);
-//    double c = selected.Central.distancia(novo);
-//    double angulo = acos((pow(b,2)-pow(a,2)-pow(c,2))/(2*a*c));
-//System.out.println("a"+" "+a+" b"+b+" c"+c+" "+toRadians(angulo));
+
 
     public void rotaciona(double radians,int lado){
         if(lado==1) {
@@ -186,24 +197,38 @@ public class Poligono {
                 v.y=(v.x*seno)+(v.y*cose);
                 v.x=ante;
             }
+            ante=(this.Central.x*cose)-(this.Central.y*seno);
+            this.Central.y=(this.Central.x*seno)+(this.Central.y*cose);
+            this.Central.x=ante;
+
+
         }else if(lado==2){
             double seno = Math.sin(radians);
             double cose = Math.cos(radians);
             double ante=0;
             for(Vertice v: this.vertices){
-                ante=(v.x*cose)+(v.z*seno);
-                v.z=(v.z*cose)-(v.x*seno);
-                v.x=ante;
+                ante=(v.z*cose)-(v.y*seno);
+                v.y=(v.z*seno)+(v.y*cose);
+                v.z=ante;
             }
+//            ante=(this.Central.z*cose)-(this.Central.y*seno);
+//            this.Central.y=(this.Central.z*seno)+(this.Central.y*cose);
+//            this.Central.z=ante;
+
+
         }else if(lado==3){
             double seno = Math.sin(radians);
             double cose = Math.cos(radians);
             double ante=0;
             for(Vertice v: vertices){
-                ante=(v.x*cose)-(v.y*seno);
-                v.z=(v.x*seno)+(v.y*cose);
+                ante=(v.x*cose)+(v.z*seno);
+                v.z=(v.z*cose)-(v.x*seno);
                 v.x=ante;
             }
+//            ante=(this.Central.x*cose)+(this.Central.z*seno);
+//            this.Central.z=(this.Central.z*cose)-(this.Central.x*seno);
+//            this.Central.x=ante;
+
         }
     }
 
