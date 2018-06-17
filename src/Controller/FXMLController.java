@@ -654,7 +654,7 @@ public class FXMLController implements Initializable {
     }
     public void rvDebug(){
         selected.calcCentroid();
-        selected.rotaciona(0.05,1);
+        selected.rotaciona(0.1,2);
         drawall();
     }
     public void trDebug(){
@@ -664,12 +664,12 @@ public class FXMLController implements Initializable {
         System.out.println(x+" "+y+" "+z);
 
 
-        double seno = Math.sin(0.05);
-        double cose = Math.cos(0.05);
+        double seno = Math.sin(0.1);
+        double cose = Math.cos(0.1);
         double ante=0;
-        ante=(selected.Central.x*cose)-(selected.Central.y*seno);
-        selected.Central.y=(selected.Central.x*seno)+(selected.Central.y*cose);
-        selected.Central.x=ante;
+        ante=(selected.Central.z*cose)-(selected.Central.y*seno);
+        selected.Central.y=(selected.Central.z*seno)+(selected.Central.y*cose);
+        selected.Central.z=ante;
 
         //selected.calcCentroid();
         selected.translada(new Vertice(
