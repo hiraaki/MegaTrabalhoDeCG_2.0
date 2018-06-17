@@ -309,6 +309,31 @@ public class FXMLController implements Initializable {
             }
 
         }
+        for(Poligono p:this.polyline){
+            if(p==this.selected){
+                gc1.setStroke(Color.RED);
+                gc2.setStroke(Color.RED);
+                gc3.setStroke(Color.RED);
+                gc1.setLineWidth(3.0);
+                gc2.setLineWidth(3.0);
+                gc3.setLineWidth(3.0);
+                //System.out.println("selected");
+                p.draw(gc1,1);
+                p.draw(gc2,2);
+                p.draw(gc3,3);
+                gc1.setLineWidth(1.0);
+                gc2.setLineWidth(1.0);
+                gc3.setLineWidth(1.0);
+                gc1.setStroke(Color.BLACK);
+                gc2.setStroke(Color.BLACK);
+                gc3.setStroke(Color.BLACK);
+            }else {
+                p.draw(gc1,1);
+                p.draw(gc2,2);
+                p.draw(gc3,3);
+            }
+
+        }
         for(Poliedro p:this.poliedros)
             if (p == this.poliselected) {
                 gc1.setStroke(Color.RED);
@@ -403,6 +428,7 @@ public class FXMLController implements Initializable {
         Vertice v = new Vertice();
         boolean foundpolig=false;
         boolean foundpolie=false;
+        boolean foundpoly=false;
         int lado=0;
         if(e.getSource()==canvas1){
             System.out.println("canvas1");
@@ -436,6 +462,22 @@ public class FXMLController implements Initializable {
         }
         if(this.selected==null) {
             for (Poligono p : this.poligonos) {
+                for (Aresta a : p.arestas) {
+                    if (a.selected(v, lado)) {
+                        this.selected = a.pai;
+                        foundpolig = true;
+                        break;
+                    }
+                }
+                if (foundpolig) {
+                    if(poliselected!=null){
+                        this.poliselected=null;
+                    }
+                    break;
+                }
+            }
+
+            for (Poligono p : this.polyline) {
                 for (Aresta a : p.arestas) {
                     if (a.selected(v, lado)) {
                         this.selected = a.pai;
@@ -643,6 +685,7 @@ public class FXMLController implements Initializable {
         if(selected!=null){
             this.poliedros.add(new Poliedro(selected,1000,3));
             this.poligonos.remove(selected);
+            this.polyline .remove(selected);
             selected=null;
             drawall();
         }
