@@ -477,6 +477,15 @@ public class FXMLController implements Initializable {
         canvas1.setOnMousePressed(this::setClick);
         canvas1.setOnMouseDragged(this::rotaciona);
         canvas1.setOnMouseReleased(this::clearCanvasSet);
+
+        canvas2.setOnMousePressed(this::setClick);
+        canvas2.setOnMouseDragged(this::rotaciona);
+        canvas2.setOnMouseReleased(this::clearCanvasSet);
+
+        canvas3.setOnMousePressed(this::setClick);
+        canvas3.setOnMouseDragged(this::rotaciona);
+        canvas3.setOnMouseReleased(this::clearCanvasSet);
+
         if(arrIrregular2.size()>0){
             fechaPolilyne();
         }
@@ -513,37 +522,48 @@ public class FXMLController implements Initializable {
                 if(clique!=null) {
                     if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
                         if (e.getSource() == canvas1) {
-
                             if (selected != null) {
-                               // selected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
                                 double x=selected.Central.x;
                                 double y=selected.Central.y;
                                 double z=selected.Central.z;
-//                                selected.rotaciona((e.getX() - clique.x)*0.005,3);
-//                                selected.rotaciona((e.getY() - clique.y)*0.005,2);
-//                                selected.calcCentroid();
-                                selected.rotaciona((e.getY() - clique.y)*0.005,1);
-                                selected.calcCentroid();
-                                System.out.println(x+" "+y+" "+z);
-                                System.out.println(
-                                        (selected.Central.x-x)+" "+
-                                        (selected.Central.y-y)+" "+
-                                        (selected.Central.z-z)
-                                );
+
+                                selected.rotaciona((e.getX() - clique.x)*0.005,3);
+                                selected.rotaciona((e.getY() - clique.y)*0.005,2);
+
                                 selected.translada(new Vertice(
-                                        selected.Central.x-x,
-                                        selected.Central.y-y,
-                                        selected.Central.z-z
+                                        x-selected.Central.x,
+                                        y-selected.Central.y,
+                                        z-selected.Central.z
                                 ));
 
+                                selected.Central.x=x;
+                                selected.Central.y=y;
+                                selected.Central.z=z;
                             } else if (poliselected != null) {
                                 //poliselected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
-                                poliselected.rotaciona((e.getX() - clique.x)*0.005,3);
+                                poliselected.rotaciona((e.getX() - clique.x)*0.005,1);
                                 poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
                             }
                         } else if (e.getSource() == canvas2) {
                             if (selected != null) {
-                                selected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
+
+                                double x=selected.Central.x;
+                                double y=selected.Central.y;
+                                double z=selected.Central.z;
+
+                                selected.rotaciona((e.getX() - clique.x)*0.005,2);
+                                selected.rotaciona((e.getY() - clique.y)*0.005,1);
+
+                                selected.translada(new Vertice(
+                                        x-selected.Central.x,
+                                        y-selected.Central.y,
+                                        z-selected.Central.z
+                                ));
+
+                                selected.Central.x=x;
+                                selected.Central.y=y;
+                                selected.Central.z=z;
+
                             } else if (poliselected != null) {
                                 poliselected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
                             }
@@ -587,18 +607,27 @@ public class FXMLController implements Initializable {
                 if (e.getSource() == canvas1) {
                     if (selected != null) {
                         selected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
+                        selected.Central.x+=e.getX() - clique.x;
+                        selected.Central.y+=e.getY() - clique.y;
+
                     } else if (poliselected != null) {
                         poliselected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
                     }
                 } else if (e.getSource() == canvas2) {
                     if (selected != null) {
                         selected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
+                        selected.Central.z+=e.getX() - clique.x;
+                        selected.Central.y+=e.getY() - clique.y;
+
                     } else if (poliselected != null) {
                         poliselected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
                     }
                 } else if (e.getSource() == canvas3) {
                     if (selected != null) {
                         selected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
+                        selected.Central.x+=e.getX() - clique.x;
+                        selected.Central.z+=e.getY() - clique.y;
+
                     } else if (poliselected != null) {
                         poliselected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
                     }
@@ -619,5 +648,40 @@ public class FXMLController implements Initializable {
         }
     }
 
+    public void ctest(){
+        this.poligonos.add(new Poligono(new Vertice(300,150,0),3,null,1));
+        drawall();
+    }
+    public void rvDebug(){
+        selected.calcCentroid();
+        selected.rotaciona(0.05,1);
+        drawall();
+    }
+    public void trDebug(){
+        double x=selected.Central.x;
+        double y=selected.Central.y;
+        double z=selected.Central.z;
+        System.out.println(x+" "+y+" "+z);
+
+
+        double seno = Math.sin(0.05);
+        double cose = Math.cos(0.05);
+        double ante=0;
+        ante=(selected.Central.x*cose)-(selected.Central.y*seno);
+        selected.Central.y=(selected.Central.x*seno)+(selected.Central.y*cose);
+        selected.Central.x=ante;
+
+        //selected.calcCentroid();
+        selected.translada(new Vertice(
+        x-selected.Central.x,
+        y-selected.Central.y,
+        z-selected.Central.z
+        ));
+        selected.Central.x=x;
+        selected.Central.y=y;
+        selected.Central.z=z;
+
+        drawall();
+    }
 
 }

@@ -211,9 +211,9 @@ public class Poligono {
                 v.y=(v.z*seno)+(v.y*cose);
                 v.z=ante;
             }
-//            ante=(this.Central.z*cose)-(this.Central.y*seno);
-//            this.Central.y=(this.Central.z*seno)+(this.Central.y*cose);
-//            this.Central.z=ante;
+            ante=(this.Central.z*cose)-(this.Central.y*seno);
+            this.Central.y=(this.Central.z*seno)+(this.Central.y*cose);
+            this.Central.z=ante;
 
 
         }else if(lado==3){
@@ -225,9 +225,9 @@ public class Poligono {
                 v.z=(v.z*cose)-(v.x*seno);
                 v.x=ante;
             }
-//            ante=(this.Central.x*cose)+(this.Central.z*seno);
-//            this.Central.z=(this.Central.z*cose)-(this.Central.x*seno);
-//            this.Central.x=ante;
+            ante=(this.Central.x*cose)+(this.Central.z*seno);
+            this.Central.z=(this.Central.z*cose)-(this.Central.x*seno);
+            this.Central.x=ante;
 
         }
     }
