@@ -240,6 +240,18 @@ public class FXMLController implements Initializable {
                 polylineAtiva=1;
             }
         }else if(e.getSource()==canvas2){
+            if(verIrregular2.size()>0){
+                System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertice(0,e.getY(),e.getX())));
+                verIrregular2.add(new Vertice(0, e.getY(), (e.getX())));
+                arrIrregular2.add(new Aresta(this.verIrregular2.get(this.verIrregular2.size() - 2),
+                        this.verIrregular2.get(this.verIrregular2.size() - 1),
+                        null));
+
+                this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc2, 1);
+            }else {
+                verIrregular2.add(new Vertice(0, e.getY(), e.getX()));
+                polylineAtiva=1;
+            }
 
         }else if(e.getSource()==canvas3){
 
