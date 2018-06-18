@@ -98,7 +98,11 @@ public class Aresta {
 
     public boolean selected(Vertice v,int lado){
         if(this.DistanceFromLine(v,lado)<5){
-            //System.out.println(this.DistanceFromLine(v));
+            System.out.println("x:"+v.x+" y:"+v.y+" z:"+v.z);
+            System.out.println("x:"+this.ini.x+" y:"+this.ini.y+" z:"+this.ini.z);
+            System.out.println("x:"+this.fim.x+" y:"+this.fim.y+" z:"+this.fim.z);
+            System.out.println(this.DistanceFromLine(v,lado));
+            System.out.println();
             return true;
         }else {
             return false;
