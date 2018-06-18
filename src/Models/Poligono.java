@@ -179,9 +179,9 @@ public class Poligono {
             v.y+=V.y;
             v.z+=V.z;
         }
-        this.Central.x=V.x;
-        this.Central.y=V.y;
-        this.Central.z=V.z;
+        this.Central.x+=V.x;
+        this.Central.y+=V.y;
+        this.Central.z+=V.z;
 
     }
 
