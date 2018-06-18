@@ -39,7 +39,9 @@ public class Poliedro {
                 pface.arestas.add(novo.arestas.get(i));
                 pface.arestas.add(new Aresta(atual.arestas.get(i).fim, novo.arestas.get(i).fim, pface));
                 pface.setVertices();
-                faces.add(pface);
+                Poligono face = new Poligono();
+                face.copyInByAresta(pface.arestas);
+                faces.add(face);
             }
 
             anguloAtual=anguloNovo;

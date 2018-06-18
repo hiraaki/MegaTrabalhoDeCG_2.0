@@ -152,6 +152,14 @@ public class Poligono {
         }
         this.setArestas();
     }
+
+    public void copyInByAresta(ArrayList<Aresta> Arestas){
+        for(Aresta a: Arestas){
+            this.vertices.add(new Vertice(a.ini.x,a.ini.y,a.ini.z));
+            this.vertices.add(new Vertice(a.fim.x,a.fim.y,a.fim.z));
+        }
+        this.setArestas();
+    }
     public void setVertices(){
         for(Aresta a: this.arestas){
             this.vertices.add(a.ini);

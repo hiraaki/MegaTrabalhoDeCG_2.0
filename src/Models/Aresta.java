@@ -38,6 +38,10 @@ public class Aresta {
             by = this.fim.y;
             cx = v.x;
             cy = v.y;
+
+            System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
+            System.out.println();
+
         }else if(lado==2){
             ax = this.ini.z;
             ay = this.ini.y;
@@ -45,6 +49,10 @@ public class Aresta {
             by = this.fim.y;
             cx = v.z;
             cy = v.y;
+
+            System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
+            System.out.println();
+
         }else if (lado==3){
             ax = this.ini.x;
             ay = this.ini.z;
@@ -52,11 +60,16 @@ public class Aresta {
             by = this.fim.z;
             cx = v.x;
             cy = v.z;
+
+            System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
+            System.out.println();
         }
         double distanceSegment,distanceLine;
         double r_numerator = (cx-ax)*(bx-ax) + (cy-ay)*(by-ay);
         double r_denomenator = (bx-ax)*(bx-ax) + (by-ay)*(by-ay);
         double r = r_numerator / r_denomenator;
+
+
 
         double px = ax + r*(bx-ax);
         double py = ay + r*(by-ay);
@@ -98,11 +111,11 @@ public class Aresta {
 
     public boolean selected(Vertice v,int lado){
         if(this.DistanceFromLine(v,lado)<5){
-            System.out.println("x:"+v.x+" y:"+v.y+" z:"+v.z);
-            System.out.println("x:"+this.ini.x+" y:"+this.ini.y+" z:"+this.ini.z);
-            System.out.println("x:"+this.fim.x+" y:"+this.fim.y+" z:"+this.fim.z);
-            System.out.println(this.DistanceFromLine(v,lado));
-            System.out.println();
+//            System.out.println("x:"+v.x+" y:"+v.y+" z:"+v.z);
+//            System.out.println("x:"+this.ini.x+" y:"+this.ini.y+" z:"+this.ini.z);
+//            System.out.println("x:"+this.fim.x+" y:"+this.fim.y+" z:"+this.fim.z);
+//            System.out.println(this.DistanceFromLine(v,lado));
+//            System.out.println();
             return true;
         }else {
             return false;

@@ -459,10 +459,13 @@ public class FXMLController implements Initializable {
 
         for (Poliedro poli : this.poliedros) {
             for (Poligono p : poli.faces) {
-                if (p.isselected(v, lados)) {
-                    this.poliselected = poli;
-                    foundpolie = true;
-                    break;
+                for (Aresta a : p.arestas) {
+                    System.out.println("ds");
+                    if (p.isselected(v, lados)) {
+                        this.poliselected = poli;
+                        foundpolie = true;
+                        break;
+                    }
                 }
             }
             if (foundpolie) {
@@ -508,17 +511,15 @@ public class FXMLController implements Initializable {
         }
 
 
-        if(!foundpolie&&!foundpolig){
-            this.selected=null;
-            this.poliselected=null;
-        }
+
         if(!foundpolie&&foundpolig){
             this.poliselected=null;
-        }
-        if(foundpolie&&!foundpolig){
+        }else if(foundpolie&&!foundpolig){
             this.selected=null;
+        }else if(!foundpolie&&!foundpolig){
+            this.selected=null;
+            this.poliselected=null;
         }
-
 
 
 
