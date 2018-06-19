@@ -30,12 +30,7 @@ public class Poligono {
         this.calcCentroid();
     }
 
-    public Poligono(ArrayList<Vertice> vertices) {
-        this.vertices = vertices;
-        this.arestas = new ArrayList<>();
-        this.setArestas();
-        this.calcCentroid();
-    }
+
 
     public Poligono(Vertice ini, int lados, Color cor, int plano){ //planos 1 - XY / 2 - XZ / 3 - YZ
         this.Central= new Vertice();
@@ -97,20 +92,6 @@ public class Poligono {
     }
 
     public void calcCentroid(){
-//        double soma=0;
-//        double area = getArea();
-//        Aresta a= new Aresta();
-//        for (int i = 0; i < this.arestas.size(); i++) {
-//            a=this.arestas.get(i);
-//            soma+=(a.ini.x+a.fim.x)*((a.ini.x*a.fim.y)-(a.fim.x*a.ini.y));
-//        }
-//        this.Central.x=soma/(6*area);
-//        soma=0;
-//        for (int i = 0; i < this.arestas.size(); i++) {
-//            a=this.arestas.get(i);
-//            soma+=(a.ini.y+a.fim.y)*((a.ini.x*a.fim.y)-(a.fim.x*a.ini.y));
-//        }
-//        this.Central.y=soma/(6*area);
         double maiorX=Double.MIN_VALUE, maiorY=Double.MIN_VALUE, maiorZ=Double.MIN_VALUE;
         double menorX=Double.MAX_VALUE, menorY=Double.MAX_VALUE, menorZ=Double.MAX_VALUE;
 
@@ -129,17 +110,6 @@ public class Poligono {
         }
         this.Central=new Vertice(menorX+((maiorX-menorX)/2),menorY+((maiorY-menorY)/2),menorZ+((maiorZ-menorZ)/2));
     }
-    public double getArea(){
-        double area=0;
-        double soma=0;
-        Aresta a= new Aresta();
-        for (int i = 0; i < this.arestas.size(); i++) {
-            a=this.arestas.get(i);
-            soma+=(a.ini.x*a.fim.y)-(a.fim.x*a.ini.y);
-        }
-        area=soma/2;
-        return area;
-    }
     public void draw(GraphicsContext gc,int lado){
         for (Aresta a:this.arestas){
             a.draw(gc,lado);
@@ -151,20 +121,6 @@ public class Poligono {
             this.vertices.add(new Vertice(v.x,v.y,v.z));
         }
         this.setArestas();
-    }
-
-    public void copyInByAresta(ArrayList<Aresta> Arestas){
-        for(Aresta a: Arestas){
-            this.vertices.add(new Vertice(a.ini.x,a.ini.y,a.ini.z));
-            this.vertices.add(new Vertice(a.fim.x,a.fim.y,a.fim.z));
-        }
-        this.setArestas();
-    }
-    public void setVertices(){
-        for(Aresta a: this.arestas){
-            this.vertices.add(a.ini);
-            this.vertices.add(a.fim);
-        }
     }
 
     public boolean isselected(Vertice v, int lados){
