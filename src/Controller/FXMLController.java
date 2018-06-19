@@ -534,16 +534,19 @@ public class FXMLController implements Initializable {
             v = new Vertice(e.getX(),0,e.getY());
             lado=3;
         }
-
+       //System.out.print("F "+lado);
         for (Poliedro poli : this.poliedros) {
             for (Poligono p : poli.faces) {
                 for (Aresta a : p.arestas) {
                     //System.out.println("ds");
-                    System.out.println(p.isselected(v, lados));
-                    if (p.isselected(v, lados)) {
+                    //System.out.println(p.isselected(v, lados));
+                    //System.out.print("F "+lado);
+                    if (p.isselected(v, lado)) {
                         this.poliselected = poli;
                         foundpolie = true;
+                        ///System.out.println(this.poliedros.indexOf(this.poliselected));
                         break;
+
                     }
                 }
             }

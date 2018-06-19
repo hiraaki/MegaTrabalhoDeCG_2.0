@@ -7,6 +7,7 @@ import java.util.ArrayList;
 public class Poliedro {
     public ArrayList<Poligono> faces;
     public ArrayList<Vertice> vertices;
+    public Vertice Central;
 
     public Poliedro() {
         faces= new ArrayList<>();
@@ -51,8 +52,8 @@ public class Poliedro {
             atual.copyIn(arevolucionar.vertices);
             atual.rotaciona(anguloAtual,lado);
         }
-
-
+        this.Central=new Vertice();
+        this.calcCentroid();
     }
 
     public void draw(GraphicsContext gc, int lado){
@@ -70,5 +71,24 @@ public class Poliedro {
         for(Poligono p: this.faces){
             p.rotaciona(radians,lado);
         }
+    }
+    public void calcCentroid(){
+        double maiorX=Double.MIN_VALUE, maiorY=Double.MIN_VALUE, maiorZ=Double.MIN_VALUE;
+        double menorX=Double.MAX_VALUE, menorY=Double.MAX_VALUE, menorZ=Double.MAX_VALUE;
+        for(Poligono p:this.faces){
+
+            if(p.Central.x>maiorX) maiorX=p.Central.x;
+
+            if(p.Central.x<menorX) menorX=p.Central.x;
+
+            if(p.Central.y>maiorY) maiorY=p.Central.y;
+
+            if(p.Central.y<menorY) menorY=p.Central.y;
+
+            if(p.Central.z>maiorZ) maiorZ=p.Central.z;
+
+            if(p.Central.z<menorZ) menorZ=p.Central.z;
+        }
+        this.Central=new Vertice(menorX+((maiorX-menorX)/2),menorY+((maiorY-menorY)/2),menorZ+((maiorZ-menorZ)/2));
     }
 }

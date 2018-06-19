@@ -117,10 +117,12 @@ public class Poligono {
     }
 
     public void copyIn(ArrayList<Vertice> vertices){
+        this.Central=new Vertice();
         for(Vertice v:vertices){
             this.vertices.add(new Vertice(v.x,v.y,v.z));
         }
         this.setArestas();
+        this.calcCentroid();
     }
 
     public boolean isselected(Vertice v, int lados){

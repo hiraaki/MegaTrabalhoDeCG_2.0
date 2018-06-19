@@ -31,6 +31,7 @@ public class Aresta {
     }
     public double DistanceFromLine(Vertice v, int lado){
         double ax=0, ay=0, bx=0, by=0, cx=0, cy=0;
+        //System.out.print("A "+lado);
         if (lado==1) {
             ax = this.ini.x;
             ay = this.ini.y;
@@ -39,8 +40,8 @@ public class Aresta {
             cx = v.x;
             cy = v.y;
 
-            System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
-            System.out.println();
+            //System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
+            //System.out.println();
 
         }else if(lado==2){
             ax = this.ini.z;
@@ -50,8 +51,8 @@ public class Aresta {
             cx = v.z;
             cy = v.y;
 
-            System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
-            System.out.println();
+//            System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
+//            System.out.println();
 
         }else if (lado==3){
             ax = this.ini.x;
@@ -61,8 +62,8 @@ public class Aresta {
             cx = v.x;
             cy = v.z;
 
-            System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
-            System.out.println();
+//            System.out.println("ax:"+ax+" ay:"+bx+" by:"+by);
+//            System.out.println();
         }
         double distanceSegment,distanceLine;
         double r_numerator = (cx-ax)*(bx-ax) + (cy-ay)*(by-ay);
