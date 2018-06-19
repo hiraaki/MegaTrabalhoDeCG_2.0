@@ -152,37 +152,104 @@ public class FXMLController implements Initializable {
     private void Irregular(MouseEvent e){
 
 
-        if(verIrregular.size()>0){
+        if(e.getSource()==canvas1){
+            if(verIrregular.size()>0){
 
-            if(verIrregular.get(0).distancia(new Vertice(e.getX(),e.getY(),0))<5) {
+                if(verIrregular.get(0).distancia(new Vertice(e.getX(),e.getY(),0))<5) {
 
 
-                this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
-                //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
-                //System.out.println("saiu!!!!");
+                    this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
+                    //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                    //System.out.println("saiu!!!!");
 
-                this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
 
-                this.poligonos.add(new Poligono(this.verIrregular,this.arrIrregular));
+                    this.poligonos.add(new Poligono(this.verIrregular,this.arrIrregular));
 
-                this.verIrregular=new ArrayList<>();
-                this.arrIrregular=new ArrayList<>();
+                    this.verIrregular=new ArrayList<>();
+                    this.arrIrregular=new ArrayList<>();
 
+                }else {
+
+                    //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                    verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
+                    arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
+                            this.verIrregular.get(this.verIrregular.size() - 1),
+                            null));
+
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
+                }
             }else {
 
-                //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                 verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
-                arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
-                        this.verIrregular.get(this.verIrregular.size() - 1),
-                        null));
 
-                this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
             }
-        }else {
+        }else if(e.getSource()==canvas2){
+            if(verIrregular.size()>0){
 
-            verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
+                if(verIrregular.get(0).distancia(new Vertice(0,e.getY(),e.getX()))<5) {
 
+
+                    this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
+                    //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                    //System.out.println("saiu!!!!");
+
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc2, 2);
+
+                    this.poligonos.add(new Poligono(this.verIrregular,this.arrIrregular));
+
+                    this.verIrregular=new ArrayList<>();
+                    this.arrIrregular=new ArrayList<>();
+
+                }else {
+
+                    //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                    verIrregular.add(new Vertice(0, e.getY(), e.getX()));
+                    arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
+                            this.verIrregular.get(this.verIrregular.size() - 1),
+                            null));
+
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc2, 2);
+                }
+            }else {
+
+                verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
+
+            }
+        }else if(e.getSource()==canvas3){
+            if(verIrregular.size()>0){
+
+                if(verIrregular.get(0).distancia(new Vertice(e.getX(),0,e.getY()))<5) {
+
+
+                    this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
+                    //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                    //System.out.println("saiu!!!!");
+
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc3, 3);
+
+                    this.poligonos.add(new Poligono(this.verIrregular,this.arrIrregular));
+
+                    this.verIrregular=new ArrayList<>();
+                    this.arrIrregular=new ArrayList<>();
+
+                }else {
+
+                    //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
+                    verIrregular.add(new Vertice(e.getX(), 0, e.getY()));
+                    arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
+                            this.verIrregular.get(this.verIrregular.size() - 1),
+                            null));
+
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc3, 3);
+                }
+            }else {
+
+                verIrregular.add(new Vertice(e.getX(), 0, e.getY()));
+
+            }
         }
+
 
     }
 
@@ -247,14 +314,25 @@ public class FXMLController implements Initializable {
                         this.verIrregular2.get(this.verIrregular2.size() - 1),
                         null));
 
-                this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc2, 1);
+                this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc2, 2);
             }else {
                 verIrregular2.add(new Vertice(0, e.getY(), e.getX()));
                 polylineAtiva=1;
             }
 
         }else if(e.getSource()==canvas3){
+            if(verIrregular2.size()>0){
+                System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertice(e.getX(), 0,e.getY())));
+                verIrregular2.add(new Vertice(e.getX(), 0, e.getY()));
+                arrIrregular2.add(new Aresta(this.verIrregular2.get(this.verIrregular2.size() - 2),
+                        this.verIrregular2.get(this.verIrregular2.size() - 1),
+                        null));
 
+                this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc3, 3);
+            }else {
+                verIrregular2.add(new Vertice(e.getX(), 0, e.getY()));
+                polylineAtiva=1;
+            }
         }
 
 
@@ -528,6 +606,7 @@ public class FXMLController implements Initializable {
     public void buuttonDelete(){
         if(selected!=null) {
             this.poligonos.remove(selected);
+            this.polyline.remove(selected);
             this.selected=null;
         }else if(poliselected!=null) {
             this.poliedros.remove(poliselected);
@@ -714,7 +793,7 @@ public class FXMLController implements Initializable {
 
     public void buttonRevoluciona(){
         if(selected!=null){
-            this.poliedros.add(new Poliedro(selected,1000,3));
+            this.poliedros.add(new Poliedro(selected,10,3));
             this.poligonos.remove(selected);
             this.polyline .remove(selected);
             selected=null;
