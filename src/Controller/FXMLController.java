@@ -558,7 +558,6 @@ public class FXMLController implements Initializable {
             }
         }
 
-
         for (Poligono p : this.poligonos) {
             for (Aresta a : p.arestas) {
                 if (a.selected(v, lado)) {
@@ -575,7 +574,6 @@ public class FXMLController implements Initializable {
             }
 
         }
-
         for (Poligono p : this.polyline) {
             for (Aresta a : p.arestas) {
                 if (a.selected(v, lado)) {
@@ -591,9 +589,6 @@ public class FXMLController implements Initializable {
                 break;
             }
         }
-
-
-
         if(!foundpolie&&foundpolig){
             this.poliselected=null;
         }else if(foundpolie&&!foundpolig){
@@ -602,9 +597,6 @@ public class FXMLController implements Initializable {
             this.selected=null;
             this.poliselected=null;
         }
-
-
-
         drawall();
     }
     public void buuttonDelete(){
@@ -679,10 +671,24 @@ public class FXMLController implements Initializable {
                                 selected.Central.x=x;
                                 selected.Central.y=y;
                                 selected.Central.z=z;
-                            } else if (poliselected != null) {
+                            } else if (this.poliselected != null) {
                                 //poliselected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
-                                poliselected.rotaciona((e.getX() - clique.x)*0.005,3);
-                                poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
+                                double x=this.poliselected.Central.x;
+                                double y=this.poliselected.Central.y;
+                                double z=this.poliselected.Central.z;
+
+                                this.poliselected.rotaciona((e.getX() - clique.x)*0.005,3);
+                                this.poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
+
+                                this.poliselected.translada(new Vertice(
+                                        x-this.poliselected.Central.x,
+                                        y-this.poliselected.Central.y,
+                                        z-this.poliselected.Central.z
+                                ));
+
+                                this.poliselected.Central.x=x;
+                                this.poliselected.Central.y=y;
+                                this.poliselected.Central.z=z;
                             }
                         } else if (e.getSource() == canvas2) {
                             if (selected != null) {
@@ -705,7 +711,22 @@ public class FXMLController implements Initializable {
                                 selected.Central.z=z;
 
                             } else if (poliselected != null) {
-                                poliselected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
+                                double x=this.poliselected.Central.x;
+                                double y=this.poliselected.Central.y;
+                                double z=this.poliselected.Central.z;
+
+                                this.poliselected.rotaciona((e.getX() - clique.x)*0.005,3);
+                                this.poliselected.rotaciona((e.getY() - clique.y)*0.005,1);
+
+                                this.poliselected.translada(new Vertice(
+                                        x-this.poliselected.Central.x,
+                                        y-this.poliselected.Central.y,
+                                        z-this.poliselected.Central.z
+                                ));
+
+                                this.poliselected.Central.x=x;
+                                this.poliselected.Central.y=y;
+                                this.poliselected.Central.z=z;
                             }
                         } else if (e.getSource() == canvas3) {
                             if (selected != null) {
@@ -728,7 +749,22 @@ public class FXMLController implements Initializable {
                                 selected.Central.z=z;
 
                             } else if (poliselected != null) {
-                                poliselected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
+                                double x=this.poliselected.Central.x;
+                                double y=this.poliselected.Central.y;
+                                double z=this.poliselected.Central.z;
+
+                                this.poliselected.rotaciona((e.getX() - clique.x)*0.005,1);
+                                this.poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
+
+                                this.poliselected.translada(new Vertice(
+                                        x-this.poliselected.Central.x,
+                                        y-this.poliselected.Central.y,
+                                        z-this.poliselected.Central.z
+                                ));
+
+                                this.poliselected.Central.x=x;
+                                this.poliselected.Central.y=y;
+                                this.poliselected.Central.z=z;
                             }
                         }
                         clique.x = e.getX();

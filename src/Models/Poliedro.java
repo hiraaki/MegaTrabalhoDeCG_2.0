@@ -66,10 +66,29 @@ public class Poliedro {
         for(Poligono p: this.faces){
             p.translada(v);
         }
+        this.Central.x+=v.x;
+        this.Central.y+=v.y;
+        this.Central.z+=v.z;
     }
     public void rotaciona(double radians,int lado){
         for(Poligono p: this.faces){
             p.rotaciona(radians,lado);
+        }
+        double seno = Math.sin(radians);
+        double cose = Math.cos(radians);
+        double ante=0;
+        if(lado==1){
+            ante=(this.Central.x*cose)-(this.Central.y*seno);
+            this.Central.y=(this.Central.x*seno)+(this.Central.y*cose);
+            this.Central.x=ante;
+        }else if(lado==2){
+            ante=(this.Central.z*cose)-(this.Central.y*seno);
+            this.Central.y=(this.Central.z*seno)+(this.Central.y*cose);
+            this.Central.z=ante;
+        }else if(lado==3){
+            ante=(this.Central.x*cose)+(this.Central.z*seno);
+            this.Central.z=(this.Central.z*cose)-(this.Central.x*seno);
+            this.Central.x=ante;
         }
     }
     public void calcCentroid(){
