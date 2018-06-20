@@ -3,11 +3,12 @@ package Models;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import static java.lang.Math.abs;
 
-public class Poligono {
+public class Poligono implements Serializable {
     public ArrayList<Vertice> vertices;
     public ArrayList<Aresta> arestas;
     public Vertice Central;

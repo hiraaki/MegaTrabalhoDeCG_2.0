@@ -2,10 +2,12 @@ package Models;
 
 import javafx.scene.canvas.GraphicsContext;
 
+import java.io.Serializable;
+
 import static java.lang.Math.abs;
 import static java.lang.StrictMath.sqrt;
 
-public class Aresta {
+public class Aresta implements Serializable {
     public Vertice ini;
     public Vertice fim;
     public Poligono pai;
