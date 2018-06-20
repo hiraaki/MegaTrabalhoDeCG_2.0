@@ -99,8 +99,8 @@ public class FXMLController implements Initializable {
 
     ObservableList<String> eixo = FXCollections.observableArrayList("X","Y","Z");
 
-//    @FXML
-//    private ChoiceBox<String> eixos;
+    @FXML
+    private ChoiceBox<String> eixos;
 
 
 
@@ -987,9 +987,9 @@ public class FXMLController implements Initializable {
                                 }else if((e.getX() - clique.x)<0){
                                     selected.scala(0.99,1);
                                 }
-                                if ((e.getY() - clique.y)>0){
+                                if ((e.getY() - clique.y)<0){
                                     selected.scala(1.01,2);
-                                }else if((e.getY() - clique.y)<0){
+                                }else if((e.getY() - clique.y)>0){
                                     selected.scala(0.99,2);
                                 }
                                 selected.translada(new Vertice(
