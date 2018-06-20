@@ -833,6 +833,17 @@ public class FXMLController implements Initializable {
 
     public void buttonRevoluciona(){
         if(selected!=null){
+//            JTextField segmentos = new JTextField();
+//            JTextField eixo = new JTextField();
+//            JTextField angulo = new JTextField();
+//            Object[] campos = {
+//                "Segmentos", segmentos,
+//                "Eixo", eixo,
+//                "Angulo", angulo
+//            };
+//
+//            JOptionPane.showConfirmDialog(null, campos);
+            //1 - z, 2 - x, 3 - y
             System.out.println(toRadians(360));
             this.poliedros.add(new Poliedro(selected,100,3,180));
             this.poligonos.remove(selected);
