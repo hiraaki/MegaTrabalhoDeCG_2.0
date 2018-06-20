@@ -1,8 +1,10 @@
 package Models;
 
+import java.io.Serializable;
+
 import static java.lang.StrictMath.sqrt;
 
-public class Vertice {
+public class Vertice implements Serializable {
     public double x;
     public double y;
     public double z;

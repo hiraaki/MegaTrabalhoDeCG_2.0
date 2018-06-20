@@ -8,6 +8,8 @@ package Controller;
 
 import Models.*;
 import javafx.scene.input.MouseEvent;
+
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -16,6 +18,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.stage.FileChooser;
+
 import javax.swing.*;
 
 import static java.lang.Math.*;
@@ -876,6 +880,57 @@ public class FXMLController implements Initializable {
         selected.Central.z=z;
 
         drawall();
+    }
+
+    public void buttonSave(){
+        FileChooser chooser = new FileChooser();
+        FileChooser filter = new FileChooser();
+        FileChooser.ExtensionFilter extFiler = new FileChooser.ExtensionFilter("POLIGON Files (*.out)", "*.out");
+        chooser.getExtensionFilters().add(extFiler);
+        chooser.setTitle("Salvar Cena");
+        String savef = chooser.showSaveDialog(canvas1.getScene().getWindow()).toString();
+        save(savef);
+
+    }
+
+    public void save(String fileName) {
+        FileOutputStream out = null;
+        try {
+            out = new FileOutputStream(fileName);
+            ObjectOutputStream oos = new ObjectOutputStream(out);
+            oos.writeObject(this.poligonos);
+            oos.writeObject(this.poliedros);
+            oos.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void buttonLoad() {
+        FileChooser chooser = new FileChooser();
+        FileChooser filter = new FileChooser();
+        FileChooser.ExtensionFilter extFiler = new FileChooser.ExtensionFilter("POLIGON Files (*.out)", "*.out");
+        chooser.getExtensionFilters().add(extFiler);
+        chooser.setTitle("Abrir Cena");
+        String openf = chooser.showOpenDialog(canvas1.getScene().getWindow()).toString();
+        load(openf);
+    }
+
+    public void load(String fileName) {
+        try {
+            FileInputStream in = new FileInputStream(fileName);
+            ObjectInputStream ois = new ObjectInputStream(in);
+            this.poligonos = (ArrayList<Poligono>) (ois.readObject());
+            this.poliedros = (ArrayList<Poliedro>) (ois.readObject());
+        } catch (Exception e) {
+            System.out.println("Problem serializing: " + e);
+        }
+        System.out.println("este é o arquivo");
+        clear();
+        drawall();
+        //gc1.clearRect(0, 0, drawingArea1.getWidth(), drawingArea1.getHeight());
+        // this.drawall();
+        //return null;
     }
 
 }

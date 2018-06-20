@@ -2,11 +2,12 @@ package Models;
 
 import javafx.scene.canvas.GraphicsContext;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import static java.lang.Math.toRadians;
 
-public class Poliedro {
+public class Poliedro implements Serializable {
     public ArrayList<Poligono> faces;
     public ArrayList<Vertice> vertices;
     public Vertice Central;
