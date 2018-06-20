@@ -9,9 +9,10 @@ package Controller;
 import Models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.ChoiceBox;
+
 import javafx.scene.input.MouseEvent;
 
+import java.awt.*;
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
@@ -22,6 +23,8 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 
 import javax.swing.*;
 
@@ -97,10 +100,17 @@ public class FXMLController implements Initializable {
 
     int lados, polylineAtiva, canvas;
 
-    ObservableList<String> eixo = FXCollections.observableArrayList("X","Y","Z");
 
     @FXML
-    private ChoiceBox<String> eixos;
+    private ChoiceBox<String> comboBox;
+
+    ObservableList<String> observableList;
+
+    @FXML
+    private TextField textAngulo;
+
+    @FXML
+    private TextField textSeg;
 
 
 
@@ -113,11 +123,15 @@ public class FXMLController implements Initializable {
         this.poligonos = new ArrayList<>();
 
 
+
         this.polyline = new ArrayList<>();
         this.clique=new Vertice();
 
         this.clique=null;
-        this.eixos= new ChoiceBox<>();
+
+
+        carregaComboBox();
+
 
         this.linhas=new ArrayList<>();
         this.poliedros=new ArrayList<>();
@@ -136,8 +150,16 @@ public class FXMLController implements Initializable {
         gc3= canvas3.getGraphicsContext2D();
         gc4= canvas4.getGraphicsContext2D();
         this.cliques=0;
-        this.eixos.setItems(eixo);
+        //this.eixos.setItems(eixo);
         desenhaRegua();
+    }
+
+    public void carregaComboBox(){
+        observableList = FXCollections.observableArrayList("X", "Y", "Z");
+        comboBox.setItems(observableList);
+        comboBox.setValue(observableList.get(0));
+//        textAngulo.setText("0");
+//        textSeg.setText("0");
     }
 
     //SAI X APENAS PARA DEBUG
@@ -847,20 +869,29 @@ public class FXMLController implements Initializable {
     }
 
     public void buttonRevoluciona(){
+        System.out.println("111111111111111111111");
         if(selected!=null){
-//            JTextField segmentos = new JTextField();
-//            JTextField eixo = new JTextField();
-//            JTextField angulo = new JTextField();
-//            Object[] campos = {
-//                "Segmentos", segmentos,
-//                "Eixo", eixo,
-//                "Angulo", angulo
-//            };
-//
-//            JOptionPane.showConfirmDialog(null, campos);
+
             //1 - z, 2 - x, 3 - y
+            int eixo=0, segmentos, angulo;
+
+            if(comboBox.getValue()=="X"){
+                eixo=2;
+            }else if(comboBox.getValue()=="Y"){
+                eixo=3;
+            }else if(comboBox.getValue()=="Z"){
+                eixo=1;
+            }
+
+
+
+            segmentos= Integer.parseInt(textSeg.getText());
+            angulo = Integer.parseInt(textAngulo.getText());
+
+            System.out.println("sei lá "+angulo+"\n");
+
             System.out.println(toRadians(360));
-            this.poliedros.add(new Poliedro(selected,100,3,180));
+            this.poliedros.add(new Poliedro(selected,segmentos,eixo,angulo));
             this.poligonos.remove(selected);
             this.polyline .remove(selected);
             selected=null;
