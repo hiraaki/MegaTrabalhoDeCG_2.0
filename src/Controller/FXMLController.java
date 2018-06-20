@@ -833,7 +833,8 @@ public class FXMLController implements Initializable {
 
     public void buttonRevoluciona(){
         if(selected!=null){
-            this.poliedros.add(new Poliedro(selected,10,3));
+            System.out.println(toRadians(360));
+            this.poliedros.add(new Poliedro(selected,100,3,180));
             this.poligonos.remove(selected);
             this.polyline .remove(selected);
             selected=null;

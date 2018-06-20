@@ -4,6 +4,8 @@ import javafx.scene.canvas.GraphicsContext;
 
 import java.util.ArrayList;
 
+import static java.lang.Math.toRadians;
+
 public class Poliedro {
     public ArrayList<Poligono> faces;
     public ArrayList<Vertice> vertices;
@@ -17,8 +19,8 @@ public class Poliedro {
         this.faces = faces;
     }
 
-    public Poliedro(Poligono arevolucionar,int particoes,int lado) {
-        double angulo = (2*Math.PI)/particoes;
+    public Poliedro(Poligono arevolucionar,int particoes,int lado,double Angulo) {
+        double angulo = toRadians(Angulo)/particoes;
         double anguloAtual = angulo;
         double anguloNovo = 0;
         this.faces = new ArrayList<>();
