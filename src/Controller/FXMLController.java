@@ -803,8 +803,8 @@ public class FXMLController implements Initializable {
                 if (e.getSource() == canvas1) {
                     if (selected != null) {
                         selected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
-                        selected.Central.x+=e.getX() - clique.x;
-                        selected.Central.y+=e.getY() - clique.y;
+//                        selected.Central.x+=e.getX() - clique.x;
+//                        selected.Central.y+=e.getY() - clique.y;
 
                     } else if (poliselected != null) {
                         poliselected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
@@ -812,8 +812,8 @@ public class FXMLController implements Initializable {
                 } else if (e.getSource() == canvas2) {
                     if (selected != null) {
                         selected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
-                        selected.Central.z+=e.getX() - clique.x;
-                        selected.Central.y+=e.getY() - clique.y;
+//                        selected.Central.z+=e.getX() - clique.x;
+//                        selected.Central.y+=e.getY() - clique.y;
 
                     } else if (poliselected != null) {
                         poliselected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
@@ -821,8 +821,8 @@ public class FXMLController implements Initializable {
                 } else if (e.getSource() == canvas3) {
                     if (selected != null) {
                         selected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
-                        selected.Central.x+=e.getX() - clique.x;
-                        selected.Central.z+=e.getY() - clique.y;
+//                        selected.Central.x+=e.getX() - clique.x;
+//                        selected.Central.z+=e.getY() - clique.y;
 
                     } else if (poliselected != null) {
                         poliselected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
@@ -971,9 +971,16 @@ public class FXMLController implements Initializable {
                                 double y=selected.Central.y;
                                 double z=selected.Central.z;
 
-                                selected.scala((e.getX() - clique.x),1);
-                                selected.scala((e.getY() - clique.y),2);
-
+                                if((e.getX() - clique.x)>0){
+                                    selected.scala(1.01,1);
+                                }else if((e.getX() - clique.x)<0){
+                                    selected.scala(0.99,1);
+                                }
+                                if ((e.getY() - clique.y)>0){
+                                    selected.scala(1.01,2);
+                                }else if((e.getY() - clique.y)<0){
+                                    selected.scala(0.99,2);
+                                }
                                 selected.translada(new Vertice(
                                         x-selected.Central.x,
                                         y-selected.Central.y,
@@ -989,8 +996,16 @@ public class FXMLController implements Initializable {
                                 double y=this.poliselected.Central.y;
                                 double z=this.poliselected.Central.z;
 
-                                this.poliselected.scala((e.getX() - clique.x)*0.005,1);
-                                this.poliselected.scala((e.getY() - clique.y)*0.005,2);
+                                if((e.getX() - clique.x)>0){
+                                    this.poliselected.scala(1.01,1);
+                                }else if((e.getX() - clique.x)<0){
+                                    this.poliselected.scala(0.99,1);
+                                }
+                                if ((e.getY() - clique.y)>0){
+                                    this.poliselected.scala(1.01,2);
+                                }else if((e.getY() - clique.y)<0){
+                                    this.poliselected.scala(0.99,2);
+                                }
 
                                 this.poliselected.translada(new Vertice(
                                         x-this.poliselected.Central.x,
@@ -1009,8 +1024,16 @@ public class FXMLController implements Initializable {
                                 double y=selected.Central.y;
                                 double z=selected.Central.z;
 
-                                selected.scala((e.getX() - clique.x)*0.005,3);
-                                selected.scala((e.getY() - clique.y)*0.005,2);
+                                if((e.getX() - clique.x)>0){
+                                    selected.scala(1.01,3);
+                                }else if((e.getX() - clique.x)<0){
+                                    selected.scala(0.99,3);
+                                }
+                                if ((e.getY() - clique.y)>0){
+                                    selected.scala(1.01,2);
+                                }else if((e.getY() - clique.y)<0){
+                                    selected.scala(0.99,2);
+                                }
 
                                 selected.translada(new Vertice(
                                         x-selected.Central.x,
@@ -1027,8 +1050,16 @@ public class FXMLController implements Initializable {
                                 double y=this.poliselected.Central.y;
                                 double z=this.poliselected.Central.z;
 
-                                this.poliselected.scala((e.getX() - clique.x)*0.005,3);
-                                this.poliselected.scala((e.getY() - clique.y)*0.005,2);
+                                if((e.getX() - clique.x)>0){
+                                    this.poliselected.scala(1.01,1);
+                                }else if((e.getX() - clique.x)<0){
+                                    this.poliselected.scala(0.99,1);
+                                }
+                                if ((e.getY() - clique.y)>0){
+                                    this.poliselected.scala(1.01,2);
+                                }else if((e.getY() - clique.y)<0){
+                                    this.poliselected.scala(0.99,2);
+                                }
 
                                 this.poliselected.translada(new Vertice(
                                         x-this.poliselected.Central.x,
@@ -1050,6 +1081,17 @@ public class FXMLController implements Initializable {
                                 selected.rotaciona((e.getX() - clique.x)*0.005,1);
                                 selected.rotaciona((e.getY() - clique.y)*0.005,3);
 
+                                if((e.getX() - clique.x)>0){
+                                    selected.scala(1.01,1);
+                                }else if((e.getX() - clique.x)<0){
+                                    selected.scala(0.99,1);
+                                }
+                                if ((e.getY() - clique.y)>0){
+                                    selected.scala(1.01,3);
+                                }else if((e.getY() - clique.y)<0){
+                                    selected.scala(0.99,3);
+                                }
+
                                 selected.translada(new Vertice(
                                         x-selected.Central.x,
                                         y-selected.Central.y,
@@ -1065,8 +1107,16 @@ public class FXMLController implements Initializable {
                                 double y=this.poliselected.Central.y;
                                 double z=this.poliselected.Central.z;
 
-                                this.poliselected.rotaciona((e.getX() - clique.x)*0.005,1);
-                                this.poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
+                                if((e.getX() - clique.x)>0){
+                                    this.poliselected.scala(1.01,1);
+                                }else if((e.getX() - clique.x)<0){
+                                    this.poliselected.scala(0.99,1);
+                                }
+                                if ((e.getY() - clique.y)>0){
+                                    this.poliselected.scala(1.01,3);
+                                }else if((e.getY() - clique.y)<0){
+                                    this.poliselected.scala(0.99,3);
+                                }
 
                                 this.poliselected.translada(new Vertice(
                                         x-this.poliselected.Central.x,
