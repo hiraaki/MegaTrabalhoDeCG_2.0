@@ -1012,9 +1012,9 @@ public class FXMLController implements Initializable {
                                 }else if((e.getX() - clique.x)<0){
                                     this.poliselected.scala(0.99,1);
                                 }
-                                if ((e.getY() - clique.y)>0){
+                                if ((e.getY() - clique.y)<0){
                                     this.poliselected.scala(1.01,2);
-                                }else if((e.getY() - clique.y)<0){
+                                }else if((e.getY() - clique.y)>0){
                                     this.poliselected.scala(0.99,2);
                                 }
 
@@ -1040,9 +1040,9 @@ public class FXMLController implements Initializable {
                                 }else if((e.getX() - clique.x)<0){
                                     selected.scala(0.99,3);
                                 }
-                                if ((e.getY() - clique.y)>0){
+                                if ((e.getY() - clique.y)<0){
                                     selected.scala(1.01,2);
-                                }else if((e.getY() - clique.y)<0){
+                                }else if((e.getY() - clique.y)>0){
                                     selected.scala(0.99,2);
                                 }
 
@@ -1066,9 +1066,9 @@ public class FXMLController implements Initializable {
                                 }else if((e.getX() - clique.x)<0){
                                     this.poliselected.scala(0.99,1);
                                 }
-                                if ((e.getY() - clique.y)>0){
+                                if ((e.getY() - clique.y)<0){
                                     this.poliselected.scala(1.01,2);
-                                }else if((e.getY() - clique.y)<0){
+                                }else if((e.getY() - clique.y)>0){
                                     this.poliselected.scala(0.99,2);
                                 }
 
@@ -1097,9 +1097,9 @@ public class FXMLController implements Initializable {
                                 }else if((e.getX() - clique.x)<0){
                                     selected.scala(0.99,1);
                                 }
-                                if ((e.getY() - clique.y)>0){
+                                if ((e.getY() - clique.y)<0){
                                     selected.scala(1.01,3);
-                                }else if((e.getY() - clique.y)<0){
+                                }else if((e.getY() - clique.y)>0){
                                     selected.scala(0.99,3);
                                 }
 
@@ -1123,9 +1123,9 @@ public class FXMLController implements Initializable {
                                 }else if((e.getX() - clique.x)<0){
                                     this.poliselected.scala(0.99,1);
                                 }
-                                if ((e.getY() - clique.y)>0){
+                                if ((e.getY() - clique.y)<0){
                                     this.poliselected.scala(1.01,3);
-                                }else if((e.getY() - clique.y)<0){
+                                }else if((e.getY() - clique.y)>0){
                                     this.poliselected.scala(0.99,3);
                                 }
 
