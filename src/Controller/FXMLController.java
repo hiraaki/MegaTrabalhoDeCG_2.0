@@ -7,6 +7,9 @@ package Controller;
 
 
 import Models.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.input.MouseEvent;
 
 import java.io.*;
@@ -94,6 +97,11 @@ public class FXMLController implements Initializable {
 
     int lados, polylineAtiva, canvas;
 
+    ObservableList<String> eixo = FXCollections.observableArrayList("X","Y","Z");
+
+//    @FXML
+//    private ChoiceBox<String> eixos;
+
 
 
     @Override
@@ -104,10 +112,12 @@ public class FXMLController implements Initializable {
         this.verIrregular2 = new ArrayList<>();
         this.poligonos = new ArrayList<>();
 
+
         this.polyline = new ArrayList<>();
         this.clique=new Vertice();
 
         this.clique=null;
+        this.eixos= new ChoiceBox<>();
 
         this.linhas=new ArrayList<>();
         this.poliedros=new ArrayList<>();
@@ -126,6 +136,7 @@ public class FXMLController implements Initializable {
         gc3= canvas3.getGraphicsContext2D();
         gc4= canvas4.getGraphicsContext2D();
         this.cliques=0;
+        this.eixos.setItems(eixo);
         desenhaRegua();
     }
 
