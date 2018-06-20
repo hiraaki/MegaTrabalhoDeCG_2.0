@@ -943,5 +943,151 @@ public class FXMLController implements Initializable {
         // this.drawall();
         //return null;
     }
+    public void buttonScala(){
+        canvas1.setOnMousePressed(this::setClick);
+        canvas1.setOnMouseDragged(this::scala);
+        canvas1.setOnMouseReleased(this::clearCanvasSet);
+
+        canvas2.setOnMousePressed(this::setClick);
+        canvas2.setOnMouseDragged(this::scala);
+        canvas2.setOnMouseReleased(this::clearCanvasSet);
+
+        canvas3.setOnMousePressed(this::setClick);
+        canvas3.setOnMouseDragged(this::scala);
+        canvas3.setOnMouseReleased(this::clearCanvasSet);
+
+        if(arrIrregular2.size()>0){
+            fechaPolilyne();
+        }
+    }
+    private void scala(MouseEvent e){
+        if(clique!=null){
+            if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
+                if(clique!=null) {
+                    if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
+                        if (e.getSource() == canvas1) {
+                            if (selected != null) {
+                                double x=selected.Central.x;
+                                double y=selected.Central.y;
+                                double z=selected.Central.z;
+
+                                selected.scala((e.getX() - clique.x),1);
+                                selected.scala((e.getY() - clique.y),2);
+
+                                selected.translada(new Vertice(
+                                        x-selected.Central.x,
+                                        y-selected.Central.y,
+                                        z-selected.Central.z
+                                ));
+
+                                selected.Central.x=x;
+                                selected.Central.y=y;
+                                selected.Central.z=z;
+                            } else if (this.poliselected != null) {
+                                //poliselected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
+                                double x=this.poliselected.Central.x;
+                                double y=this.poliselected.Central.y;
+                                double z=this.poliselected.Central.z;
+
+                                this.poliselected.scala((e.getX() - clique.x)*0.005,1);
+                                this.poliselected.scala((e.getY() - clique.y)*0.005,2);
+
+                                this.poliselected.translada(new Vertice(
+                                        x-this.poliselected.Central.x,
+                                        y-this.poliselected.Central.y,
+                                        z-this.poliselected.Central.z
+                                ));
+
+                                this.poliselected.Central.x=x;
+                                this.poliselected.Central.y=y;
+                                this.poliselected.Central.z=z;
+                            }
+                        } else if (e.getSource() == canvas2) {
+                            if (selected != null) {
+
+                                double x=selected.Central.x;
+                                double y=selected.Central.y;
+                                double z=selected.Central.z;
+
+                                selected.scala((e.getX() - clique.x)*0.005,3);
+                                selected.scala((e.getY() - clique.y)*0.005,2);
+
+                                selected.translada(new Vertice(
+                                        x-selected.Central.x,
+                                        y-selected.Central.y,
+                                        z-selected.Central.z
+                                ));
+
+                                selected.Central.x=x;
+                                selected.Central.y=y;
+                                selected.Central.z=z;
+
+                            } else if (poliselected != null) {
+                                double x=this.poliselected.Central.x;
+                                double y=this.poliselected.Central.y;
+                                double z=this.poliselected.Central.z;
+
+                                this.poliselected.scala((e.getX() - clique.x)*0.005,3);
+                                this.poliselected.scala((e.getY() - clique.y)*0.005,2);
+
+                                this.poliselected.translada(new Vertice(
+                                        x-this.poliselected.Central.x,
+                                        y-this.poliselected.Central.y,
+                                        z-this.poliselected.Central.z
+                                ));
+
+                                this.poliselected.Central.x=x;
+                                this.poliselected.Central.y=y;
+                                this.poliselected.Central.z=z;
+                            }
+                        } else if (e.getSource() == canvas3) {
+                            if (selected != null) {
+
+                                double x=selected.Central.x;
+                                double y=selected.Central.y;
+                                double z=selected.Central.z;
+
+                                selected.rotaciona((e.getX() - clique.x)*0.005,1);
+                                selected.rotaciona((e.getY() - clique.y)*0.005,3);
+
+                                selected.translada(new Vertice(
+                                        x-selected.Central.x,
+                                        y-selected.Central.y,
+                                        z-selected.Central.z
+                                ));
+
+                                selected.Central.x=x;
+                                selected.Central.y=y;
+                                selected.Central.z=z;
+
+                            } else if (poliselected != null) {
+                                double x=this.poliselected.Central.x;
+                                double y=this.poliselected.Central.y;
+                                double z=this.poliselected.Central.z;
+
+                                this.poliselected.rotaciona((e.getX() - clique.x)*0.005,1);
+                                this.poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
+
+                                this.poliselected.translada(new Vertice(
+                                        x-this.poliselected.Central.x,
+                                        y-this.poliselected.Central.y,
+                                        z-this.poliselected.Central.z
+                                ));
+
+                                this.poliselected.Central.x=x;
+                                this.poliselected.Central.y=y;
+                                this.poliselected.Central.z=z;
+                            }
+                        }
+                        clique.x = e.getX();
+                        clique.y = e.getY();
+                        drawall();
+                    }
+                }
+            }
+            this.clique.x=e.getX();
+            this.clique.y=e.getY();
+        }
+    }
 
 }

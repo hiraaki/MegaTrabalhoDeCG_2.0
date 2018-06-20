@@ -198,6 +198,24 @@ public class Poligono implements Serializable {
 
         }
     }
+    public void scala(double novoTamanho,int eixo){
+        if(eixo==1) {
+            for (Vertice v : this.vertices) {
+                v.x = v.x * novoTamanho;
+            }
+            this.Central.x = this.Central.x * novoTamanho;
+        }else if(eixo==2){
+            for(Vertice v : this.vertices){
+                v.y=v.y*novoTamanho;
+            }
+            this.Central.y=this.Central.y*novoTamanho;
+        }else if (eixo==3){
+            for(Vertice v : this.vertices){
+                v.z=v.z*novoTamanho;
+            }
+            this.Central.z=this.Central.z*novoTamanho;
+        }
+    }
 
 
 }

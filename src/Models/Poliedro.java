@@ -113,4 +113,16 @@ public class Poliedro implements Serializable {
         }
         this.Central=new Vertice(menorX+((maiorX-menorX)/2),menorY+((maiorY-menorY)/2),menorZ+((maiorZ-menorZ)/2));
     }
+    public void scala(double variacao,int eixo){
+        for (Poligono p:this.faces){
+            p.scala(variacao,eixo);
+        }
+        if(eixo==1){
+            this.Central.x = this.Central.x * variacao;
+        }else if(eixo==2){
+            this.Central.y = this.Central.y * variacao;
+        }else if(eixo==3){
+            this.Central.y = this.Central.y * variacao;
+        }
+    }
 }
