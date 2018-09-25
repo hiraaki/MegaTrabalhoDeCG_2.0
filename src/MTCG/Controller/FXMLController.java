@@ -411,49 +411,11 @@ public class FXMLController implements Initializable {
 
     private void drawall(){
         clear();
-        for(Poligono p:this.poligonos){
+        ArrayList<Poligono> poligonos = this.poligonos;
+        poligonos.addAll(this.polyline);
+        for(Poligono p: poligonos){
             if(p==this.selected){
-                gc1.setStroke(Color.RED);
-                gc2.setStroke(Color.RED);
-                gc3.setStroke(Color.RED);
-                gc1.setLineWidth(3.0);
-                gc2.setLineWidth(3.0);
-                gc3.setLineWidth(3.0);
-                //System.out.println("selected");
-                p.draw(gc1,1);
-                p.draw(gc2,2);
-                p.draw(gc3,3);
-                gc1.setLineWidth(1.0);
-                gc2.setLineWidth(1.0);
-                gc3.setLineWidth(1.0);
-                gc1.setStroke(Color.BLACK);
-                gc2.setStroke(Color.BLACK);
-                gc3.setStroke(Color.BLACK);
-            }else {
-                p.draw(gc1,1);
-                p.draw(gc2,2);
-                p.draw(gc3,3);
-            }
-
-        }
-        for(Poligono p:this.polyline){
-            if(p==this.selected){
-                gc1.setStroke(Color.RED);
-                gc2.setStroke(Color.RED);
-                gc3.setStroke(Color.RED);
-                gc1.setLineWidth(3.0);
-                gc2.setLineWidth(3.0);
-                gc3.setLineWidth(3.0);
-                //System.out.println("selected");
-                p.draw(gc1,1);
-                p.draw(gc2,2);
-                p.draw(gc3,3);
-                gc1.setLineWidth(1.0);
-                gc2.setLineWidth(1.0);
-                gc3.setLineWidth(1.0);
-                gc1.setStroke(Color.BLACK);
-                gc2.setStroke(Color.BLACK);
-                gc3.setStroke(Color.BLACK);
+                drawselected(p,null);
             }else {
                 p.draw(gc1,1);
                 p.draw(gc2,2);
@@ -479,6 +441,31 @@ public class FXMLController implements Initializable {
             }
 
         desenhaRegua();
+    }
+
+    private void drawselected(Poligono poligono,Poliedro poliedro){
+        gc1.setStroke(Color.RED);
+        gc2.setStroke(Color.RED);
+        gc3.setStroke(Color.RED);
+        gc1.setLineWidth(3.0);
+        gc2.setLineWidth(3.0);
+        gc3.setLineWidth(3.0);
+        //System.out.println("selected");
+        if(poligono!=null){
+            poligono.draw(gc1,1);
+            poligono.draw(gc2,2);
+            poligono.draw(gc3,3);
+        }else {
+            poliedro.draw(gc1,1);
+            poliedro.draw(gc2,2);
+            poliedro.draw(gc3,3);
+        }
+        gc1.setLineWidth(1.0);
+        gc2.setLineWidth(1.0);
+        gc3.setLineWidth(1.0);
+        gc1.setStroke(Color.BLACK);
+        gc2.setStroke(Color.BLACK);
+        gc3.setStroke(Color.BLACK);
     }
 
     private void fechaPolilyne(){

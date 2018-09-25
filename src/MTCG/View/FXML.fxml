@@ -228,6 +228,7 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#buttonSave" text="Save" />
               <MenuItem mnemonicParsing="false" onAction="#buttonLoad" text="Load" />
+                  <MenuItem mnemonicParsing="false" text="New" />
             </items>
           </Menu>
         </menus>
