@@ -7,17 +7,17 @@ import java.io.Serializable;
 import static java.lang.Math.abs;
 import static java.lang.StrictMath.sqrt;
 
-public class Aresta implements Serializable {
-    public Vertice ini;
-    public Vertice fim;
-    public Poligono pai;
-    public Aresta() {
-        this.pai = new Poligono();
-        this.ini= new Vertice();
-        this.fim= new Vertice();
+public class Edge implements Serializable {
+    public Vertex ini;
+    public Vertex fim;
+    public Polygon pai;
+    public Edge() {
+        this.pai = new Polygon();
+        this.ini= new Vertex();
+        this.fim= new Vertex();
     }
 
-    public Aresta(Vertice ini, Vertice fim,Poligono pai) {
+    public Edge(Vertex ini, Vertex fim, Polygon pai) {
         this.ini = ini;
         this.fim = fim;
         this.pai = pai;
@@ -31,7 +31,7 @@ public class Aresta implements Serializable {
             gc.strokeLine(this.ini.z,this.ini.y,this.fim.z,this.fim.y);
         }
     }
-    public double DistanceFromLine(Vertice v, int lado){
+    public double DistanceFromLine(Vertex v, int lado){
         double ax=0, ay=0, bx=0, by=0, cx=0, cy=0;
         //System.out.print("A "+lado);
         if (lado==1) {
@@ -112,7 +112,7 @@ public class Aresta implements Serializable {
         return distanceSegment;
     }
 
-    public boolean selected(Vertice v,int lado){
+    public boolean selected(Vertex v, int lado){
         if(this.DistanceFromLine(v,lado)<5){
 //            System.out.println("x:"+v.x+" y:"+v.y+" z:"+v.z);
 //            System.out.println("x:"+this.ini.x+" y:"+this.ini.y+" z:"+this.ini.z);

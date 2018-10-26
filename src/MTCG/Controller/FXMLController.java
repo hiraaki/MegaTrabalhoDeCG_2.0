@@ -9,10 +9,7 @@ package Controller;
 import Models.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import javafx.scene.input.MouseEvent;
-
-import java.awt.*;
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
@@ -25,7 +22,6 @@ import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-
 import javax.swing.*;
 
 import static java.lang.Math.*;
@@ -70,28 +66,28 @@ public class FXMLController implements Initializable {
 
     private int cliques;
 
-    private ArrayList<Vertice> verIrregular;
+    private ArrayList<Vertex> verIrregular;
 
-    private ArrayList<Vertice> verIrregular2;
+    private ArrayList<Vertex> verIrregular2;
 
-    private ArrayList<Aresta> arrIrregular;
+    private ArrayList<Edge> arrIrregular;
 
-    private ArrayList<Aresta> arrIrregular2;
+    private ArrayList<Edge> arrIrregular2;
 
-    private ArrayList<Poligono> poligonos;
+    private ArrayList<Polygon> poligonos;
 
-    private ArrayList<Poligono> polyline;
+    private ArrayList<Polygon> polyline;
 
-    private Poligono selected;
+    private Polygon selected;
 
-    private Poliedro poliselected;
+    private Polyhedron poliselected;
 
-    private Vertice clique;
+    private Vertex clique;
 
-    private ArrayList<Vertice> linhas;
+    private ArrayList<Vertex> linhas;
 
 
-    private ArrayList<Poliedro> poliedros;
+    private ArrayList<Polyhedron> poliedros;
 
     GraphicsContext gc1;
     GraphicsContext gc2;
@@ -125,7 +121,7 @@ public class FXMLController implements Initializable {
 
 
         this.polyline = new ArrayList<>();
-        this.clique=new Vertice();
+        this.clique=new Vertex();
 
         this.clique=null;
 
@@ -192,16 +188,16 @@ public class FXMLController implements Initializable {
         if(e.getSource()==canvas1){
             if(verIrregular.size()>0){
 
-                if(verIrregular.get(0).distancia(new Vertice(e.getX(),e.getY(),0))<5) {
+                if(verIrregular.get(0).distancia(new Vertex(e.getX(),e.getY(),0))<5) {
 
 
-                    this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
+                    this.arrIrregular.add(new Edge(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                     //System.out.println("saiu!!!!");
 
                     this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
 
-                    this.poligonos.add(new Poligono(this.verIrregular,this.arrIrregular));
+                    this.poligonos.add(new Polygon(this.verIrregular,this.arrIrregular));
 
                     this.verIrregular=new ArrayList<>();
                     this.arrIrregular=new ArrayList<>();
@@ -209,8 +205,8 @@ public class FXMLController implements Initializable {
                 }else {
 
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
-                    verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
-                    arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
+                    verIrregular.add(new Vertex(e.getX(), e.getY(), 0));
+                    arrIrregular.add(new Edge(this.verIrregular.get(this.verIrregular.size() - 2),
                             this.verIrregular.get(this.verIrregular.size() - 1),
                             null));
 
@@ -218,22 +214,22 @@ public class FXMLController implements Initializable {
                 }
             }else {
 
-                verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
+                verIrregular.add(new Vertex(e.getX(), e.getY(), 0));
 
             }
         }else if(e.getSource()==canvas2){
             if(verIrregular.size()>0){
 
-                if(verIrregular.get(0).distancia(new Vertice(0,e.getY(),e.getX()))<5) {
+                if(verIrregular.get(0).distancia(new Vertex(0,e.getY(),e.getX()))<5) {
 
 
-                    this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
+                    this.arrIrregular.add(new Edge(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                     //System.out.println("saiu!!!!");
 
                     this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc2, 2);
 
-                    this.poligonos.add(new Poligono(this.verIrregular,this.arrIrregular));
+                    this.poligonos.add(new Polygon(this.verIrregular,this.arrIrregular));
 
                     this.verIrregular=new ArrayList<>();
                     this.arrIrregular=new ArrayList<>();
@@ -241,8 +237,8 @@ public class FXMLController implements Initializable {
                 }else {
 
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
-                    verIrregular.add(new Vertice(0, e.getY(), e.getX()));
-                    arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
+                    verIrregular.add(new Vertex(0, e.getY(), e.getX()));
+                    arrIrregular.add(new Edge(this.verIrregular.get(this.verIrregular.size() - 2),
                             this.verIrregular.get(this.verIrregular.size() - 1),
                             null));
 
@@ -250,22 +246,22 @@ public class FXMLController implements Initializable {
                 }
             }else {
 
-                verIrregular.add(new Vertice(e.getX(), e.getY(), 0));
+                verIrregular.add(new Vertex(e.getX(), e.getY(), 0));
 
             }
         }else if(e.getSource()==canvas3){
             if(verIrregular.size()>0){
 
-                if(verIrregular.get(0).distancia(new Vertice(e.getX(),0,e.getY()))<5) {
+                if(verIrregular.get(0).distancia(new Vertex(e.getX(),0,e.getY()))<5) {
 
 
-                    this.arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
+                    this.arrIrregular.add(new Edge(this.verIrregular.get(this.verIrregular.size() - 1), this.verIrregular.get(0),null));
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                     //System.out.println("saiu!!!!");
 
                     this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc3, 3);
 
-                    this.poligonos.add(new Poligono(this.verIrregular,this.arrIrregular));
+                    this.poligonos.add(new Polygon(this.verIrregular,this.arrIrregular));
 
                     this.verIrregular=new ArrayList<>();
                     this.arrIrregular=new ArrayList<>();
@@ -273,8 +269,8 @@ public class FXMLController implements Initializable {
                 }else {
 
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
-                    verIrregular.add(new Vertice(e.getX(), 0, e.getY()));
-                    arrIrregular.add(new Aresta(this.verIrregular.get(this.verIrregular.size() - 2),
+                    verIrregular.add(new Vertex(e.getX(), 0, e.getY()));
+                    arrIrregular.add(new Edge(this.verIrregular.get(this.verIrregular.size() - 2),
                             this.verIrregular.get(this.verIrregular.size() - 1),
                             null));
 
@@ -282,7 +278,7 @@ public class FXMLController implements Initializable {
                 }
             }else {
 
-                verIrregular.add(new Vertice(e.getX(), 0, e.getY()));
+                verIrregular.add(new Vertex(e.getX(), 0, e.getY()));
 
             }
         }
@@ -306,13 +302,13 @@ public class FXMLController implements Initializable {
     private void Regular(MouseEvent e){
 
         if(e.getSource()==canvas1){
-            this.poligonos.add(new Poligono(new Vertice(e.getX(), e.getY(), 0), lados, null,1));
+            this.poligonos.add(new Polygon(new Vertex(e.getX(), e.getY(), 0), lados, null,1));
             this.poligonos.get(this.poligonos.size()-1).draw(gc1,1);
         }else if(e.getSource()==canvas2){
-            this.poligonos.add(new Poligono(new Vertice(0, e.getY(), e.getX()), lados, null,3));
+            this.poligonos.add(new Polygon(new Vertex(0, e.getY(), e.getX()), lados, null,3));
             this.poligonos.get(this.poligonos.size()-1).draw(gc2,2);
         }else if(e.getSource()==canvas3){
-            this.poligonos.add(new Poligono(new Vertice(e.getX(), 0, e.getY()), lados, null,2));
+            this.poligonos.add(new Polygon(new Vertex(e.getX(), 0, e.getY()), lados, null,2));
             this.poligonos.get(this.poligonos.size()-1).draw(gc3,3);
         }
     }
@@ -332,42 +328,42 @@ public class FXMLController implements Initializable {
 
         if(e.getSource()==canvas1){
             if(verIrregular2.size()>0){
-                System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
-                verIrregular2.add(new Vertice(e.getX(), e.getY(), 0));
-                arrIrregular2.add(new Aresta(this.verIrregular2.get(this.verIrregular2.size() - 2),
+                System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertex(e.getX(),e.getY(),0)));
+                verIrregular2.add(new Vertex(e.getX(), e.getY(), 0));
+                arrIrregular2.add(new Edge(this.verIrregular2.get(this.verIrregular2.size() - 2),
                         this.verIrregular2.get(this.verIrregular2.size() - 1),
                         null));
 
                 this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc1, 1);
             }else {
-                verIrregular2.add(new Vertice(e.getX(), e.getY(), 0));
+                verIrregular2.add(new Vertex(e.getX(), e.getY(), 0));
                 polylineAtiva=1;
             }
         }else if(e.getSource()==canvas2){
             if(verIrregular2.size()>0){
-                System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertice(0,e.getY(),e.getX())));
-                verIrregular2.add(new Vertice(0, e.getY(), (e.getX())));
-                arrIrregular2.add(new Aresta(this.verIrregular2.get(this.verIrregular2.size() - 2),
+                System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertex(0,e.getY(),e.getX())));
+                verIrregular2.add(new Vertex(0, e.getY(), (e.getX())));
+                arrIrregular2.add(new Edge(this.verIrregular2.get(this.verIrregular2.size() - 2),
                         this.verIrregular2.get(this.verIrregular2.size() - 1),
                         null));
 
                 this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc2, 2);
             }else {
-                verIrregular2.add(new Vertice(0, e.getY(), e.getX()));
+                verIrregular2.add(new Vertex(0, e.getY(), e.getX()));
                 polylineAtiva=1;
             }
 
         }else if(e.getSource()==canvas3){
             if(verIrregular2.size()>0){
-                System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertice(e.getX(), 0,e.getY())));
-                verIrregular2.add(new Vertice(e.getX(), 0, e.getY()));
-                arrIrregular2.add(new Aresta(this.verIrregular2.get(this.verIrregular2.size() - 2),
+                System.out.println(verIrregular2.get(verIrregular2.size()-1).distancia(new Vertex(e.getX(), 0,e.getY())));
+                verIrregular2.add(new Vertex(e.getX(), 0, e.getY()));
+                arrIrregular2.add(new Edge(this.verIrregular2.get(this.verIrregular2.size() - 2),
                         this.verIrregular2.get(this.verIrregular2.size() - 1),
                         null));
 
                 this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc3, 3);
             }else {
-                verIrregular2.add(new Vertice(e.getX(), 0, e.getY()));
+                verIrregular2.add(new Vertex(e.getX(), 0, e.getY()));
                 polylineAtiva=1;
             }
         }
@@ -388,17 +384,17 @@ public class FXMLController implements Initializable {
     }
 
     private void Circulo1(MouseEvent e){
-        this.poligonos.add(new Poligono(new Vertice(e.getX(), e.getY(), 0), 500, null,1));
+        this.poligonos.add(new Polygon(new Vertex(e.getX(), e.getY(), 0), 500, null,1));
         this.poligonos.get(this.poligonos.size()-1).draw(gc1,1);
     }
 
     private void Circulo2(MouseEvent e){
-        this.poligonos.add(new Poligono(new Vertice(0, e.getY(), e.getX()), 500, null,3));
+        this.poligonos.add(new Polygon(new Vertex(0, e.getY(), e.getX()), 500, null,3));
         this.poligonos.get(this.poligonos.size()-1).draw(gc2,2);
     }
 
     private void Circulo3(MouseEvent e){
-        this.poligonos.add(new Poligono(new Vertice(e.getX(), 0, e.getY()), 500, null,2));
+        this.poligonos.add(new Polygon(new Vertex(e.getX(), 0, e.getY()), 500, null,2));
         this.poligonos.get(this.poligonos.size()-1).draw(gc3,3);
     }
 
@@ -411,9 +407,9 @@ public class FXMLController implements Initializable {
 
     private void drawall(){
         clear();
-        ArrayList<Poligono> poligonos = this.poligonos;
+        ArrayList<Polygon> poligonos = this.poligonos;
         poligonos.addAll(this.polyline);
-        for(Poligono p: poligonos){
+        for(Polygon p: poligonos){
             if(p==this.selected){
                 drawselected(p,null);
             }else {
@@ -423,7 +419,7 @@ public class FXMLController implements Initializable {
             }
 
         }
-        for(Poliedro p:this.poliedros)
+        for(Polyhedron p:this.poliedros)
             if (p == this.poliselected) {
                 gc1.setStroke(Color.RED);
                 gc2.setStroke(Color.RED);
@@ -443,7 +439,7 @@ public class FXMLController implements Initializable {
         desenhaRegua();
     }
 
-    private void drawselected(Poligono poligono,Poliedro poliedro){
+    private void drawselected(Polygon poligono, Polyhedron poliedro){
         gc1.setStroke(Color.RED);
         gc2.setStroke(Color.RED);
         gc3.setStroke(Color.RED);
@@ -469,7 +465,7 @@ public class FXMLController implements Initializable {
     }
 
     private void fechaPolilyne(){
-        this.polyline.add(new Poligono(this.verIrregular2,this.arrIrregular2));
+        this.polyline.add(new Polygon(this.verIrregular2,this.arrIrregular2));
         this.polyline.get(this.polyline.size()-1).calcCentroid();
         this.verIrregular2=new ArrayList<>();
         this.arrIrregular2=new ArrayList<>();
@@ -540,28 +536,28 @@ public class FXMLController implements Initializable {
     }
 
     private void select(MouseEvent e){
-        Vertice v = new Vertice();
+        Vertex v = new Vertex();
         boolean foundpolig=false;
         boolean foundpolie=false;
         boolean foundpoly=false;
         int lado=0;
         if(e.getSource()==canvas1){
             System.out.println("canvas1");
-            v = new Vertice(e.getX(),e.getY(),0);
+            v = new Vertex(e.getX(),e.getY(),0);
             lado=1;
         }else if(e.getSource()==canvas2){
             System.out.println("canvas2");
-            v = new Vertice(0,e.getY(),e.getX());
+            v = new Vertex(0,e.getY(),e.getX());
             lado=2;
         }else if(e.getSource()==canvas3){
             System.out.println("canvas3");
-            v = new Vertice(e.getX(),0,e.getY());
+            v = new Vertex(e.getX(),0,e.getY());
             lado=3;
         }
        //System.out.print("F "+lado);
-        for (Poliedro poli : this.poliedros) {
-            for (Poligono p : poli.faces) {
-                for (Aresta a : p.arestas) {
+        for (Polyhedron poli : this.poliedros) {
+            for (Polygon p : poli.faces) {
+                for (Edge a : p.arestas) {
                     //System.out.println("ds");
                     //System.out.println(p.isselected(v, lados));
                     //System.out.print("F "+lado);
@@ -582,8 +578,8 @@ public class FXMLController implements Initializable {
             }
         }
 
-        for (Poligono p : this.poligonos) {
-            for (Aresta a : p.arestas) {
+        for (Polygon p : this.poligonos) {
+            for (Edge a : p.arestas) {
                 if (a.selected(v, lado)) {
                     this.selected = a.pai;
                     foundpolig = true;
@@ -598,8 +594,8 @@ public class FXMLController implements Initializable {
             }
 
         }
-        for (Poligono p : this.polyline) {
-            for (Aresta a : p.arestas) {
+        for (Polygon p : this.polyline) {
+            for (Edge a : p.arestas) {
                 if (a.selected(v, lado)) {
                     this.selected = a.pai;
                     foundpolig = true;
@@ -668,7 +664,7 @@ public class FXMLController implements Initializable {
         this.clique=null;
     }
     private void setClick(MouseEvent e){
-        this.clique=new Vertice(e.getX(),e.getY(),0);
+        this.clique=new Vertex(e.getX(),e.getY(),0);
     }
 
 
@@ -686,7 +682,7 @@ public class FXMLController implements Initializable {
                                 selected.rotaciona((e.getX() - clique.x)*0.005,3);
                                 selected.rotaciona((e.getY() - clique.y)*0.005,2);
 
-                                selected.translada(new Vertice(
+                                selected.translada(new Vertex(
                                         x-selected.Central.x,
                                         y-selected.Central.y,
                                         z-selected.Central.z
@@ -704,7 +700,7 @@ public class FXMLController implements Initializable {
                                 this.poliselected.rotaciona((e.getX() - clique.x)*0.005,3);
                                 this.poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
 
-                                this.poliselected.translada(new Vertice(
+                                this.poliselected.translada(new Vertex(
                                         x-this.poliselected.Central.x,
                                         y-this.poliselected.Central.y,
                                         z-this.poliselected.Central.z
@@ -724,7 +720,7 @@ public class FXMLController implements Initializable {
                                 selected.rotaciona((e.getX() - clique.x)*0.005,3);
                                 selected.rotaciona((e.getY() - clique.y)*0.005,1);
 
-                                selected.translada(new Vertice(
+                                selected.translada(new Vertex(
                                         x-selected.Central.x,
                                         y-selected.Central.y,
                                         z-selected.Central.z
@@ -742,7 +738,7 @@ public class FXMLController implements Initializable {
                                 this.poliselected.rotaciona((e.getX() - clique.x)*0.005,3);
                                 this.poliselected.rotaciona((e.getY() - clique.y)*0.005,1);
 
-                                this.poliselected.translada(new Vertice(
+                                this.poliselected.translada(new Vertex(
                                         x-this.poliselected.Central.x,
                                         y-this.poliselected.Central.y,
                                         z-this.poliselected.Central.z
@@ -762,7 +758,7 @@ public class FXMLController implements Initializable {
                                 selected.rotaciona((e.getX() - clique.x)*0.005,1);
                                 selected.rotaciona((e.getY() - clique.y)*0.005,2);
 
-                                selected.translada(new Vertice(
+                                selected.translada(new Vertex(
                                         x-selected.Central.x,
                                         y-selected.Central.y,
                                         z-selected.Central.z
@@ -780,7 +776,7 @@ public class FXMLController implements Initializable {
                                 this.poliselected.rotaciona((e.getX() - clique.x)*0.005,1);
                                 this.poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
 
-                                this.poliselected.translada(new Vertice(
+                                this.poliselected.translada(new Vertex(
                                         x-this.poliselected.Central.x,
                                         y-this.poliselected.Central.y,
                                         z-this.poliselected.Central.z
@@ -822,30 +818,30 @@ public class FXMLController implements Initializable {
             if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
                 if (e.getSource() == canvas1) {
                     if (selected != null) {
-                        selected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
+                        selected.translada(new Vertex(e.getX() - clique.x, e.getY() - clique.y, 0));
 //                        selected.Central.x+=e.getX() - clique.x;
 //                        selected.Central.y+=e.getY() - clique.y;
 
                     } else if (poliselected != null) {
-                        poliselected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
+                        poliselected.translada(new Vertex(e.getX() - clique.x, e.getY() - clique.y, 0));
                     }
                 } else if (e.getSource() == canvas2) {
                     if (selected != null) {
-                        selected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
+                        selected.translada(new Vertex(0, e.getY() - clique.y, e.getX() - clique.x));
 //                        selected.Central.z+=e.getX() - clique.x;
 //                        selected.Central.y+=e.getY() - clique.y;
 
                     } else if (poliselected != null) {
-                        poliselected.translada(new Vertice(0, e.getY() - clique.y, e.getX() - clique.x));
+                        poliselected.translada(new Vertex(0, e.getY() - clique.y, e.getX() - clique.x));
                     }
                 } else if (e.getSource() == canvas3) {
                     if (selected != null) {
-                        selected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
+                        selected.translada(new Vertex(e.getX() - clique.x, 0, e.getY() - clique.y));
 //                        selected.Central.x+=e.getX() - clique.x;
 //                        selected.Central.z+=e.getY() - clique.y;
 
                     } else if (poliselected != null) {
-                        poliselected.translada(new Vertice(e.getX() - clique.x, 0, e.getY() - clique.y));
+                        poliselected.translada(new Vertex(e.getX() - clique.x, 0, e.getY() - clique.y));
                     }
                 }
                 clique.x = e.getX();
@@ -878,7 +874,7 @@ public class FXMLController implements Initializable {
             System.out.println("sei lá "+angulo+"\n");
 
             System.out.println(toRadians(360));
-            this.poliedros.add(new Poliedro(selected,segmentos,eixo,angulo));
+            this.poliedros.add(new Polyhedron(selected,segmentos,eixo,angulo));
             this.poligonos.remove(selected);
             this.polyline .remove(selected);
             selected=null;
@@ -887,7 +883,7 @@ public class FXMLController implements Initializable {
     }
 
     public void ctest(){
-        this.poligonos.add(new Poligono(new Vertice(300,150,0),3,null,1));
+        this.poligonos.add(new Polygon(new Vertex(300,150,0),3,null,1));
         drawall();
     }
     public void rvDebug(){
@@ -910,7 +906,7 @@ public class FXMLController implements Initializable {
         selected.Central.z=ante;
 
         //selected.calcCentroid();
-        selected.translada(new Vertice(
+        selected.translada(new Vertex(
         x-selected.Central.x,
         y-selected.Central.y,
         z-selected.Central.z
@@ -960,8 +956,8 @@ public class FXMLController implements Initializable {
         try {
             FileInputStream in = new FileInputStream(fileName);
             ObjectInputStream ois = new ObjectInputStream(in);
-            this.poligonos = (ArrayList<Poligono>) (ois.readObject());
-            this.poliedros = (ArrayList<Poliedro>) (ois.readObject());
+            this.poligonos = (ArrayList<Polygon>) (ois.readObject());
+            this.poliedros = (ArrayList<Polyhedron>) (ois.readObject());
         } catch (Exception e) {
             System.out.println("Problem serializing: " + e);
         }
@@ -1010,7 +1006,7 @@ public class FXMLController implements Initializable {
                                 }else if((e.getY() - clique.y)>0){
                                     selected.scala(0.99,2);
                                 }
-                                selected.translada(new Vertice(
+                                selected.translada(new Vertex(
                                         x-selected.Central.x,
                                         y-selected.Central.y,
                                         z-selected.Central.z
@@ -1036,7 +1032,7 @@ public class FXMLController implements Initializable {
                                     this.poliselected.scala(0.99,2);
                                 }
 
-                                this.poliselected.translada(new Vertice(
+                                this.poliselected.translada(new Vertex(
                                         x-this.poliselected.Central.x,
                                         y-this.poliselected.Central.y,
                                         z-this.poliselected.Central.z
@@ -1064,7 +1060,7 @@ public class FXMLController implements Initializable {
                                     selected.scala(0.99,2);
                                 }
 
-                                selected.translada(new Vertice(
+                                selected.translada(new Vertex(
                                         x-selected.Central.x,
                                         y-selected.Central.y,
                                         z-selected.Central.z
@@ -1090,7 +1086,7 @@ public class FXMLController implements Initializable {
                                     this.poliselected.scala(0.99,2);
                                 }
 
-                                this.poliselected.translada(new Vertice(
+                                this.poliselected.translada(new Vertex(
                                         x-this.poliselected.Central.x,
                                         y-this.poliselected.Central.y,
                                         z-this.poliselected.Central.z
@@ -1121,7 +1117,7 @@ public class FXMLController implements Initializable {
                                     selected.scala(0.99,3);
                                 }
 
-                                selected.translada(new Vertice(
+                                selected.translada(new Vertex(
                                         x-selected.Central.x,
                                         y-selected.Central.y,
                                         z-selected.Central.z
@@ -1147,7 +1143,7 @@ public class FXMLController implements Initializable {
                                     this.poliselected.scala(0.99,3);
                                 }
 
-                                this.poliselected.translada(new Vertice(
+                                this.poliselected.translada(new Vertex(
                                         x-this.poliselected.Central.x,
                                         y-this.poliselected.Central.y,
                                         z-this.poliselected.Central.z
