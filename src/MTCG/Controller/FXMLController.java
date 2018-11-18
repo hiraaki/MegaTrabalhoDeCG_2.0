@@ -376,9 +376,6 @@ public class FXMLController implements Initializable {
             }
         }
 
-
-
-
     }
 
     public void botaoCirculo(){
@@ -682,189 +679,126 @@ public class FXMLController implements Initializable {
         this.clique=new Vertex(e.getX(),e.getY(),0);
     }
 
-        private void rotaciona(MouseEvent e){
-            if (selected != null) {
-                if (clique != null) {
-                    if ((e.getX() != this.clique.x) || (e.getY() != clique.y)) {
-                        if (e.getSource() == canvas1) {
-                            double x=selected.Central.x;
-                            double y=selected.Central.y;
-                            double z=selected.Central.z;
-                            vertexBasedOperations.rotaciona(selected.vertices
-                                    ,selected.Central,(e.getX() - clique.x)*0.005,3);
+    /*
+    * Podia ter colocado num ArrayList do qual está selecionado separado
+    *  dae tira as Redundância de codigo
+    *  Mas vou
+    *  Num vou
+    *  Agr já terminei esta merda
+    * */
+    private void rotaciona(MouseEvent e){
+        double x;
+        double y;
+        double z;
 
-                            vertexBasedOperations.rotaciona(selected.vertices,
-                                    selected.Central,(e.getY() - clique.y)*0.005,2);
+        if (clique != null) {
+            if ((e.getX() != this.clique.x) || (e.getY() != clique.y)) {
+                if (e.getSource() == canvas1) {
+                    if (selected != null) {
+                        x = selected.Central.x;
+                        y = selected.Central.y;
+                        z = selected.Central.z;
+                        vertexBasedOperations.rotaciona(selected.vertices
+                                , selected.Central, (e.getX() - clique.x) * 0.005, 3);
 
-                            vertexBasedOperations.translada(selected.vertices,selected.Central,new Vertex(
-                                    x-selected.Central.x,
-                                    y-selected.Central.y,
-                                    z-selected.Central.z
-                            ));
-                        }
+                        vertexBasedOperations.rotaciona(selected.vertices,
+                                selected.Central, (e.getY() - clique.y) * 0.005, 2);
+
+                        vertexBasedOperations.translada(selected.vertices, selected.Central, new Vertex(
+                                x - selected.Central.x,
+                                y - selected.Central.y,
+                                z - selected.Central.z
+                        ));
+                    }else if(poliselected!=null){
+                        x=poliselected.Central.x;
+                        y=poliselected.Central.y;
+                        z=poliselected.Central.z;
+                        vertexBasedOperations.rotaciona(poliselected.vertices
+                                ,poliselected.Central,(e.getX() - clique.x)*0.005,3);
+
+                        vertexBasedOperations.rotaciona(poliselected.vertices,
+                                poliselected.Central,(e.getY() - clique.y)*0.005,2);
+
+                        vertexBasedOperations.translada(poliselected.vertices,poliselected.Central,new Vertex(
+                                x-poliselected.Central.x,
+                                y-poliselected.Central.y,
+                                z-poliselected.Central.z
+                        ));
                     }
-                    this.clique.x=e.getX();
-                    this.clique.y=e.getY();
-                    drawall();
-                }
-            }else if(poliselected!=null){
-                if (clique != null) {
-                    if ((e.getX() != this.clique.x) || (e.getY() != clique.y)) {
-                        if (e.getSource() == canvas1) {
-                            double x=poliselected.Central.x;
-                            double y=poliselected.Central.y;
-                            double z=poliselected.Central.z;
-                            vertexBasedOperations.rotaciona(poliselected.vertices
-                                    ,poliselected.Central,(e.getX() - clique.x)*0.005,3);
+                }else if (e.getSource() == canvas2) {
+                    if (selected != null) {
+                        x=selected.Central.x;
+                        y=selected.Central.y;
+                        z=selected.Central.z;
+                        vertexBasedOperations.rotaciona(selected.vertices,selected.Central,(e.getX() - clique.x)*0.005,3);
+                        vertexBasedOperations.rotaciona(selected.vertices,selected.Central,(e.getY() - clique.y)*0.005,1);
+                        vertexBasedOperations.translada(selected.vertices,selected.Central,new Vertex(
+                                x-selected.Central.x,
+                                y-selected.Central.y,
+                                z-selected.Central.z
+                        ));
+                        selected.Central.x=x;
+                        selected.Central.y=y;
+                        selected.Central.z=z;
 
-                            vertexBasedOperations.rotaciona(poliselected.vertices,
-                                    poliselected.Central,(e.getY() - clique.y)*0.005,2);
-
-                            vertexBasedOperations.translada(poliselected.vertices,poliselected.Central,new Vertex(
-                                    x-poliselected.Central.x,
-                                    y-poliselected.Central.y,
-                                    z-poliselected.Central.z
-                            ));
-                        }
+                    } else if (poliselected != null) {
+                        x=this.poliselected.Central.x;
+                        y=this.poliselected.Central.y;
+                        z=this.poliselected.Central.z;
+                        vertexBasedOperations.rotaciona(poliselected.vertices,poliselected.Central,(e.getX() - clique.x)*0.005,3);
+                        vertexBasedOperations.rotaciona(poliselected.vertices,poliselected.Central,(e.getY() - clique.y)*0.005,1);
+                        vertexBasedOperations.translada(poliselected.vertices,poliselected.Central, new Vertex(
+                                        x-this.poliselected.Central.x,
+                                        y-this.poliselected.Central.y,
+                                        z-this.poliselected.Central.z
+                                ));
+                        this.poliselected.Central.x=x;
+                        this.poliselected.Central.y=y;
+                        this.poliselected.Central.z=z;
                     }
-                    this.clique.x=e.getX();
-                    this.clique.y=e.getY();
-                    drawall();
+                }else if (e.getSource() == canvas3) {
+                    if (selected != null) {
+                        x=selected.Central.x;
+                        y=selected.Central.y;
+                        z=selected.Central.z;
+                        vertexBasedOperations.rotaciona(selected.vertices,selected.Central,(e.getX() - clique.x)*0.005,1);
+                        vertexBasedOperations.rotaciona(selected.vertices,selected.Central,(e.getY() - clique.y)*0.005,2);
+                        vertexBasedOperations.translada(selected.vertices,selected.Central,new Vertex(
+                                x-selected.Central.x,
+                                y-selected.Central.y,
+                                z-selected.Central.z
+                        ));
+
+                        selected.Central.x=x;
+                        selected.Central.y=y;
+                        selected.Central.z=z;
+
+                    } else if (poliselected != null) {
+                        x=this.poliselected.Central.x;
+                        y=this.poliselected.Central.y;
+                        z=this.poliselected.Central.z;
+
+                        vertexBasedOperations.rotaciona(poliselected.vertices,poliselected.Central,(e.getX() - clique.x)*0.005,1);
+                        vertexBasedOperations.rotaciona(poliselected.vertices,poliselected.Central,(e.getY() - clique.y)*0.005,2);
+                        vertexBasedOperations.translada(poliselected.vertices,poliselected.Central,new Vertex(
+                                x-this.poliselected.Central.x,
+                                y-this.poliselected.Central.y,
+                                z-this.poliselected.Central.z
+                        ));
+
+                        this.poliselected.Central.x=x;
+                        this.poliselected.Central.y=y;
+                        this.poliselected.Central.z=z;
+                    }
                 }
+
             }
+            this.clique.x=e.getX();
+            this.clique.y=e.getY();
+            drawall();
         }
-//    private void rotaciona(MouseEvent e){
-//        if(clique!=null){
-//            if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
-//                if(clique!=null) {
-//                    if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
-//                        if (e.getSource() == canvas1) {
-//                            if (selected != null) {
-//                                double x=selected.Central.x;
-//                                double y=selected.Central.y;
-//                                double z=selected.Central.z;
+    }
 
-//                                vertexBasedOperations.rotaciona(selected.vertices
-//                                        ,selected.Central,(e.getX() - clique.x)*0.005,3);
-//
-//                                vertexBasedOperations.rotaciona(selected.vertices,
-//                                        selected.Central,(e.getY() - clique.y)*0.005,2);
-//
-//                                vertexBasedOperations.translada(selected.vertices,selected.Central,new Vertex(
-//                                        x-selected.Central.x,
-//                                        y-selected.Central.y,
-//                                        z-selected.Central.z
-//                                ));
-//
-//                                selected.Central.x=x;
-//                                selected.Central.y=y;
-//                                selected.Central.z=z;
-//                            } else if (this.poliselected != null) {
-//                                //poliselected.translada(new Vertice(e.getX() - clique.x, e.getY() - clique.y, 0));
-//                                double x=this.poliselected.Central.x;
-//                                double y=this.poliselected.Central.y;
-//                                double z=this.poliselected.Central.z;
-//
-//                                this.poliselected.rotaciona((e.getX() - clique.x)*0.005,3);
-//                                this.poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
-//
-//                                this.poliselected.translada(new Vertex(
-//                                        x-this.poliselected.Central.x,
-//                                        y-this.poliselected.Central.y,
-//                                        z-this.poliselected.Central.z
-//                                ));
-//
-//                                this.poliselected.Central.x=x;
-//                                this.poliselected.Central.y=y;
-//                                this.poliselected.Central.z=z;
-//                            }
-//                        } else if (e.getSource() == canvas2) {
-//                            if (selected != null) {
-//
-//                                double x=selected.Central.x;
-//                                double y=selected.Central.y;
-//                                double z=selected.Central.z;
-//
-//                                selected.rotaciona((e.getX() - clique.x)*0.005,3);
-//                                selected.rotaciona((e.getY() - clique.y)*0.005,1);
-//
-//                                selected.translada(new Vertex(
-//                                        x-selected.Central.x,
-//                                        y-selected.Central.y,
-//                                        z-selected.Central.z
-//                                ));
-//
-//                                selected.Central.x=x;
-//                                selected.Central.y=y;
-//                                selected.Central.z=z;
-//
-//                            } else if (poliselected != null) {
-//                                double x=this.poliselected.Central.x;
-//                                double y=this.poliselected.Central.y;
-//                                double z=this.poliselected.Central.z;
-//
-//                                this.poliselected.rotaciona((e.getX() - clique.x)*0.005,3);
-//                                this.poliselected.rotaciona((e.getY() - clique.y)*0.005,1);
-//
-//                                this.poliselected.translada(new Vertex(
-//                                        x-this.poliselected.Central.x,
-//                                        y-this.poliselected.Central.y,
-//                                        z-this.poliselected.Central.z
-//                                ));
-//
-//                                this.poliselected.Central.x=x;
-//                                this.poliselected.Central.y=y;
-//                                this.poliselected.Central.z=z;
-//                            }
-//                        } else if (e.getSource() == canvas3) {
-//                            if (selected != null) {
-//
-//                                double x=selected.Central.x;
-//                                double y=selected.Central.y;
-//                                double z=selected.Central.z;
-//
-//                                selected.rotaciona((e.getX() - clique.x)*0.005,1);
-//                                selected.rotaciona((e.getY() - clique.y)*0.005,2);
-//
-//                                selected.translada(new Vertex(
-//                                        x-selected.Central.x,
-//                                        y-selected.Central.y,
-//                                        z-selected.Central.z
-//                                ));
-//
-//                                selected.Central.x=x;
-//                                selected.Central.y=y;
-//                                selected.Central.z=z;
-//
-//                            } else if (poliselected != null) {
-//                                double x=this.poliselected.Central.x;
-//                                double y=this.poliselected.Central.y;
-//                                double z=this.poliselected.Central.z;
-//
-//                                this.poliselected.rotaciona((e.getX() - clique.x)*0.005,1);
-//                                this.poliselected.rotaciona((e.getY() - clique.y)*0.005,2);
-//
-//                                this.poliselected.translada(new Vertex(
-//                                        x-this.poliselected.Central.x,
-//                                        y-this.poliselected.Central.y,
-//                                        z-this.poliselected.Central.z
-//                                ));
-//
-//                                this.poliselected.Central.x=x;
-//                                this.poliselected.Central.y=y;
-//                                this.poliselected.Central.z=z;
-//                            }
-//                        }
-//                        clique.x = e.getX();
-//                        clique.y = e.getY();
-//                        drawall();
-//                    }
-//                }
-//            }
-//            this.clique.x=e.getX();
-//            this.clique.y=e.getY();
-//        }
-//    }
     public void buttontranslada(){
         canvas1.setOnMousePressed(this::setClick);
         canvas1.setOnMouseDragged(this::translada);
@@ -1258,7 +1192,5 @@ public class FXMLController implements Initializable {
             this.clique.y=e.getY();
         }
     }
-
-
 
 }
