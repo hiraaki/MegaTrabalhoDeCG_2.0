@@ -27,11 +27,6 @@ import javax.swing.*;
 import static java.lang.Math.*;
 
 
-/**
- * FXML Controller class
- *
- * @author gabriela
- */
 public class FXMLController implements Initializable {
 
     @FXML
