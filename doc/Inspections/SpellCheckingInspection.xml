@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/Main.java</file>
+    <line>16</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>View</package>
+    <entry_point TYPE="method" FQNAME="View.Main void start(javafx.stage.Stage primaryStage)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Trabalho'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>38</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>46</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>51</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>60</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'botao'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>60</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Seleciona'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>64</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>69</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Selecionar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>75</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'botao'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>75</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Exclui'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>79</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>84</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Excluir'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>91</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'botao'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>91</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Ponto'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>95</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>100</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Desenhar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>100</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'polígono'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>100</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'livre'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>107</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'botao'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>107</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Circulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>111</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>116</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Desenhar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>116</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'círculo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>123</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'botao'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>127</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>139</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'botao'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>139</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Poligono'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>143</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>148</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Desenhar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>148</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'polígono'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>155</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'rotaciona'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>157</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Rotacionar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>166</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>171</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'translada'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>173</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Transladar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>182</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>191</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>196</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Revolucionar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>207</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'imagens'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>212</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Redimensionar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>219</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Angulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>220</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Eixo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>221</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Ângulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>223</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Segmentos'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>227</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Arquivo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/ResizableCanvas.java</file>
+    <line>12</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="class" FQNAME="Models.ResizableCanvas" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Custon'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polyhedron.java</file>
+    <line>34</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polyhedron void draw(javafx.scene.canvas.GraphicsContext gc, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grafics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polyhedron.java</file>
+    <line>35</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polyhedron void draw(javafx.scene.canvas.GraphicsContext gc, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polyhedron.java</file>
+    <line>37</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polyhedron void draw(javafx.scene.canvas.GraphicsContext gc, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Edge.java</file>
+    <line>36</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Edge void drawn(javafx.scene.canvas.GraphicsContext gc, int surface)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grafics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Edge.java</file>
+    <line>61</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Edge boolean selected(Models.Vertex v, int surface)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Vertex.java</file>
+    <line>29</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Vertex double distancia(Models.Vertex V)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Vertex.java</file>
+    <line>33</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Vertex double distancia(Models.Vertex V)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'distancia'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>58</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polygon boolean isselected(Models.Vertex v, int lados)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lados'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>61</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polygon boolean isselected(Models.Vertex v, int lados)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lados'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>61</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polygon boolean isselected(Models.Vertex v, int lados)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'isselected'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>46</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polygon void draw(javafx.scene.canvas.GraphicsContext gc, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Grafics'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>47</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polygon void draw(javafx.scene.canvas.GraphicsContext gc, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>49</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polygon void draw(javafx.scene.canvas.GraphicsContext gc, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>30</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Polygon Polygon(java.util.ArrayList&lt;Models.Vertex&gt; vertices, java.util.ArrayList&lt;Models.Edge&gt; edges)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>79</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController void calcCentroid(Models.Polyhedron polyhedron)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'maior'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>79</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController void calcCentroid(Models.Polyhedron polyhedron)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'maior'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>79</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController void calcCentroid(Models.Polyhedron polyhedron)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'maior'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>80</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController void calcCentroid(Models.Polyhedron polyhedron)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'menor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>80</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController void calcCentroid(Models.Polyhedron polyhedron)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'menor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>80</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController void calcCentroid(Models.Polyhedron polyhedron)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'menor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>23</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Geratriz'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>23</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'revolute'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>24</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'arevolucionar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>25</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'particoes'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>26</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>27</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Angulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>27</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'revolute'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>30</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'arevolucionar'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>30</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'particoes'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>30</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>30</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Angulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>32</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'angulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>33</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'angulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>33</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Atual'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>34</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'angulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>34</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Novo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>35</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'atual'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>36</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'novo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>44</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'angulo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>44</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Novo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>47</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'pface'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>30</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'criate'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>15</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Vertex calcCentroid(java.util.ArrayList&lt;Models.Vertex&gt; vertices)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>16</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Vertex calcCentroid(java.util.ArrayList&lt;Models.Vertex&gt; vertices)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>20</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Vertex calcCentroid(java.util.ArrayList&lt;Models.Vertex&gt; vertices)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'maior'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>20</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Vertex calcCentroid(java.util.ArrayList&lt;Models.Vertex&gt; vertices)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'maior'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>20</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Vertex calcCentroid(java.util.ArrayList&lt;Models.Vertex&gt; vertices)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'maior'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>21</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Vertex calcCentroid(java.util.ArrayList&lt;Models.Vertex&gt; vertices)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'menor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>21</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Vertex calcCentroid(java.util.ArrayList&lt;Models.Vertex&gt; vertices)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'menor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>21</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Vertex calcCentroid(java.util.ArrayList&lt;Models.Vertex&gt; vertices)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'menor'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>61</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Polygon createRegularPolygon(Models.Vertex point, int axis, javafx.scene.paint.Color cor, int plano)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'planos'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>65</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Polygon createRegularPolygon(Models.Vertex point, int axis, javafx.scene.paint.Color cor, int plano)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'xtemp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>66</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Polygon createRegularPolygon(Models.Vertex point, int axis, javafx.scene.paint.Color cor, int plano)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'ytemp'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>67</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Polygon createRegularPolygon(Models.Vertex point, int axis, javafx.scene.paint.Color cor, int plano)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'grau'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>40</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController void setEdges(Models.Polygon polygon)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>40</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController void setEdges(Models.Polygon polygon)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'aassuming'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>40</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController void setEdges(Models.Polygon polygon)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>40</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController void setEdges(Models.Polygon polygon)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'acord'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>15</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>18</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>20</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>56</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'denomenator'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>13</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>16</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>18</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'lado'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>20</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'seno'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>21</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'cose'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>34</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'seno'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>35</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'cose'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>48</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'seno'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>49</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'cose'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>18</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void rotaciona(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double radians, int lado)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'rotaciona'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>65</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void translada(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, Models.Vertex V)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>69</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void translada(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, Models.Vertex V)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'translada'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>86</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void scala(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double novoTamanho, int eixo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Vertexs'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>88</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void scala(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double novoTamanho, int eixo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'novo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>88</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void scala(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double novoTamanho, int eixo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Tamanho'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>89</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void scala(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double novoTamanho, int eixo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'eixo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>91</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void scala(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double novoTamanho, int eixo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'novo'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>91</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void scala(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double novoTamanho, int eixo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'Tamanho'</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/VertexBasedOperations.java</file>
+    <line>91</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.VertexBasedOperations void scala(java.util.ArrayList&lt;Models.Vertex&gt; vertices, Models.Vertex Central, double novoTamanho, int eixo)" />
+    <problem_class severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+    <description>Typo: In word 'eixo'</description>
+  </problem>
+</problems>
+

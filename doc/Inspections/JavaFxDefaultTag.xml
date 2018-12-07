@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>37</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>45</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>50</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>35</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>25</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>63</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>78</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>94</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>110</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>126</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>142</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>165</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>181</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>190</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>206</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>59</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>228</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>226</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>23</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary default tag</problem_class>
+    <description>Default property tag could be removed</description>
+  </problem>
+</problems>
+

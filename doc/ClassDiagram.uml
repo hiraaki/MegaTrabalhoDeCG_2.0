@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="228.1195488721805" y="0.0">Models.Vertex</node>
+    <node x="465.7016001542318" y="585.0">Controller.VertexBasedOperations</node>
+    <node x="262.3466817293722" y="357.0">Controller.PolygonController</node>
+    <node x="233.2973489598272" y="694.0">Controller.PolyhedronController</node>
+    <node x="868.6264121843069" y="0.0">View.Main</node>
+    <node x="127.91826682089848" y="466.0">Models.Polygon</node>
+    <node x="378.99734895982715" y="883.0">Controller.FXMLController</node>
+    <node x="57.38325982214775" y="585.0">Models.Polyhedron</node>
+    <node x="198.725213101435" y="248.0">Models.Edge</node>
+    <node x="689.626412184307" y="694.0">Models.ResizableCanvas</node>
+    <node x="105.725213101435" y="159.0">Controller.EdgeController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Models.Polyhedron" target="Models.Polygon">
+      <point x="15.571428571428555" y="-14.5" />
+      <point x="127.4546883935763" y="555.0" />
+      <point x="141.7182668208985" y="555.0" />
+      <point x="-32.19999999999999" y="14.5" />
+    </edge>
+    <edge source="Models.Polygon" target="Models.Vertex">
+      <point x="-42.46153846153845" y="-14.5" />
+      <point x="131.45672835936003" y="446.0" />
+      <point x="73.99444387066575" y="446.0" />
+      <point x="73.99444387066575" y="89.0" />
+      <point x="247.06691729323316" y="89.0" />
+      <point x="-21.05263157894734" y="14.5" />
+    </edge>
+    <edge source="Controller.FXMLController" target="Models.Vertex">
+      <point x="49.904761904761926" y="-14.5" />
+      <point x="494.4021108645891" y="843.0" />
+      <point x="672.8883169462117" y="843.0" />
+      <point x="672.8883169462117" y="59.0" />
+      <point x="301.80375939849625" y="59.0" />
+      <point x="33.68421052631578" y="14.5" />
+    </edge>
+    <edge source="Controller.FXMLController" target="Controller.PolyhedronController">
+      <point x="-6.238095238095241" y="-14.5" />
+      <point x="438.25925372173197" y="773.0" />
+      <point x="354.7973489598272" y="773.0" />
+      <point x="40.5" y="14.5" />
+    </edge>
+    <edge source="Controller.PolygonController" target="Models.Polygon">
+      <point x="-9.0625" y="14.5" />
+      <point x="325.7841817293722" y="446.0" />
+      <point x="216.37980528243693" y="446.0" />
+      <point x="42.46153846153845" y="-14.5" />
+    </edge>
+    <edge source="Models.Polygon" target="Models.Edge">
+      <point x="-7.076923076923038" y="-14.5" />
+      <point x="166.84134374397541" y="307.0" />
+      <point x="209.82521310143503" y="307.0" />
+      <point x="-25.899999999999977" y="14.5" />
+    </edge>
+    <edge source="Controller.PolyhedronController" target="Controller.PolygonController">
+      <point x="8.100000000000023" y="-14.5" />
+      <point x="322.39734895982724" y="634.0" />
+      <point x="344.6779317293723" y="634.0" />
+      <point x="9.0625" y="14.5" />
+    </edge>
+    <edge source="Models.Edge" target="Models.Vertex">
+      <point x="6.166666666666629" y="-14.5" />
+      <point x="241.89187976810163" y="228.0" />
+      <point x="243.225213101435" y="228.0" />
+      <point x="243.225213101435" y="139.0" />
+      <point x="268.11954887218053" y="139.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Controller.PolyhedronController" target="Controller.VertexBasedOperations">
+      <point x="72.89999999999998" y="-14.5" />
+      <point x="387.1973489598272" y="674.0" />
+      <point x="529.0766001542318" y="674.0" />
+      <point x="-21.125" y="14.5" />
+    </edge>
+    <edge source="Models.Edge" target="Controller.EdgeController">
+      <point x="-18.5" y="-14.5" />
+      <point x="217.225213101435" y="218.0" />
+      <point x="169.225213101435" y="218.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Controller.PolyhedronController" target="Models.Edge">
+      <point x="-8.100000000000023" y="-14.5" />
+      <point x="306.1973489598272" y="634.0" />
+      <point x="251.84668172937225" y="634.0" />
+      <point x="251.84668172937225" y="337.0" />
+      <point x="239.42521310143505" y="337.0" />
+      <point x="3.7000000000000455" y="14.5" />
+    </edge>
+    <edge source="Controller.FXMLController" target="Models.Polyhedron">
+      <point x="-56.14285714285717" y="-14.5" />
+      <point x="388.35449181697004" y="853.0" />
+      <point x="73.41257199235974" y="853.0" />
+      <point x="73.41257199235974" y="674.0" />
+      <point x="68.28325982214773" y="674.0" />
+      <point x="-43.60000000000002" y="14.5" />
+    </edge>
+    <edge source="Models.Edge" target="Models.Polygon">
+      <point x="-3.7000000000000455" y="14.5" />
+      <point x="232.02521310143496" y="337.0" />
+      <point x="214.5521361783581" y="337.0" />
+      <point x="214.5521361783581" y="406.0" />
+      <point x="188.0721129747446" y="406.0" />
+      <point x="14.153846153846132" y="-14.5" />
+    </edge>
+    <edge source="Controller.FXMLController" target="Controller.VertexBasedOperations">
+      <point x="24.952380952380963" y="-14.5" />
+      <point x="469.4497299122081" y="803.0" />
+      <point x="597.3425870550652" y="803.0" />
+      <point x="597.3425870550652" y="674.0" />
+      <point x="613.5766001542318" y="674.0" />
+      <point x="63.375" y="14.5" />
+    </edge>
+    <edge source="Controller.EdgeController" target="Models.Vertex">
+      <point x="0.0" y="-14.5" />
+      <point x="169.225213101435" y="129.0" />
+      <point x="263.90902255639105" y="129.0" />
+      <point x="-4.21052631578948" y="14.5" />
+    </edge>
+    <edge source="Models.Polygon" target="Controller.PolygonController">
+      <point x="21.230769230769226" y="-14.5" />
+      <point x="195.1490360516677" y="416.0" />
+      <point x="271.4091817293722" y="416.0" />
+      <point x="-63.4375" y="14.5" />
+    </edge>
+    <edge source="Controller.PolygonController" target="Models.Vertex">
+      <point x="48.33333333333337" y="-14.5" />
+      <point x="383.1800150627056" y="337.0" />
+      <point x="374.04274357516294" y="337.0" />
+      <point x="374.04274357516294" y="99.0" />
+      <point x="284.96165413533845" y="99.0" />
+      <point x="16.84210526315792" y="14.5" />
+    </edge>
+    <edge source="Controller.PolygonController" target="Models.Edge">
+      <point x="-48.33333333333337" y="-14.5" />
+      <point x="286.51334839603885" y="327.0" />
+      <point x="246.82521310143503" y="327.0" />
+      <point x="11.100000000000023" y="14.5" />
+    </edge>
+    <edge source="Controller.FXMLController" target="Models.ResizableCanvas">
+      <point x="62.38095238095241" y="-14.5" />
+      <point x="506.87830134077956" y="863.0" />
+      <point x="756.626412184307" y="863.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Models.Polyhedron" target="Models.Vertex">
+      <point x="-46.71428571428572" y="-14.5" />
+      <point x="65.16897410786203" y="565.0" />
+      <point x="47.783917554876155" y="565.0" />
+      <point x="47.783917554876155" y="59.0" />
+      <point x="234.43533834586472" y="59.0" />
+      <point x="-33.68421052631578" y="14.5" />
+    </edge>
+    <edge source="Controller.FXMLController" target="Controller.PolygonController">
+      <point x="0.0" y="-14.5" />
+      <point x="444.49734895982715" y="763.0" />
+      <point x="442.72540967804133" y="763.0" />
+      <point x="442.72540967804133" y="446.0" />
+      <point x="380.1591817293722" y="446.0" />
+      <point x="45.3125" y="14.5" />
+    </edge>
+    <edge source="Controller.FXMLController" target="Models.Polygon">
+      <point x="-24.952380952380963" y="-14.5" />
+      <point x="419.5449680074462" y="803.0" />
+      <point x="197.83798167040104" y="803.0" />
+      <point x="197.83798167040104" y="545.0" />
+      <point x="187.7182668208985" y="545.0" />
+      <point x="13.800000000000011" y="14.5" />
+    </edge>
+    <edge source="Models.Polygon" target="Models.Polyhedron">
+      <point x="-13.800000000000011" y="14.5" />
+      <point x="160.11826682089847" y="565.0" />
+      <point x="158.59754553643347" y="565.0" />
+      <point x="46.71428571428572" y="-14.5" />
+    </edge>
+    <edge source="Controller.PolyhedronController" target="Models.Vertex">
+      <point x="40.5" y="-14.5" />
+      <point x="354.7973489598272" y="654.0" />
+      <point x="417.8466817293722" y="654.0" />
+      <point x="417.8466817293722" y="89.0" />
+      <point x="289.1721804511278" y="89.0" />
+      <point x="21.05263157894734" y="14.5" />
+    </edge>
+    <edge source="Controller.EdgeController" target="Models.Edge">
+      <point x="42.33333333333337" y="14.5" />
+      <point x="211.55854643476837" y="208.0" />
+      <point x="229.55854643476837" y="208.0" />
+      <point x="-6.166666666666629" y="-14.5" />
+    </edge>
+    <edge source="Controller.PolyhedronController" target="Models.Polygon">
+      <point x="-40.5" y="-14.5" />
+      <point x="273.7973489598272" y="654.0" />
+      <point x="217.3473489598272" y="654.0" />
+      <point x="217.3473489598272" y="525.0" />
+      <point x="206.11826682089847" y="525.0" />
+      <point x="32.19999999999999" y="14.5" />
+    </edge>
+    <edge source="Controller.VertexBasedOperations" target="Models.Vertex">
+      <point x="0.0" y="-14.5" />
+      <point x="550.2016001542318" y="446.0" />
+      <point x="662.439695392327" y="446.0" />
+      <point x="662.439695392327" y="79.0" />
+      <point x="293.3827067669173" y="79.0" />
+      <point x="25.26315789473682" y="14.5" />
+    </edge>
+    <edge source="Controller.PolyhedronController" target="Models.Polyhedron">
+      <point x="-72.89999999999998" y="-14.5" />
+      <point x="241.3973489598272" y="674.0" />
+      <point x="133.68325982214776" y="674.0" />
+      <point x="21.80000000000001" y="14.5" />
+    </edge>
+    <edge source="Controller.FXMLController" target="Models.Edge">
+      <point x="31.190476190476204" y="-14.5" />
+      <point x="475.6878251503034" y="813.0" />
+      <point x="645.2016001542318" y="813.0" />
+      <point x="645.2016001542318" y="307.0" />
+      <point x="261.62521310143495" y="307.0" />
+      <point x="25.899999999999977" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9291845493562232" x="472.0" y="456.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

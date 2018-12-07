@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>33</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>Variable &lt;code&gt;anguloAtual&lt;/code&gt; initializer &lt;code&gt;angulo&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>35</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>Variable &lt;code&gt;atual&lt;/code&gt; initializer &lt;code&gt;new Polygon()&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>41</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>The value new Polygon() assigned to &lt;code&gt;novo&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>58</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>Variable &lt;code&gt;face&lt;/code&gt; initializer &lt;code&gt;new Polygon()&lt;/code&gt; is redundant</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>65</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController Models.Polyhedron criateNewPolyhedronRegular(Models.Polygon arevolucionar, int particoes, int lado, double Angulo)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>The value new Polygon() assigned to &lt;code&gt;atual&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>81</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>The value ax assigned to &lt;code&gt;xx&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>82</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>The value ay assigned to &lt;code&gt;yy&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>87</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>The value bx assigned to &lt;code&gt;xx&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>88</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+    <description>The value by assigned to &lt;code&gt;yy&lt;/code&gt; is never used</description>
+  </problem>
+</problems>
+

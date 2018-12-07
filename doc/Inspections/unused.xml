@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>997</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void buttonLoad()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused declaration</problem_class>
+    <description>Variable &lt;code&gt;filter&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>156</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void sX()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>47</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController cliques" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>966</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void buttonSave()" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused declaration</problem_class>
+    <description>Variable &lt;code&gt;filter&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>600</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void select(javafx.scene.input.MouseEvent e)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused declaration</problem_class>
+    <description>Variable &lt;code&gt;foundpoly&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>76</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController canvas" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field has no usages.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>722</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void clearCanvasSet(javafx.scene.input.MouseEvent e)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused declaration</problem_class>
+    <hints>
+      <hint value="e" />
+    </hints>
+    <description>Parameter &lt;code&gt;e&lt;/code&gt; is not used in either this method or any of its derived methods</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>67</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController linhas" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>18</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="field" FQNAME="Models.Polygon father" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Field is assigned but never accessed.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>78</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolyhedronController void calcCentroid(Models.Polyhedron polyhedron)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">unused declaration</problem_class>
+    <hints>
+      <hint value="comment" />
+      <hint value="delete" />
+    </hints>
+    <description>Method is never used.</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>61</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Polygon createRegularPolygon(Models.Vertex point, int axis, javafx.scene.paint.Color cor, int plano)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused declaration</problem_class>
+    <hints>
+      <hint value="cor" />
+    </hints>
+    <description>Parameter &lt;code&gt;cor&lt;/code&gt; is not used in either this method or any of its derived methods</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>67</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused declaration</problem_class>
+    <description>Variable &lt;code&gt;xx&lt;/code&gt; is never used</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/EdgeController.java</file>
+    <line>68</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.EdgeController double distanceFromLine(Models.Edge edge, Models.Vertex v, int lado)" />
+    <problem_class severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused declaration</problem_class>
+    <description>Variable &lt;code&gt;yy&lt;/code&gt; is never used</description>
+  </problem>
+</problems>
+

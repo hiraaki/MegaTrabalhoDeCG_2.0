@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>60</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved fx:id attribute reference</problem_class>
+    <description>Unresolved fx:id reference</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>75</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved fx:id attribute reference</problem_class>
+    <description>Unresolved fx:id reference</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>91</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved fx:id attribute reference</problem_class>
+    <description>Unresolved fx:id reference</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>123</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved fx:id attribute reference</problem_class>
+    <description>Unresolved fx:id reference</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>155</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved fx:id attribute reference</problem_class>
+    <description>Unresolved fx:id reference</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>171</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved fx:id attribute reference</problem_class>
+    <description>Unresolved fx:id reference</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml</file>
+    <line>225</line>
+    <package>&lt;default&gt;</package>
+    <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/MTCG/View/FXML.fxml" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unresolved fx:id attribute reference</problem_class>
+    <description>Unresolved fx:id reference</description>
+  </problem>
+</problems>
+

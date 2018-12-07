@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>74</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController gc4" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>979</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void save(java.lang.String fileName)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>76</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController lados" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>71</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController gc1" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>76</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController polylineAtiva" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>72</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController gc2" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>1009</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void load(java.lang.String fileName)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>145</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void carregaComboBox()" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>73</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController gc3" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>722</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.FXMLController void clearCanvasSet(javafx.scene.input.MouseEvent e)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/FXMLController.java</file>
+    <line>87</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.FXMLController observableList" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>18</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="field" FQNAME="Models.Polygon father" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>15</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.PolyhedronController vertexBasedOperations" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>14</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.PolyhedronController polygonController" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>43</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController void setEdges(Models.Polygon polygon)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration access can be weaker</problem_class>
+    <hints>
+      <hint value="private" />
+    </hints>
+    <description>Can be private</description>
+  </problem>
+</problems>
+

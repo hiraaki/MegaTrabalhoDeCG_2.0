@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Vertex.java</file>
+    <line>34</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Vertex double distancia(Models.Vertex V)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant local variable</problem_class>
+    <description>Local variable &lt;code&gt;resp&lt;/code&gt; is redundant #loc</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolygonController.java</file>
+    <line>64</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="method" FQNAME="Controller.PolygonController Models.Polygon createRegularPolygon(Models.Vertex point, int axis, javafx.scene.paint.Color cor, int plano)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant local variable</problem_class>
+    <description>Local variable &lt;code&gt;V&lt;/code&gt; is redundant #loc</description>
+  </problem>
+</problems>
+

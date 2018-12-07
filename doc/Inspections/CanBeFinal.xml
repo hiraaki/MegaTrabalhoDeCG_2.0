@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polyhedron.java</file>
+    <line>14</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="field" FQNAME="Models.Polyhedron faces" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Edge.java</file>
+    <line>14</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="field" FQNAME="Models.Edge end" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Edge.java</file>
+    <line>13</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="field" FQNAME="Models.Edge start" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>15</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="field" FQNAME="Models.Polygon vertices" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Polygon.java</file>
+    <line>16</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="field" FQNAME="Models.Polygon edges" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>15</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.PolyhedronController vertexBasedOperations" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Controller/PolyhedronController.java</file>
+    <line>14</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Controller</package>
+    <entry_point TYPE="field" FQNAME="Controller.PolyhedronController polygonController" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Declaration can have final modifier</problem_class>
+    <hints />
+    <description>Declaration can have final modifier</description>
+  </problem>
+</problems>
+

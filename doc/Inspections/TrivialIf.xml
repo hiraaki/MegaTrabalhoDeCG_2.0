@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+  <problem>
+    <file>file://$PROJECT_DIR$/src/MTCG/Models/Edge.java</file>
+    <line>57</line>
+    <module>MegaTrabalhoDeCG_2.1</module>
+    <package>Models</package>
+    <entry_point TYPE="method" FQNAME="Models.Edge boolean selected(Models.Vertex v, int surface)" />
+    <problem_class severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Redundant 'if' statement</problem_class>
+    <description>&lt;code&gt;if&lt;/code&gt; statement can be simplified #loc</description>
+  </problem>
+</problems>
+
