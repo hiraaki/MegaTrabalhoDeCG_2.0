@@ -6,7 +6,10 @@ import Models.Polyhedron;
 import Models.Vertex;
 
 import static java.lang.Math.toRadians;
-
+/**
+ * Class responsible to implements the methods for polyhedrons.
+ * @author Gabriela, Hamã, Mauricio.
+ */
 public class PolyhedronController {
     PolygonController polygonController;
     VertexBasedOperations vertexBasedOperations;
@@ -16,6 +19,14 @@ public class PolyhedronController {
         vertexBasedOperations = new VertexBasedOperations();
     }
 
+    /**
+     * Creates a default polyhedron based on a polygon(Geratriz) or line, the size is defined by the distance of the object from the axis to revolute.
+     * @param arevolucionar Base polygon or line.
+     * @param particoes Number of sections in the polyhedron.
+     * @param lado Plan of reference create the polygon.
+     * @param Angulo angle limit to revolute
+     * @return Polyhedron created
+     */
     public Polyhedron criateNewPolyhedronRegular(Polygon arevolucionar, int particoes, int lado, double Angulo) {
         Polyhedron polyhedron=new Polyhedron();
         double angulo = toRadians(Angulo)/particoes;
@@ -60,6 +71,10 @@ public class PolyhedronController {
         return polyhedron;
     }
 
+    /**
+     * Calculates the centroid of the Polyhedron based on the centroid of the polygons
+     * @param polyhedron The polyhedron to calculate the centroid
+     */
     public void calcCentroid(Polyhedron polyhedron){
         double maiorX=Double.MIN_VALUE, maiorY=Double.MIN_VALUE, maiorZ=Double.MIN_VALUE;
         double menorX=Double.MAX_VALUE, menorY=Double.MAX_VALUE, menorZ=Double.MAX_VALUE;

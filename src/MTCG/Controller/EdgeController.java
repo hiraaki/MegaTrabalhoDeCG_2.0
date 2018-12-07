@@ -3,9 +3,18 @@ import Models.Edge;
 import Models.Vertex;
 import static java.lang.Math.abs;
 import static java.lang.StrictMath.sqrt;
-
+/**
+ * Class where is implemented edge operations
+ * @author Gabriela, Hamã, Mauricio
+ */
 public class EdgeController {
-
+    /**
+     * Calculates The distance between edge and the vertex
+     * @param edge The base edge
+     * @param v Vertex to compere with the edge
+     * @param lado The plan orientation where will be tested
+     * @return Distance
+     */
     public double distanceFromLine(Edge edge, Vertex v, int lado){
         double ax=0, ay=0, bx=0, by=0, cx=0, cy=0;
         //System.out.print("A "+lado);
@@ -48,7 +57,6 @@ public class EdgeController {
         double r = r_numerator / r_denomenator;
 
 
-
         double px = ax + r*(bx-ax);
         double py = ay + r*(by-ay);
 
@@ -86,4 +94,5 @@ public class EdgeController {
 
         return distanceSegment;
     }
+
 }

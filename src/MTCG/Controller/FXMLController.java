@@ -26,7 +26,10 @@ import javax.swing.*;
 
 import static java.lang.Math.*;
 
-
+/**
+ * Class reponsible to interprete and respond the FXML
+ * @author Gabriela, Hamã, Mauricio
+ */
 public class FXMLController implements Initializable {
 
     @FXML
@@ -108,7 +111,11 @@ public class FXMLController implements Initializable {
     private TextField textSeg;
 
 
-
+    /**
+     * Initialization function of the FXML
+     * @param url Default parameter
+     * @param rb Default parameter
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.arrIrregular= new ArrayList<>();
@@ -133,14 +140,14 @@ public class FXMLController implements Initializable {
         this.poliedros=new ArrayList<>();
         this.poliselected =null;
         this.selected =null;
-        canvas1.widthProperty().addListener(evt -> drawall());
-        canvas1.heightProperty().addListener(evt -> drawall());
-        canvas2.widthProperty().addListener(evt -> drawall());
-        canvas2.heightProperty().addListener(evt -> drawall());
-        canvas3.widthProperty().addListener(evt -> drawall());
-        canvas3.heightProperty().addListener(evt -> drawall());
-        canvas4.widthProperty().addListener(evt -> drawall());
-        canvas4.heightProperty().addListener(evt -> drawall());
+        canvas1.widthProperty().addListener(evt -> drawnall());
+        canvas1.heightProperty().addListener(evt -> drawnall());
+        canvas2.widthProperty().addListener(evt -> drawnall());
+        canvas2.heightProperty().addListener(evt -> drawnall());
+        canvas3.widthProperty().addListener(evt -> drawnall());
+        canvas3.heightProperty().addListener(evt -> drawnall());
+        canvas4.widthProperty().addListener(evt -> drawnall());
+        canvas4.heightProperty().addListener(evt -> drawnall());
         gc1= canvas1.getGraphicsContext2D();
         gc2= canvas2.getGraphicsContext2D();
         gc3= canvas3.getGraphicsContext2D();
@@ -150,6 +157,9 @@ public class FXMLController implements Initializable {
         desenhaRegua();
     }
 
+    /**
+     * Load the Values of the combobox
+     */
     public void carregaComboBox(){
         observableList = FXCollections.observableArrayList("X", "Y", "Z");
         comboBox.setItems(observableList);
@@ -158,7 +168,9 @@ public class FXMLController implements Initializable {
 //        textSeg.setText("0");
     }
 
-    //SAI X APENAS PARA DEBUG
+    /**
+     * SAI X APENAS PARA DEBUG
+     */
     public void sX(){
         double width = canvas1.getWidth();
         double height = canvas1.getHeight();
@@ -171,7 +183,9 @@ public class FXMLController implements Initializable {
 
     }
 
-    //FAZ O POLIGONO IRREGULAR
+    /**
+     * FAZ O POLIGONO IRREGULAR
+     */
     public void ButtonPonto(){
 
         canvas1.setOnMouseClicked(this::Irregular);
@@ -182,6 +196,10 @@ public class FXMLController implements Initializable {
         }
     }
 
+    /**
+     * The function takes the MouseEvent and add it to de List of Irregular points
+     * @param e MouseEvent
+     */
     private void Irregular(MouseEvent e){
 
 
@@ -195,7 +213,7 @@ public class FXMLController implements Initializable {
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                     //System.out.println("saiu!!!!");
 
-                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).drawn(gc1, 1);
 
                     this.poligonos.add(new Polygon(this.verIrregular,this.arrIrregular));
 
@@ -210,7 +228,7 @@ public class FXMLController implements Initializable {
                             this.verIrregular.get(this.verIrregular.size() - 1),
                             null));
 
-                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc1, 1);
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).drawn(gc1, 1);
                 }
             }else {
 
@@ -227,7 +245,7 @@ public class FXMLController implements Initializable {
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                     //System.out.println("saiu!!!!");
 
-                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc2, 2);
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).drawn(gc2, 2);
 
                     this.poligonos.add(new Polygon(this.verIrregular,this.arrIrregular));
 
@@ -242,7 +260,7 @@ public class FXMLController implements Initializable {
                             this.verIrregular.get(this.verIrregular.size() - 1),
                             null));
 
-                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc2, 2);
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).drawn(gc2, 2);
                 }
             }else {
 
@@ -259,7 +277,7 @@ public class FXMLController implements Initializable {
                     //System.out.println(verIrregular.get(verIrregular.size()-1).distancia(new Vertice(e.getX(),e.getY(),0)));
                     //System.out.println("saiu!!!!");
 
-                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc3, 3);
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).drawn(gc3, 3);
 
                     this.poligonos.add(new Polygon(this.verIrregular,this.arrIrregular));
 
@@ -274,7 +292,7 @@ public class FXMLController implements Initializable {
                             this.verIrregular.get(this.verIrregular.size() - 1),
                             null));
 
-                    this.arrIrregular.get(this.arrIrregular.size() - 1).draw(gc3, 3);
+                    this.arrIrregular.get(this.arrIrregular.size() - 1).drawn(gc3, 3);
                 }
             }else {
 
@@ -286,19 +304,25 @@ public class FXMLController implements Initializable {
 
     }
 
+    /**
+     * Creates a pop-up with the options to create a new default Poligon, and sets the mouse event to call the Regular() function.
+     */
     public void botaoPoligonoR(){
-        canvas1.setOnMouseClicked(this::Regular);
-        canvas2.setOnMouseClicked(this::Regular);
-        canvas3.setOnMouseClicked(this::Regular);
         String resposta = JOptionPane.showInputDialog(null, "Quantos lados possui o polígono?");
         lados = Integer.parseInt(resposta);
         System.out.println(lados);
-
+        canvas1.setOnMouseClicked(this::Regular);
+        canvas2.setOnMouseClicked(this::Regular);
+        canvas3.setOnMouseClicked(this::Regular);
         if(arrIrregular2.size()>0){
             fechaPolilyne();
         }
     }
 
+    /**
+     * Calls the function to Create a regular Polygon
+     * @param e MouseEvent
+     */
     private void Regular(MouseEvent e){
         Polygon polygon;
         if(e.getSource()==canvas1){
@@ -316,7 +340,9 @@ public class FXMLController implements Initializable {
         }
     }
 
-
+    /**
+     * Sets the Mouse Event on click to the function Polyline()
+     */
     public void botaoPolyline(){
         canvas1.setOnMouseClicked(this::Polyline);
         canvas2.setOnMouseClicked(this::Polyline);
@@ -327,6 +353,10 @@ public class FXMLController implements Initializable {
         }
     }
 
+    /**
+     * Creates Edges while another option isnt selected
+     * @param e Mouse click
+     */
     private void Polyline(MouseEvent e){
 
         if(e.getSource()==canvas1){
@@ -337,7 +367,7 @@ public class FXMLController implements Initializable {
                         this.verIrregular2.get(this.verIrregular2.size() - 1),
                         null));
 
-                this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc1, 1);
+                this.arrIrregular2.get(this.arrIrregular2.size() - 1).drawn(gc1, 1);
             }else {
                 verIrregular2.add(new Vertex(e.getX(), e.getY(), 0));
                 polylineAtiva=1;
@@ -350,7 +380,7 @@ public class FXMLController implements Initializable {
                         this.verIrregular2.get(this.verIrregular2.size() - 1),
                         null));
 
-                this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc2, 2);
+                this.arrIrregular2.get(this.arrIrregular2.size() - 1).drawn(gc2, 2);
             }else {
                 verIrregular2.add(new Vertex(0, e.getY(), e.getX()));
                 polylineAtiva=1;
@@ -364,7 +394,7 @@ public class FXMLController implements Initializable {
                         this.verIrregular2.get(this.verIrregular2.size() - 1),
                         null));
 
-                this.arrIrregular2.get(this.arrIrregular2.size() - 1).draw(gc3, 3);
+                this.arrIrregular2.get(this.arrIrregular2.size() - 1).drawn(gc3, 3);
             }else {
                 verIrregular2.add(new Vertex(e.getX(), 0, e.getY()));
                 polylineAtiva=1;
@@ -373,6 +403,9 @@ public class FXMLController implements Initializable {
 
     }
 
+    /**
+     * Function to response the buton action of the button botaoCirculo, and calls the function Circulo1, Circulo2 ou Circulo3
+     */
     public void botaoCirculo(){
         canvas1.setOnMouseClicked(this::Circulo1);
         canvas2.setOnMouseClicked(this::Circulo2);
@@ -383,6 +416,10 @@ public class FXMLController implements Initializable {
         }
     }
 
+    /**
+     * Creates a circle in the plan XY
+     * @param e Mouse Click
+     */
     private void Circulo1(MouseEvent e){
         Polygon polygon;
         polygon=polygonController.createRegularPolygon(new Vertex(e.getX(), e.getY(), 0), 500, null,1);
@@ -390,6 +427,10 @@ public class FXMLController implements Initializable {
         this.poligonos.add(polygon);
     }
 
+    /**
+     * Creates a circle in the plan YZ
+     * @param e Mouse Click
+     */
     private void Circulo2(MouseEvent e){
         Polygon polygon;
         polygon=polygonController.createRegularPolygon(new Vertex(0, e.getY(), e.getX()), 500, null,3);
@@ -397,6 +438,10 @@ public class FXMLController implements Initializable {
         this.poligonos.add(polygon);
     }
 
+    /**
+     * Creates a circle in the plan YZ
+     * @param e Mouse Click
+     */
     private void Circulo3(MouseEvent e){
         Polygon polygon;
         polygon=polygonController.createRegularPolygon(new Vertex(e.getX(), 0, e.getY()), 500, null,2);
@@ -404,6 +449,9 @@ public class FXMLController implements Initializable {
         this.poligonos.add(polygon);
     }
 
+    /**
+     * Clean all the canvas
+     */
     private void clear() {
         gc1.clearRect(0, 0, canvas1.getWidth(), canvas1.getHeight());
         gc2.clearRect(0, 0, canvas2.getWidth(), canvas2.getHeight());
@@ -411,7 +459,10 @@ public class FXMLController implements Initializable {
         gc4.clearRect(0, 0, canvas4.getWidth(), canvas4.getHeight());
     }
 
-    private void drawall(){
+    /**
+     * Drawn all the objects on each canvas
+     */
+    private void drawnall(){
         clear();
         ArrayList<Polygon> poligonos = this.poligonos;
         poligonos.addAll(this.polylines);
@@ -445,6 +496,11 @@ public class FXMLController implements Initializable {
         desenhaRegua();
     }
 
+    /**
+     * Drwan a Poligon border in red
+     * @param poligono Polygon to be drwaned
+     * @param poliedro Polygon to be drwaned
+     */
     private void drawselected(Polygon poligono, Polyhedron poliedro){
         gc1.setStroke(Color.RED);
         gc2.setStroke(Color.RED);
@@ -470,6 +526,9 @@ public class FXMLController implements Initializable {
         gc3.setStroke(Color.BLACK);
     }
 
+    /**
+     * Close the poliline when it's called
+     */
     private void fechaPolilyne(){
         Polygon polygon = new Polygon(this.verIrregular2,this.arrIrregular2);
         this.polylines.add(polygon);
@@ -478,6 +537,9 @@ public class FXMLController implements Initializable {
         this.arrIrregular2=new ArrayList<>();
     }
 
+    /**
+     * Drawn a Ruler on the left and uper bord of each canvas
+     */
     private void desenhaRegua(){
         Font f = new Font("Verdana",9);
         gc1.setFont(f);
@@ -533,6 +595,9 @@ public class FXMLController implements Initializable {
         }
     }
 
+    /**
+     * Set the function select to the mouse click
+     */
     public void buttonselect(){
         canvas1.setOnMouseClicked(this::select);
         canvas2.setOnMouseClicked(this::select);
@@ -542,6 +607,10 @@ public class FXMLController implements Initializable {
         }
     }
 
+    /**
+     * Get the poligon or polyhedron selected, if the mouse click is near enogh to the edge of a poligon or polyhedrion.
+     * @param e Mouse Click
+     */
     private void select(MouseEvent e){
         Vertex v = new Vertex();
         boolean foundpolig=false;
@@ -624,8 +693,12 @@ public class FXMLController implements Initializable {
             this.selected=null;
             this.poliselected=null;
         }
-        drawall();
+        drawnall();
     }
+
+    /**
+     * Delete the Polygon or polyhedron in the selectd or polyselecd pointers
+     */
     public void buuttonDelete(){
         if(selected!=null) {
             this.poligonos.remove(selected);
@@ -636,8 +709,12 @@ public class FXMLController implements Initializable {
             this.poliselected=null;
 
         }
-        drawall();
+        drawnall();
     }
+
+    /**
+     * Set the mouse click and drag to the function rotaciona
+     */
     public void buttonRotaciona(){
         canvas1.setOnMousePressed(this::setClick);
         canvas1.setOnMouseDragged(this::rotaciona);
@@ -655,6 +732,11 @@ public class FXMLController implements Initializable {
             fechaPolilyne();
         }
     }
+
+    /**
+     * clean the mouse sets of all canvas
+     * @param e Mouse Released
+     */
     public void clearCanvasSet(MouseEvent e){
         canvas1.setOnMousePressed(null);
         canvas1.setOnMouseClicked(null);
@@ -670,17 +752,16 @@ public class FXMLController implements Initializable {
         canvas3.setOnMouseReleased(null);
         this.clique=null;
     }
+
+
     private void setClick(MouseEvent e){
         this.clique=new Vertex(e.getX(),e.getY(),0);
     }
 
-    /*
-    * Podia ter colocado num ArrayList do qual está selecionado separado
-    *  dae tira as Redundância de codigo
-    *  Mas vou
-    *  Num vou
-    *  Agr já terminei esta merda
-    * */
+    /**
+     * Rotete the polygon or polyhedron acording the plan
+     * @param e
+     */
     private void rotaciona(MouseEvent e){
         double x;
         double y;
@@ -790,10 +871,13 @@ public class FXMLController implements Initializable {
             }
             this.clique.x=e.getX();
             this.clique.y=e.getY();
-            drawall();
+            drawnall();
         }
     }
 
+    /**
+     * Set the function translada to the mouse click
+     */
     public void buttontranslada(){
         canvas1.setOnMousePressed(this::setClick);
         canvas1.setOnMouseDragged(this::translada);
@@ -810,6 +894,11 @@ public class FXMLController implements Initializable {
             fechaPolilyne();
         }
     }
+
+    /**
+     * Set translation of the polygon or polyedron selected, acording the plan was clicked.
+     * @param e Mouse released
+     */
     private void translada(MouseEvent e){
         if(clique!=null) {
             if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
@@ -849,13 +938,17 @@ public class FXMLController implements Initializable {
                 }
                 clique.x = e.getX();
                 clique.y = e.getY();
-                drawall();
+                drawnall();
             }
         }
     }
 
+
+    /**
+     * Creates a objet acording the selected polygon and the options selected.
+     */
     public void buttonRevoluciona(){
-        System.out.println("111111111111111111111");
+       // System.out.println("111111111111111111111");
         if(selected!=null){
 
             //1 - z, 2 - x, 3 - y
@@ -869,8 +962,6 @@ public class FXMLController implements Initializable {
                 eixo=1;
             }
 
-
-
             segmentos= Integer.parseInt(textSeg.getText());
             angulo = Integer.parseInt(textAngulo.getText());
 
@@ -881,47 +972,13 @@ public class FXMLController implements Initializable {
             this.poligonos.remove(selected);
             this.polylines.remove(selected);
             selected=null;
-            drawall();
+            drawnall();
         }
     }
 
-//    public void ctest(){
-//        this.poligonos.add(new Polygon(new Vertex(300,150,0),3,null,1));
-//        drawall();
-//    }
-    public void rvDebug(){
-        selected.Central = polygonController.calcCentroid(selected.vertices);
-        vertexBasedOperations.rotaciona(selected.vertices,selected.Central,0.1,2);
-        drawall();
-    }
-    public void trDebug(){
-        double x=selected.Central.x;
-        double y=selected.Central.y;
-        double z=selected.Central.z;
-        System.out.println(x+" "+y+" "+z);
-
-
-        double seno = Math.sin(0.1);
-        double cose = Math.cos(0.1);
-        double ante=0;
-        //selected.calcCentroid();
-        ante=(selected.Central.z*cose)-(selected.Central.y*seno);
-        selected.Central.y=(selected.Central.z*seno)+(selected.Central.y*cose);
-        selected.Central.z=ante;
-
-        vertexBasedOperations.translada(selected.vertices,selected.Central,new Vertex(
-        x-selected.Central.x,
-        y-selected.Central.y,
-        z-selected.Central.z
-        ));
-
-        selected.Central.x=x;
-        selected.Central.y=y;
-        selected.Central.z=z;
-
-        drawall();
-    }
-
+    /**
+     * Function whem the Button save is clicked calls a pop-up to save te actual state of the objects
+     */
     public void buttonSave(){
         FileChooser chooser = new FileChooser();
         FileChooser filter = new FileChooser();
@@ -933,6 +990,10 @@ public class FXMLController implements Initializable {
 
     }
 
+    /**
+     * Save a file on a path
+     * @param fileName File path and name to save the file
+     */
     public void save(String fileName) {
         FileOutputStream out = null;
         try {
@@ -946,6 +1007,9 @@ public class FXMLController implements Initializable {
         }
     }
 
+    /**
+     * Creates a pop-up to select a file
+     */
     public void buttonLoad() {
         FileChooser chooser = new FileChooser();
         FileChooser filter = new FileChooser();
@@ -956,6 +1020,10 @@ public class FXMLController implements Initializable {
         load(openf);
     }
 
+    /**
+     * Load a file from a path
+     * @param fileName File path
+     */
     public void load(String fileName) {
         try {
             FileInputStream in = new FileInputStream(fileName);
@@ -967,11 +1035,15 @@ public class FXMLController implements Initializable {
         }
         System.out.println("este é o arquivo");
         clear();
-        drawall();
+        drawnall();
         //gc1.clearRect(0, 0, drawingArea1.getWidth(), drawingArea1.getHeight());
-        // this.drawall();
+        // this.drawnall();
         //return null;
     }
+
+    /**
+     * Set the mouse click and mouse drag to the function scala
+     */
     public void buttonScala(){
         canvas1.setOnMousePressed(this::setClick);
         canvas1.setOnMouseDragged(this::scala);
@@ -989,6 +1061,11 @@ public class FXMLController implements Initializable {
             fechaPolilyne();
         }
     }
+
+    /**
+     * Makes the scala operation according which plan.
+     * @param e Mouse click or drag
+     */
     private void scala(MouseEvent e){
         if(clique!=null){
             if((e.getX()!=this.clique.x)||(e.getY()!=clique.y)) {
@@ -1179,7 +1256,7 @@ public class FXMLController implements Initializable {
                         }
                         clique.x = e.getX();
                         clique.y = e.getY();
-                        drawall();
+                        drawnall();
                     }
                 }
             }

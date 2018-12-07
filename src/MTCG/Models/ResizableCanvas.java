@@ -8,7 +8,10 @@ import java.awt.event.MouseMotionListener;
 
 import static com.sun.java.accessibility.util.AWTEventMonitor.addMouseListener;
 import static com.sun.java.accessibility.util.AWTEventMonitor.addMouseMotionListener;
-
+/**
+ * Custon class of a canvas, made to be resizable
+ * @author Gabriela, Hamã, Mauricio
+ */
 public class ResizableCanvas extends Canvas
  {
 
@@ -57,7 +60,7 @@ public class ResizableCanvas extends Canvas
     {
         super.setWidth(width);
         super.setHeight(height);
-        //draw();
+        //drawn();
     }
 
 

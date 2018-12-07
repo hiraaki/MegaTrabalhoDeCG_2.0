@@ -3,9 +3,18 @@ package Controller;
 import Models.Vertex;
 
 import java.util.ArrayList;
-
+/**
+ * Class where is implemented vertex based operations
+ * @author Gabriela, Hamã, Mauricio
+ */
 public class VertexBasedOperations {
-
+    /**
+     * Make rotation in the array of points of a polygon
+     * @param vertices List of Vertexs of the polygon
+     * @param Central The central point of the polygon
+     * @param radians A value angle in radians to rotate the points
+     * @param lado The orientation of the plan 1(x,y), 2(x,z), 3(z,y)
+     */
     public void rotaciona(ArrayList<Vertex> vertices, Vertex Central,double radians, int lado){
         if(lado==1) {
             double seno = Math.sin(radians);
@@ -51,6 +60,12 @@ public class VertexBasedOperations {
         }
     }
 
+    /**
+     * Make a translation in the array of points of a polygon
+     * @param vertices List of Vertexs of the polygon
+     * @param Central The central point of the polygon
+     * @param V The vertex where to match the final central point of the polygon
+     */
     public void translada(ArrayList<Vertex> vertices, Vertex Central,Vertex V){
 //        double x = V.x;//-this.Central.x;
 //        double y =V.y;//-this.Central.y;
@@ -66,6 +81,13 @@ public class VertexBasedOperations {
 
     }
 
+    /**
+     * Make a scala in the array of points of a polygon
+     * @param vertices List of Vertexs of the polygon
+     * @param Central The central point of the polygon
+     * @param novoTamanho The final size of the polygon. Consider 1=100%;
+     * @param eixo The orientation of the plan 1(x,y), 2(x,z), 3(z,y)
+     */
     public void scala(ArrayList<Vertex> vertices,Vertex Central,double novoTamanho,int eixo){
         if(eixo==1) {
             for (Vertex v : vertices) {

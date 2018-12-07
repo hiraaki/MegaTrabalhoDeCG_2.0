@@ -5,7 +5,10 @@ import javafx.scene.canvas.GraphicsContext;
 import java.io.Serializable;
 
 import static java.lang.Math.abs;
-
+/**
+ * Class who represent a Edge
+ * @author Gabriela, Hamã, Mauricio
+ */
 public class Edge implements Serializable {
     public Vertex start;
     public Vertex end;
@@ -16,12 +19,24 @@ public class Edge implements Serializable {
         this.end = new Vertex();
     }
 
-    public Edge(Vertex ini, Vertex fim, Polygon father) {
-        this.start = ini;
-        this.end = fim;
+    /**
+     * Create a Edge
+     * @param start The vertex in the beginning of the Edge
+     * @param end The vertex in the end of the Edge
+     * @param father  Is the polygon who the Edge belongs
+     */
+    public Edge(Vertex start, Vertex end, Polygon father) {
+        this.start = start;
+        this.end = end;
         this.father = father;
     }
-    public void draw(GraphicsContext gc, int surface){
+
+    /**
+     * Draw the vertex
+     * @param gc Grafics Context where the edge will be drawn
+     * @param surface The orientation of the plan 1(x,y), 2(x,z), 3(z,y)
+     */
+    public void drawn(GraphicsContext gc, int surface){
         if(surface ==1)
             gc.strokeLine(this.start.x,this.start.y,this.end.x,this.end.y);
         else if(surface ==3){
@@ -31,6 +46,12 @@ public class Edge implements Serializable {
         }
     }
 
+    /**
+     *
+     * @param v The vertex to be compared with the edge
+     * @param surface The plan orientation where will be tested
+     * @return The answer of  is edge selected or is not?
+     */
     public boolean selected(Vertex v, int surface){
         EdgeController ec= new EdgeController();
         if(ec.distanceFromLine(this,v, surface)<5){
