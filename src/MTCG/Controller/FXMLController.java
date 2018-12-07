@@ -44,24 +44,6 @@ public class FXMLController implements Initializable {
     @FXML
     private ResizableCanvas canvas4;
 
-//    @FXML
-//    private Button botaoSeleciona;
-//
-//    @FXML
-//    private Button botaoExclui;
-//
-//    @FXML
-//    private Button botaoPonto;
-//
-//    @FXML
-//    private Button botaoCirculo;
-//
-//    @FXML
-//    private Button botaoReta;
-//
-//    @FXML
-//    private Button botaoPoligonoR;
-
     private int cliques;
 
     private ArrayList<Vertex> verIrregular;
