@@ -150,23 +150,9 @@ public class FXMLController implements Initializable {
 //        textSeg.setText("0");
     }
 
-    /**
-     * SAI X APENAS PARA DEBUG
-     */
-    public void sX(){
-        double width = canvas1.getWidth();
-        double height = canvas1.getHeight();
-
-        GraphicsContext gc = gc1;
-        gc.clearRect(0, 0, width, height);
-        gc.setStroke(Color.RED);
-        gc.strokeLine(0, 0, width, height);
-        gc.strokeLine(0, height, width, 0);
-
-    }
 
     /**
-     * FAZ O POLIGONO IRREGULAR
+     * Set the function Irregular to the mouse click
      */
     public void ButtonPonto(){
 
@@ -742,7 +728,7 @@ public class FXMLController implements Initializable {
 
     /**
      * Rotete the polygon or polyhedron acording the plan
-     * @param e
+     * @param e mouse click
      */
     private void rotaciona(MouseEvent e){
         double x;
