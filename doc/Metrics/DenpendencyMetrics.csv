@@ -1,0 +1,21 @@
+Class Dependency metrics,,,,,
+Class,Number of Cyclic Dependencies,Number of Dependencies,Number of Transitive Dependencies,Number of Dependents,Number of Transive Dependents
+Controller.EdgeController,4,2,5,1,6
+Controller.FXMLController,0,8,9,0,0
+Controller.PolygonController,4,3,5,3,6
+Controller.PolyhedronController,0,6,7,1,1
+Controller.VertexBasedOperations,0,1,1,2,2
+Models.Edge,4,3,5,5,6
+Models.Polygon,4,4,5,5,6
+Models.Polyhedron,4,2,5,3,6
+Models.ResizableCanvas,0,0,0,1,1
+Models.Vertex,0,0,0,8,8
+View.Main,0,0,0,0,0
+,,,,,
+,,,,,
+,,,,,
+Package Dependency metrics,,,,,
+Package,Number of Package Dependencies,number of Dependent Packages,,,
+Controller,1,1,,,
+Models,1,1,,,
+View,0,0,,,
